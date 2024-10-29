@@ -2,20 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Base styles */
+@layer base {
+  body {
+    @apply bg-neutral-50 text-neutral-800;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  h1 {
+    @apply font-display text-4xl font-bold text-primary-dark mb-4;
+  }
+
+  h2 {
+    @apply font-display text-3xl font-semibold text-primary mb-3;
+  }
+
+  h3 {
+    @apply font-display text-2xl font-semibold text-primary mb-2;
+  }
+
+  p {
+    @apply font-sans text-base text-neutral-600 mb-4;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom component classes */
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-semibold transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-primary-dark;
+  }
+
+  .btn-secondary {
+    @apply btn bg-secondary text-white hover:bg-secondary-dark;
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-primary text-primary hover:bg-primary hover:text-white;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .nav-link {
+    @apply font-sans text-neutral-600 hover:text-primary transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-card p-6;
+  }
+}
+
+/* Custom animations */
+@layer utilities {
+  .transition-custom {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .hover-lift {
+    @apply hover:-translate-y-1 transition-transform duration-200;
+  }
 }
