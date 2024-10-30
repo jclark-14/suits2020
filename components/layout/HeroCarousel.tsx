@@ -39,18 +39,6 @@ function HeroCarousel() {
     setTimeout(() => setCanNavigate(true), 1000);
   }, [startTimer, canNavigate]);
 
-  const goToSlide = useCallback(
-    (index: number) => {
-      if (!canNavigate) return;
-      setCanNavigate(false);
-      setIsTransitioning(true);
-      setCurrentSlide(index + 1);
-      startTimer();
-      setTimeout(() => setCanNavigate(true), 1000);
-    },
-    [startTimer, canNavigate]
-  );
-
   useEffect(() => {
     startTimer();
     return () => {
@@ -79,7 +67,7 @@ function HeroCarousel() {
   }, [currentSlide]);
 
   return (
-    <div className="relative h-[250px] sm:h-[350px] md:h-[400px] lg:h-[525px] w-full overflow-hidden">
+    <div className="relative h-[250px] sm:h-[350px] md:h-[450px] lg:h-[700px] w-full overflow-hidden">
       <div
         className={`flex h-full ${
           isTransitioning
@@ -102,12 +90,12 @@ function HeroCarousel() {
               sizes="100vw"
             />
             <div className="absolute inset-0 bg-black/55" />
-            <div className="relative h-full flex flex-col items-center justify-end text-white px-4 text-center pb-8 sm:pb-16">
+            <div className="relative h-full flex flex-col items-center justify-end text-white px-4 text-center pb-8 sm:pb-14 md:pb-20">
               <div className="sm:space-y-3 md:space-y-4 max-w-4xl">
-                <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-semibold mb-0">
+                <h2 className="text-3xl sm:text-5xl md:text-5xl lg:text-9xl font-medium mb-0">
                   CHEERS TO 30%
                 </h2>
-                <p className="text-xl md:text-3xl lg:text-4xl font-normal tracking-wide">
+                <p className="text-xl sm:text-3xl lg:text-5xl font-normal tracking-wide">
                   SAVINGS FOR YOUR WEDDING PARTY!
                 </p>
               </div>
@@ -127,10 +115,10 @@ function HeroCarousel() {
               sizes="100vw"
             />
             <div className="absolute inset-0 bg-black/55" />
-            <div className="relative h-full flex flex-col items-center justify-end text-white px-4 text-center pb-12 sm:pb-16">
-              <div className=" sm:space-y-3 md:space-y-4 max-w-4xl">
+            <div className="relative h-full flex flex-col items-center justify-end text-white px-4 text-center pb-12 sm:pb-10">
+              <div className="sm:space-y-1 md:space-y-3 max-w-4xl">
                 <div className="md:space-y-1">
-                  <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white tracking-wide m-0">
+                  <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white tracking-wide m-2">
                     CHICAGOLAND&apos;S <br className="sm:hidden" />
                     MEN&apos;S & BOY&apos;S
                   </h1>
@@ -138,8 +126,8 @@ function HeroCarousel() {
                     FASHION OUTLET.
                   </h2>
                 </div>
-                <div className="hidden sm:block space-y-1">
-                  <p className="text-base sm:text-lg md:text-2xl lg:text-3xl font-normal tracking-wide">
+                <div className="hidden sm:block sm:space-y-4">
+                  <p className="text-base sm:text-lg md:text-2xl lg:text-3xl font-normal tracking-wide mb-0">
                     Name Brand Suits, Tuxedos, Slacks Sportcoats, Blazers
                   </p>
                   <p className="text-base sm:text-lg md:text-2xl lg:text-3xl font-normal tracking-wide">
@@ -163,12 +151,12 @@ function HeroCarousel() {
               sizes="100vw"
             />
             <div className="absolute inset-0 bg-black/55" />
-            <div className="relative h-full flex flex-col items-center justify-end text-white px-4 text-center pb-6 sm:pb-16">
-              <div className="sm:space-y-3 md:space-y-4 max-w-4xl">
-                <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-semibold mb-0">
+            <div className="relative h-full flex flex-col items-center justify-end text-white px-4 text-center pb-6 sm:pb-14">
+              <div className="sm:space-y-1 md:space-y-4 max-w-4xl">
+                <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold mb-0">
                   FULL SERVICE STYLE
                 </h2>
-                <p className="text-lg md:text-2xl lg:text-3xl font-normal tracking-wide">
+                <p className="text-lg sm:text-2xl lg:text-3xl font-normal md:tracking-wide">
                   Expert Fashion Advice and Custom <br className="sm:hidden" />
                   Tailoring OnSite.
                 </p>
@@ -189,12 +177,12 @@ function HeroCarousel() {
               sizes="100vw"
             />
             <div className="absolute inset-0 bg-black/55" />
-            <div className="relative h-full flex flex-col items-center justify-end text-white px-4 text-center pb-8 sm:pb-16">
+            <div className="relative h-full flex flex-col items-center justify-end text-white px-4 text-center pb-8 sm:pb-14 md:pb-20">
               <div className="sm:space-y-3 md:space-y-4 max-w-4xl">
-                <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-semibold mb-0">
+                <h2 className="text-3xl sm:text-5xl md:text-5xl lg:text-9xl font-medium mb-0">
                   CHEERS TO 30%
                 </h2>
-                <p className="text-xl md:text-3xl lg:text-4xl font-normal tracking-wide">
+                <p className="text-xl sm:text-3xl lg:text-5xl font-normal tracking-wide">
                   SAVINGS FOR YOUR WEDDING PARTY!
                 </p>
               </div>
@@ -214,10 +202,10 @@ function HeroCarousel() {
               sizes="100vw"
             />
             <div className="absolute inset-0 bg-black/55" />
-            <div className="relative h-full flex flex-col items-center justify-end text-white px-4 text-center pb-12 sm:pb-16">
-              <div className=" sm:space-y-3 md:space-y-4 max-w-4xl">
+            <div className="relative h-full flex flex-col items-center justify-end text-white px-4 text-center pb-12 sm:pb-10">
+              <div className="sm:space-y-1 md:space-y-3 max-w-4xl">
                 <div className="md:space-y-1">
-                  <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white tracking-wide m-0">
+                  <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white tracking-wide m-2">
                     CHICAGOLAND&apos;S <br className="sm:hidden" />
                     MEN&apos;S & BOY&apos;S
                   </h1>
@@ -225,8 +213,8 @@ function HeroCarousel() {
                     FASHION OUTLET.
                   </h2>
                 </div>
-                <div className="hidden sm:block space-y-1">
-                  <p className="text-base sm:text-lg md:text-2xl lg:text-3xl font-normal tracking-wide">
+                <div className="hidden sm:block sm:space-y-4">
+                  <p className="text-base sm:text-lg md:text-2xl lg:text-3xl font-normal tracking-wide mb-0">
                     Name Brand Suits, Tuxedos, Slacks Sportcoats, Blazers
                   </p>
                   <p className="text-base sm:text-lg md:text-2xl lg:text-3xl font-normal tracking-wide">
@@ -245,29 +233,15 @@ function HeroCarousel() {
         className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-black/20 md:bg-black/50 p-1 sm:p-2 rounded-lg text-white hover:text-gray-200 hover:bg-black/75 transition-colors z-10"
         aria-label="Previous slide"
       >
-        <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8" />
+        <ChevronLeft className="w-6 h-6 sm:w-10 sm:h-10" />
       </button>
       <button
         onClick={nextSlide}
         className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-black/20 md:bg-black/50 p-1 sm:p-2 rounded-lg text-white hover:text-gray-200 hover:bg-black/75 transition-colors z-10"
         aria-label="Next slide"
       >
-        <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8" />
+        <ChevronRight className="w-6 h-6 sm:w-10 sm:h-10" />
       </button>
-
-      {/* Slide Indicators */}
-      <div className="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 flex space-x-1 sm:space-x-2 z-10">
-        {[0, 1, 2].map(index => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-1.5 h-1.5 sm:w-2.5 sm:h-2.5 rounded-full transition-colors ${
-              index === currentSlide - 1 ? 'bg-white' : 'bg-white/50'
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
     </div>
   );
 }

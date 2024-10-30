@@ -1,3 +1,5 @@
+import aspectRatio from '@tailwindcss/aspect-ratio';
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -52,6 +54,7 @@ module.exports = {
         '6xl': ['3.75rem', { lineHeight: '1' }],
         '7xl': ['4.5rem', { lineHeight: '1' }],
         '8xl': ['5rem', { lineHeight: '1' }],
+        '9xl': ['6rem', { lineHeight: '1' }],
       },
       fontWeight: {
         thin: 100,
@@ -81,5 +84,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [aspectRatio],
 };
