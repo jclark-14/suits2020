@@ -10,12 +10,12 @@ export default function Navigation() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="bg-black">
+    <nav className="bg-white md:bg-black ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-center h-12 font-serif">
+        <div className="flex items-center md:justify-center h-12 font-sans">
           {/* Desktop Menu */}
           <div className="hidden md:flex">
-            <div className="hidden md:flex items-center space-x-4 md:space-x-6 lg:space-x-8 xl:space-x-12 flex-shrink">
+            <div className="hidden md:flex items-center text-lg space-x-4 md:space-x-6 lg:space-x-8 xl:space-x-12 flex-shrink">
               <Link href="/services">
                 <span className="text-white hover:text-gray-300 transition-colors">
                   SERVICES
@@ -42,26 +42,33 @@ export default function Navigation() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button
-              onClick={toggleMenu}
-              className="text-gray-800 hover:text-green-600 focus:outline-none"
-            >
+          <div className="md:hidden flex items-center justify-between w-full mt-1">
+            <SocialLinks />
+            <button onClick={toggleMenu} className="text-black p-2">
               <svg
-                className="w-6 h-6"
+                className="w-8 h-6"
                 fill="none"
                 stroke="currentColor"
-                viewBox="0 0 24 24"
+                viewBox="0 0 32 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d={
-                    isOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'
-                  }
-                />
+                {isOpen ? (
+                  <g transform="translate(8, 0)">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </g>
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2.5}
+                    d="M4 6h24M4 12h24M4 18h24"
+                  />
+                )}
               </svg>
             </button>
           </div>
@@ -69,28 +76,26 @@ export default function Navigation() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden mt-2 space-y-2">
-            <Link href="/services">
-              <span className="block text-gray-800 hover:text-green-600">
-                Services
-              </span>
-            </Link>
-            <Link href="/location">
-              <span className="block text-gray-800 hover:text-green-600">
-                Location
-              </span>
-            </Link>
-            <Link href="/brands">
-              <span className="block text-gray-800 hover:text-green-600">
-                Designer Brands
-              </span>
-            </Link>
-            <Link href="/contact">
-              <span className="block text-gray-800 hover:text-green-600">
-                Contact
-              </span>
-            </Link>
-          </div>
+          <>
+            <div className="border-t-2 border-gray-150 -mx-4 mt-1"></div>
+            <div className="md:hidden flex flex-col items-center mt-20 space-y-16 min-h-screen text-2xl bg-white">
+              <Link href="/services">
+                <span className="block text-gray-900">SERVICES</span>
+              </Link>
+              <div className="border-t-2 border-gray-200 w-3/4"></div>
+              <Link href="/location">
+                <span className="block text-gray-900">LOCATION</span>
+              </Link>
+              <div className="border-t-2 border-gray-200 w-3/4"></div>
+              <Link href="/brands">
+                <span className="block text-gray-900">DESIGNER BRANDS</span>
+              </Link>
+              <div className="border-t-2 border-gray-200 w-3/4"></div>
+              <Link href="/contact">
+                <span className="block text-gray-900">CONTACT</span>
+              </Link>
+            </div>
+          </>
         )}
       </div>
     </nav>

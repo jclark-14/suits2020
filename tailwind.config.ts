@@ -10,9 +10,9 @@ module.exports = {
       colors: {
         // Primary colors
         primary: {
-          DEFAULT: '#1C3879', // Deep navy blue - good for main actions and headers
+          DEFAULT: 'white',
           light: '#3B5BA5',
-          dark: '#102048',
+          dark: 'black',
         },
         // Secondary colors
         secondary: {
@@ -37,9 +37,6 @@ module.exports = {
       fontFamily: {
         // Classic, professional fonts
         sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
-        serif: ['Nunito', 'ui-serif', 'Georgia'],
-        // Special font for logos and headings
-        display: ['Josefin_Sans', 'sans-serif'],
       },
       fontSize: {
         // Custom size scale
@@ -52,16 +49,19 @@ module.exports = {
         '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
         '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
         '5xl': ['3rem', { lineHeight: '1' }],
+        '6xl': ['3.75rem', { lineHeight: '1' }],
+        '7xl': ['4.5rem', { lineHeight: '1' }],
+        '8xl': ['5rem', { lineHeight: '1' }],
       },
       fontWeight: {
         thin: 100,
-        extraLight: 200,
+        extralight: 200,
         light: 300,
         normal: 400,
         medium: 500,
-        semiBold: 600,
+        semibold: 600,
         bold: 700,
-        extraBold: 800,
+        extrabold: 800,
         black: 900,
       },
       spacing: {
