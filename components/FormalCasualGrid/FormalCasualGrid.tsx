@@ -10,7 +10,7 @@ interface Category {
   span: 'thirds' | 'twoThirds' | 'third';
   hasOverlay?: boolean;
   overlayText?: string;
-  hasHoverWithOverlay?: boolean;
+
   overlayPosition?: 'left' | 'right';
 }
 
@@ -40,7 +40,6 @@ export default function FormalCasualGrid() {
       image: '/images/grid/suits-man-sitting1.png',
       span: 'twoThirds',
       hasOverlay: true,
-      hasHoverWithOverlay: true,
       overlayText: "THE\nLOOKS\nYOU'RE\nLOOKING\nFOR",
       overlayPosition: 'right',
     },
@@ -68,7 +67,6 @@ export default function FormalCasualGrid() {
       image: '/images/grid/business-casual3.png',
       span: 'twoThirds',
       hasOverlay: true,
-      hasHoverWithOverlay: true,
       overlayText: 'THE\nNEW\nBUSINESS\nCASUAL',
       overlayPosition: 'left',
     },
@@ -104,7 +102,6 @@ export default function FormalCasualGrid() {
                 description={category.description}
                 imageSrc={category.image}
                 hasOverlay={category.hasOverlay}
-                hasHoverWithOverlay={category.hasHoverWithOverlay}
                 overlayText={category.overlayText}
                 overlayPosition={
                   category.overlayPosition as 'left' | 'right' | undefined
