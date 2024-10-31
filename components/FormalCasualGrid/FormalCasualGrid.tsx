@@ -4,12 +4,14 @@ import Card from './Card';
 interface Category {
   id: number;
   title: string;
+  subTitle?: string | undefined;
   description: string;
   image: string;
   span: 'thirds' | 'twoThirds' | 'third';
   hasOverlay?: boolean;
   overlayText?: string;
-  overlayPosition?: 'left' | 'right'; // Specify the literal types here
+  hasHoverWithOverlay?: boolean;
+  overlayPosition?: 'left' | 'right';
 }
 
 export default function FormalCasualGrid() {
@@ -20,25 +22,27 @@ export default function FormalCasualGrid() {
       description:
         "When sneakers don't cut it, stop in to see our full selection of shoes to top off your personal style.",
       image: '/images/grid/formal-shoes.png',
-      span: 'thirds', // Adjust spans to control layout
+      span: 'thirds',
     },
     {
       id: 2,
       title: 'DESIGNER ACCESSORIES',
       description:
         'Suits 20/20 offers a giant selection of Neck Ties, Belts, Socks, Cuff Links, Hankercheifs, Hats and more. New merchandise is coming in all the time, so stop in at Suits 20/20 to see the latest trends and styles.',
-      image: '/images/grid/suits-ties1.jpg',
+      image: '/images/grid/accessories3.png',
       span: 'twoThirds',
     },
     {
       id: 3,
       title: 'CASUAL LOOKS',
-      description: 'CASUAL LOOKS',
+      subTitle: 'CASUAL LOOKS',
+      description: `From laid-back weekends to effortless everyday outfits, our collection of casual wear ensures you stay comfortable without compromising on style. Whether you're stepping out or staying in, these pieces are designed to fit every moment seamlessly.`,
       image: '/images/grid/suits-man-sitting1.png',
       span: 'twoThirds',
       hasOverlay: true,
+      hasHoverWithOverlay: true,
       overlayText: "THE\nLOOKS\nYOU'RE\nLOOKING\nFOR",
-      overlayPosition: 'right', // Add this line
+      overlayPosition: 'right',
     },
     {
       id: 4,
@@ -58,23 +62,25 @@ export default function FormalCasualGrid() {
     },
     {
       id: 6,
-      title: 'BUSINESS CASUAL',
-      description: 'KEEPING CURRENT & LOOKING COOL',
-      image: '/images/grid/business-casual.png',
+      title: 'KEEPING CURRENT & LOOKING COOL',
+      subTitle: 'BUSINESS CASUAL',
+      description: `Strike the perfect balance between professional and relaxed with our business casual collection. Ideal for the modern workspace or a polished weekend look, these versatile outfits keep you sharp, stylish, and ready for anything.`,
+      image: '/images/grid/business-casual3.png',
       span: 'twoThirds',
       hasOverlay: true,
+      hasHoverWithOverlay: true,
       overlayText: 'THE\nNEW\nBUSINESS\nCASUAL',
-      overlayPosition: 'left', // Add this line
+      overlayPosition: 'left',
     },
   ];
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-12">
-      <div className="text-center mb-12">
-        <h2 className="text-8xl font-semibold text-primary-dark my-7 tracking-wider">
+    <section className="max-w-6xl mx-auto px-4 pt-4 pb-10 sm:pb-10 sm:pt-6">
+      <div className="text-center mb-6 sm:mb-12">
+        <h2 className="text-4xl sm:text-6xl font-semibold text-primary-dark my-3 sm:my-7 sm:tracking-wider">
           FROM FORMAL TO CASUAL
         </h2>
-        <p className="text-4xl text-primary-dark tracking-wider">
+        <p className="text-2xl md:text-3xl text-primary-dark sm:tracking-wider">
           EVERYTHING IN MEN&apos;S & BOY&apos;S FASHION IN ONE PLACE.
         </p>
       </div>
@@ -94,9 +100,11 @@ export default function FormalCasualGrid() {
               <Card
                 key={category.id}
                 title={category.title}
+                subTitle={category.subTitle}
                 description={category.description}
                 imageSrc={category.image}
                 hasOverlay={category.hasOverlay}
+                hasHoverWithOverlay={category.hasHoverWithOverlay}
                 overlayText={category.overlayText}
                 overlayPosition={
                   category.overlayPosition as 'left' | 'right' | undefined

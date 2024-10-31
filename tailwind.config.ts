@@ -35,6 +35,7 @@ module.exports = {
           800: '#262626', // Almost black
           900: '#171717', // Black text
         },
+        footerBrown: '#231f20',
       },
       fontFamily: {
         // Classic, professional fonts
