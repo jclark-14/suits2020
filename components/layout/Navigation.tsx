@@ -12,28 +12,28 @@ export default function Navigation() {
   return (
     <nav className="bg-white md:bg-black ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center md:justify-center h-12 md:h-12 font-sans">
+        <div className="flex items-center md:justify-center h-10 font-sans">
           {/* Desktop Menu */}
-          <div className="hidden md:flex flex-shrink">
-            <div className="hidden md:flex items-center text-lg sm:mr-2 md:mr-40 md:text-lg lg:text-xl space-x-4 md:space-x-6 lg:space-x-8 xl:space-x-12 flex-shrink">
+          <div className="hidden md:flex flex-shrink items-center">
+            <div className="hidden md:flex items-center text-lg md:mr-40 md:text-lg lg:text-lg space-x-4 md:space-x-6 lg:space-x-8 xl:space-x-10 flex-shrink">
               <Link href="/services">
                 <span className="text-white hover:text-gray-300 transition-colors">
                   SERVICES
                 </span>
               </Link>
-              <div className="border-l border-[1.5px] border-white h-[27px]"></div>
+              <div className="border-l border-[1.5px] border-white h-[19px]"></div>
               <Link href="/location">
                 <span className="text-white hover:text-gray-300 transition-colors">
                   LOCATION
                 </span>
               </Link>
-              <div className="border-l border-[1.5px] border-white h-[27px]"></div>
+              <div className="border-l border-[1.5px] border-white h-[19px]"></div>
               <Link href="/brands">
                 <span className="text-white hover:text-gray-300 whitespace-nowrap inline-block transition-colors">
                   DESIGNER BRANDS
                 </span>
               </Link>
-              <div className="border-l border-[1.5px] border-white h-[27px]"></div>
+              <div className="border-l border-[1.5px] border-white h-[19px]"></div>
               <Link href="/contact">
                 <span className="text-white hover:text-gray-300">CONTACT</span>
               </Link>

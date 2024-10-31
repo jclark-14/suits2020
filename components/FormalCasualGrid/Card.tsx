@@ -8,6 +8,7 @@ interface CardProps {
   subTitle?: string | undefined;
   description: string;
   imageSrc: string;
+  imageSrcMobile?: string;
   hasOverlay?: boolean;
   overlayText?: string;
   overlayPosition?: 'left' | 'right';
@@ -18,6 +19,7 @@ export default function Card({
   subTitle,
   description,
   imageSrc,
+  imageSrcMobile,
   hasOverlay,
   overlayText,
   overlayPosition = 'left',
@@ -32,9 +34,11 @@ export default function Card({
       setIsMobile(window.innerWidth < 768); // 768px is Tailwind's md breakpoint
     };
 
+    // Check immediately and add listener
     checkIfMobile();
     window.addEventListener('resize', checkIfMobile);
 
+    // Cleanup the event listener
     return () => {
       window.removeEventListener('resize', checkIfMobile);
     };
@@ -48,10 +52,13 @@ export default function Card({
   };
 
   const showOverlay = isMobile ? isPressed : isHovered;
+  // Determine which image to display
+  const currentImageSrc =
+    isMobile && imageSrcMobile ? imageSrcMobile : imageSrc;
 
   return (
     <div
-      className="relative w-full h-full overflow-hidden group rounded-md shadow-xl md:shadow-lg"
+      className={`relative w-full h-full overflow-hidden group rounded-md shadow-xl md:shadow-lg`}
       onClick={handleInteraction}
       onMouseEnter={() => !isMobile && setIsHovered(true)}
       onMouseLeave={() => !isMobile && setIsHovered(false)}
@@ -59,7 +66,7 @@ export default function Card({
       {/* Image Container */}
       <div className="relative w-full h-full">
         <Image
-          src={imageSrc}
+          src={currentImageSrc}
           alt={title}
           fill
           className={`object-cover transition-transform duration-300 ${

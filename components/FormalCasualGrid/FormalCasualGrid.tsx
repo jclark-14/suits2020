@@ -1,4 +1,3 @@
-// FormalCasualGrid.tsx
 import Card from './Card';
 
 interface Category {
@@ -7,6 +6,7 @@ interface Category {
   subTitle?: string | undefined;
   description: string;
   image: string;
+  imageSrcMobile?: string;
   span: 'thirds' | 'twoThirds' | 'third';
   hasOverlay?: boolean;
   overlayText?: string;
@@ -22,14 +22,15 @@ export default function FormalCasualGrid() {
       description:
         "When sneakers don't cut it, stop in to see our full selection of shoes to top off your personal style.",
       image: '/images/grid/formal-shoes.png',
-      span: 'thirds',
+      span: 'third',
     },
     {
       id: 2,
       title: 'DESIGNER ACCESSORIES',
       description:
-        'Suits 20/20 offers a giant selection of Neck Ties, Belts, Socks, Cuff Links, Hankercheifs, Hats and more. New merchandise is coming in all the time, so stop in at Suits 20/20 to see the latest trends and styles.',
-      image: '/images/grid/accessories3.png',
+        'Suits 20/20 offers a giant selection of Neck Ties, Belts, Socks, Cuff Links, Handkerchiefs, Hats and more. New merchandise is coming in all the time, so stop in at Suits 20/20 to see the latest trends and styles.',
+      image: '/images/grid/accessories.png',
+      imageSrcMobile: '/images/grid/accessories-mobile.png',
       span: 'twoThirds',
     },
     {
@@ -37,7 +38,8 @@ export default function FormalCasualGrid() {
       title: 'CASUAL LOOKS',
       subTitle: 'CASUAL LOOKS',
       description: `From laid-back weekends to effortless everyday outfits, our collection of casual wear ensures you stay comfortable without compromising on style. Whether you're stepping out or staying in, these pieces are designed to fit every moment seamlessly.`,
-      image: '/images/grid/suits-man-sitting1.png',
+      image: '/images/grid/casual-wear.png',
+      imageSrcMobile: '/images/grid/casual-wear-mobile.png',
       span: 'twoThirds',
       hasOverlay: true,
       overlayText: "THE\nLOOKS\nYOU'RE\nLOOKING\nFOR",
@@ -48,15 +50,14 @@ export default function FormalCasualGrid() {
       title: "MEN'S OUTERWEAR",
       description:
         'Stay ahead of the season with our selection of coats, jackets, and blazers designed to keep you looking sharp and comfortable.',
-      image: '/images/grid/outerwear4.png',
+      image: '/images/grid/outerwear.png',
       span: 'third',
     },
     {
       id: 5,
       title: "BOY'S SUITS",
-      description:
-        'Perfect for weddings and formal events, our finely tailored suits bring charm and confidence to your little one’s wardrobe, ensuring he looks his best.',
-      image: '/images/grid/boys-suits1.png',
+      description: `Perfect for weddings and formal events, our finely tailored suits bring charm and confidence to your little one’s wardrobe, ensuring he looks his best.`,
+      image: '/images/grid/boys-suits.png',
       span: 'third',
     },
     {
@@ -64,7 +65,8 @@ export default function FormalCasualGrid() {
       title: 'KEEPING CURRENT & LOOKING COOL',
       subTitle: 'BUSINESS CASUAL',
       description: `Strike the perfect balance between professional and relaxed with our business casual collection. Ideal for the modern workspace or a polished weekend look, these versatile outfits keep you sharp, stylish, and ready for anything.`,
-      image: '/images/grid/business-casual3.png',
+      image: '/images/grid/business-casual.png',
+      imageSrcMobile: '/images/grid/business-casual-mobile.png',
       span: 'twoThirds',
       hasOverlay: true,
       overlayText: 'THE\nNEW\nBUSINESS\nCASUAL',
@@ -87,20 +89,24 @@ export default function FormalCasualGrid() {
         {categories.map(category => (
           <div
             key={category.id}
-            className={`relative ${
+            className={`relative md:h-[320px] ${
               category.span === 'twoThirds' ? 'md:col-span-2' : 'md:col-span-1'
             }`}
-            style={{
-              paddingBottom: category.span === 'twoThirds' ? '56.25%' : '75%', // 16:9 vs 4:3
-            }}
           >
-            <div className="absolute inset-0">
+            <div
+              className={`relative w-full h-full ${
+                category.span === 'twoThirds'
+                  ? 'aspect-[4/3] md:aspect-[16/9]' // 4:3 on mobile, 16:9 on desktop for wide cards
+                  : 'aspect-[4/3]' // Always 4:3 for single-width cards
+              }`}
+            >
               <Card
                 key={category.id}
                 title={category.title}
                 subTitle={category.subTitle}
                 description={category.description}
                 imageSrc={category.image}
+                imageSrcMobile={category.imageSrcMobile}
                 hasOverlay={category.hasOverlay}
                 overlayText={category.overlayText}
                 overlayPosition={

@@ -10,6 +10,7 @@ interface SlideData {
   alt: string;
   overlayOpacity: number;
   title?: string;
+  title2?: string;
   subtitle?: string;
   description?: string[];
   className?: string;
@@ -24,7 +25,7 @@ const SLIDES: SlideData[] = [
     overlayOpacity: 0.5,
     title: 'CHEERS TO 30%',
     description: ['SAVINGS FOR YOUR WEDDING PARTY!'],
-    className: 'text-4xl sm:text-5xl md:text-5xl lg:text-7xl mb-0',
+    className: 'text-4xl sm:text-5xl md:text-5xl lg:text-8xl mb-0',
     className2:
       'text-xl md:text-3xl lg:text-4xl font-normal tracking-wide mt-0 mb-3',
   },
@@ -33,17 +34,17 @@ const SLIDES: SlideData[] = [
     image: '/images/carousel/suit-rack6.png',
     alt: 'Fashion Outlet',
     overlayOpacity: 0.3,
-    title: "CHICAGOLAND'S\nMEN'S & BOY'S\nFASHION OUTLET.",
+    title: "CHICAGOLAND'S \nMEN'S & BOY'S",
+    title2: 'FASHION OUTLET.',
     description: [
-      'Name Brand Suits, Tuxedos, Slacks Sportcoats, Blazers',
+      'Name Brand Suits, Tuxedos, Slacks, Sportcoats, Blazers',
       'Personal Service - Tailored to Fit On-site.',
     ],
     className:
-      'text-3xl lg:text-4xl font-semibold tracking-wide m-0 whitespace-pre-line sm:whitespace-normal',
+      'text-2xl lg:text-5xl md:font-semibold tracking-wide m-0 tracking-wider whitespace-pre-line sm:whitespace-normal',
     className2:
       'hidden sm:block text-base sm:text-lg md:text-2xl lg:text-3xl font-normal tracking-wide mb-0 mt-0',
   },
-
   {
     id: 3,
     image: '/images/carousel/suit-measuring.png',
@@ -51,7 +52,7 @@ const SLIDES: SlideData[] = [
     overlayOpacity: 0.5,
     title: 'FULL SERVICE STYLE',
     description: ['Expert Fashion Advice and Custom', 'Tailoring On-site.'],
-    className: 'text-4xl sm:text-5xl md:text-5xl lg:text-6xl',
+    className: 'text-4xl sm:text-5xl md:text-5xl lg:text-8xl',
   },
 ];
 
@@ -101,14 +102,15 @@ const Slide = ({ data }: { data: SlideData }) => (
         <div className="relative flex flex-col items-center justify-end text-white px-4 text-center pb-4 md:pb-16">
           <div className="md:space-y-3 max-w-4xl">
             {data.title && (
-              <h2
-                className={
-                  data.className ||
-                  'text-2xl md:text-3xl lg:text-4xl font-semibold tracking-wide m-0'
-                }
-              >
-                {data.title}
-              </h2>
+              <>
+                {/* Desktop title */}
+                <h2 className={data.className}>{data.title}</h2>
+                {data.title2 && (
+                  <h2 className="text-4xl sm:text-8xl font-semibold">
+                    {data.title2}
+                  </h2>
+                )}
+              </>
             )}
             {data.subtitle && (
               <h3 className="text-3xl md:text-5xl lg:text-7xl font-semibold m-0">
@@ -122,7 +124,7 @@ const Slide = ({ data }: { data: SlideData }) => (
                     key={index}
                     className={
                       data.className2 ||
-                      'text-base sm:text-lg md:text-2xl lg:text-3xl font-normal tracking-wide mb-0 mt-0'
+                      'text-base sm:text-lg md:text-4xl font-normal tracking-wide mb-0 mt-0'
                     }
                   >
                     {text}
@@ -191,7 +193,7 @@ function HeroCarousel() {
   }, [isTransitioning, handleTransitionEnd]);
 
   return (
-    <div className="relative h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] w-full overflow-hidden">
+    <div className="relative h-[250px] sm:h-[350px] md:h-[415px] lg:h-[500px] w-full overflow-hidden">
       <div
         className={`flex h-full ${
           isTransitioning

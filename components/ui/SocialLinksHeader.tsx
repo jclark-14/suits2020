@@ -19,7 +19,7 @@ export function SocialLinks() {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="w-[24px] h-[24px] md:w-[30px] md:h-[30px]"
+          className="w-[24px] h-[24px]"
         >
           <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
           <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
@@ -39,7 +39,7 @@ export function SocialLinks() {
           viewBox="0 0 24 24"
           fill="currentColor"
           stroke="none"
-          className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] scale-x-[1.2]"
+          className="w-[24px] h-[24px] scale-x-[1.2]"
         >
           <path d="M16.5 2H14C11.5147 2 9.5 4.01472 9.5 6.5V9H7V12H9.5V22H12.5V12H15L16 9H12.5V6.5C12.5 5.67157 13.1716 5 14 5H16.5V2Z" />
         </svg>
@@ -56,7 +56,7 @@ export function SocialLinks() {
           height="24"
           viewBox="0 0 24 24"
           fill="currentColor"
-          className="w-[24px] h-[24px] md:w-[30px] md:h-[30px]"
+          className="w-[24px] h-[24px]"
         >
           <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
         </svg>
