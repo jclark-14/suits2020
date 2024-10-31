@@ -4,7 +4,6 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-// Define slide data interface
 interface SlideData {
   id: number;
   image: string;
@@ -14,38 +13,44 @@ interface SlideData {
   subtitle?: string;
   description?: string[];
   className?: string;
+  className2?: string;
 }
 
-// Define slide data outside component to prevent recreation
 const SLIDES: SlideData[] = [
   {
     id: 1,
     image: '/images/carousel/suits-wedding.png',
     alt: 'Wedding Party Savings',
-    overlayOpacity: 55,
+    overlayOpacity: 0.5,
     title: 'CHEERS TO 30%',
     description: ['SAVINGS FOR YOUR WEDDING PARTY!'],
-    className: 'text-4xl sm:text-5xl md:text-5xl lg:text-6xl',
+    className: 'text-4xl sm:text-5xl md:text-5xl lg:text-7xl mb-0',
+    className2:
+      'text-xl md:text-3xl lg:text-4xl font-normal tracking-wide mt-0 mb-3',
   },
   {
     id: 2,
     image: '/images/carousel/suit-rack6.png',
     alt: 'Fashion Outlet',
-    overlayOpacity: 30,
-    title: "CHICAGOLAND'S MEN'S & BOY'S",
-    subtitle: 'FASHION OUTLET.',
+    overlayOpacity: 0.3,
+    title: "CHICAGOLAND'S\nMEN'S & BOY'S\nFASHION OUTLET.",
     description: [
       'Name Brand Suits, Tuxedos, Slacks Sportcoats, Blazers',
-      'Personal Service - Tailored to Fit OnSite.',
+      'Personal Service - Tailored to Fit On-site.',
     ],
+    className:
+      'text-3xl lg:text-4xl font-semibold tracking-wide m-0 whitespace-pre-line sm:whitespace-normal',
+    className2:
+      'hidden sm:block text-base sm:text-lg md:text-2xl lg:text-3xl font-normal tracking-wide mb-0 mt-0',
   },
+
   {
     id: 3,
     image: '/images/carousel/suit-measuring.png',
     alt: 'Full service style',
-    overlayOpacity: 55,
+    overlayOpacity: 0.5,
     title: 'FULL SERVICE STYLE',
-    description: ['Expert Fashion Advice and Custom', 'Tailoring OnSite.'],
+    description: ['Expert Fashion Advice and Custom', 'Tailoring On-site.'],
     className: 'text-4xl sm:text-5xl md:text-5xl lg:text-6xl',
   },
 ];
@@ -90,10 +95,10 @@ const Slide = ({ data }: { data: SlideData }) => (
       />
       <div
         className="absolute inset-0 bg-black"
-        style={{ opacity: data.overlayOpacity / 100 }}
+        style={{ opacity: data.overlayOpacity }}
       />
-      <div className="absolute inset-0 flex flex-col justify-end h-full">
-        <div className="relative flex flex-col items-center justify-end text-white px-4 text-center pb-4 md:pb-12">
+      <div className="absolute inset-0 flex flex-col justify-center mt-10 sm:mt-0 sm:justify-end h-full">
+        <div className="relative flex flex-col items-center justify-end text-white px-4 text-center pb-4 md:pb-16">
           <div className="md:space-y-3 max-w-4xl">
             {data.title && (
               <h2
@@ -115,7 +120,10 @@ const Slide = ({ data }: { data: SlideData }) => (
                 {data.description.map((text, index) => (
                   <p
                     key={index}
-                    className="text-base sm:text-lg md:text-2xl lg:text-3xl font-normal tracking-wide mb-0 mt-0"
+                    className={
+                      data.className2 ||
+                      'text-base sm:text-lg md:text-2xl lg:text-3xl font-normal tracking-wide mb-0 mt-0'
+                    }
                   >
                     {text}
                   </p>
@@ -129,6 +137,7 @@ const Slide = ({ data }: { data: SlideData }) => (
   </div>
 );
 
+//Main Carousel TSX component
 function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(1);
   const [isTransitioning, setIsTransitioning] = useState(false);
