@@ -65,7 +65,7 @@ export default function FormalCasualGrid() {
       title: 'KEEPING CURRENT & LOOKING COOL',
       subTitle: 'BUSINESS CASUAL',
       description: `Strike the perfect balance between professional and relaxed with our business casual collection. Ideal for the modern workspace or a polished weekend look, these versatile outfits keep you sharp, stylish, and ready for anything.`,
-      image: '/images/grid/business-casual.png',
+      image: '/images/grid/business-casual-1-2.png',
       imageSrcMobile: '/images/grid/business-casual-mobile.png',
       span: 'twoThirds',
       hasOverlay: true,
@@ -78,7 +78,8 @@ export default function FormalCasualGrid() {
     <section className="max-w-6xl mx-auto px-4 pt-4 pb-10 sm:pb-10 sm:pt-6">
       <div className="text-center mb-6 sm:mb-12">
         <h2 className="text-4xl sm:text-6xl font-semibold text-primary-dark my-3 sm:my-7 sm:tracking-wider">
-          FROM FORMAL TO CASUAL
+          FROM FORMAL
+          <br className="md:hidden" /> TO CASUAL
         </h2>
         <p className="text-2xl md:text-3xl text-primary-dark sm:tracking-wider">
           EVERYTHING IN MEN&apos;S & BOY&apos;S FASHION IN ONE PLACE.
@@ -89,7 +90,7 @@ export default function FormalCasualGrid() {
         {categories.map(category => (
           <div
             key={category.id}
-            className={`relative md:h-[320px] ${
+            className={`relative md:h-[380px] ${
               category.span === 'twoThirds' ? 'md:col-span-2' : 'md:col-span-1'
             }`}
           >

@@ -28,7 +28,7 @@ export default function Card({
   const [isMobile, setIsMobile] = useState(false);
   const [isPressed, setIsPressed] = useState(false);
 
-  // Check if we're on mobile
+  // Check if on mobile
   useEffect(() => {
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth < 768); // 768px is Tailwind's md breakpoint
@@ -53,8 +53,10 @@ export default function Card({
 
   const showOverlay = isMobile ? isPressed : isHovered;
   // Determine which image to display
-  const currentImageSrc =
-    isMobile && imageSrcMobile ? imageSrcMobile : imageSrc;
+  const cacheBust = isMobile ? 'mobile' : 'desktop';
+  const currentImageSrc = `${
+    isMobile && imageSrcMobile ? imageSrcMobile : imageSrc
+  }?v=${cacheBust}`;
 
   return (
     <div
@@ -105,24 +107,24 @@ export default function Card({
       {/* Special Half-Width Overlay for Cards 3 and 6 */}
       {hasOverlay && !showOverlay && !isMobile && (
         <div
-          className={`absolute inset-0 bg-black bg-opacity-80 flex w-[50%] transition-all duration-300 ease-in-out ${
+          className={`absolute inset-0 bg-black bg-opacity-80 flex w-[40%] transition-all duration-300 ease-in-out ${
             overlayPosition === 'right' ? 'right-0 ml-auto' : 'left-0'
           }`}
         >
-          <div className="w-full h-full mx-4 flex justify-center flex-col">
+          <div className="w-full h-full mx-4 flex justify-start flex-col">
             <h3
-              className={`text-2xl md:text-5xl font-semibold text-white tracking-wider ${
+              className={`text-2xl md:text-[3rem] mt-6 font-semibold text-white tracking-wider ${
                 overlayPosition === 'right' ? 'text-right' : 'text-left'
               }`}
             >
               {overlayText?.split('\n').map((line, index) => (
-                <div key={index} className="mb-2">
+                <div key={index} className="mb-6">
                   {line}
                 </div>
               ))}
             </h3>
             <p
-              className={`mb-1 pt-8 text-2xl ${
+              className={`mb-1 text-2xl ${
                 overlayPosition === 'right' ? 'text-right' : 'text-left'
               }`}
             >
@@ -141,17 +143,15 @@ export default function Card({
         }`}
       >
         <h3
-          className={`md:text-4xl px-2 font-semibold tracking-wider ${
-            isMobile ? 'text-xl mb-1' : 'text-xl mb-1'
-          }`}
+          className={`md:text-4xl px-2 font-semibold tracking-wider text-2xl mb-1`}
         >
           {subTitle ?? title}
         </h3>
         <div className="w-10/12 max-w-xl mx-auto px-2">
           <p
             className={` md:text-xl font-light tracking-wide leading-relaxed text-center
-              ${isMobile ? 'text-sm' : 'text-xl'}`}
-            style={{ lineHeight: '1.15' }}
+              ${isMobile ? 'text-lg' : 'text-xl'}`}
+            style={{ lineHeight: '1.2' }}
           >
             {description}
           </p>
