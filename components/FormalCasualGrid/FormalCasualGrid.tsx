@@ -75,7 +75,7 @@ export default function FormalCasualGrid() {
   ];
 
   return (
-    <section className="max-w-6xl mx-auto px-4 pt-4 pb-10 sm:pb-10 sm:pt-6">
+    <section className="max-w-6xl mx-auto px-4 pt-4 pb-10 sm:pb-10 sm:pt-6 bg-white">
       <div className="text-center mb-6 sm:mb-12">
         <h2 className="text-4xl sm:text-6xl font-semibold text-primary-dark my-3 sm:my-7 sm:tracking-wider">
           FROM FORMAL
