@@ -103,7 +103,6 @@ const Slide = ({ data }: { data: SlideData }) => (
           <div className="md:space-y-3 max-w-4xl">
             {data.title && (
               <>
-                {/* Desktop title */}
                 <h2 className={data.className}>{data.title}</h2>
                 {data.title2 && (
                   <h2 className="text-4xl sm:text-8xl font-semibold">
@@ -139,7 +138,6 @@ const Slide = ({ data }: { data: SlideData }) => (
   </div>
 );
 
-//Main Carousel TSX component
 function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(1);
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -173,7 +171,7 @@ function HeroCarousel() {
       setIsTransitioning(true);
       setCurrentSlide(prev => prev + (direction === 'next' ? 1 : -1));
       startTimer();
-      setTimeout(() => setCanNavigate(true), 1000);
+      setTimeout(() => setCanNavigate(true), 500);
     },
     [canNavigate, startTimer]
   );
@@ -187,7 +185,7 @@ function HeroCarousel() {
 
   useEffect(() => {
     if (isTransitioning) {
-      const timer = setTimeout(handleTransitionEnd, 1000);
+      const timer = setTimeout(handleTransitionEnd, 500);
       return () => clearTimeout(timer);
     }
   }, [isTransitioning, handleTransitionEnd]);
@@ -197,16 +195,16 @@ function HeroCarousel() {
       <div
         className={`flex h-full ${
           isTransitioning
-            ? 'transition-transform duration-1000 ease-in-out'
+            ? 'transition-transform duration-500 ease-in-out'
             : 'transition-none'
         }`}
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >
-        <Slide data={SLIDES[SLIDES.length - 1]} /> {/* Clone of last slide */}
+        <Slide data={SLIDES[SLIDES.length - 1]} />
         {SLIDES.map(slide => (
           <Slide key={slide.id} data={slide} />
         ))}
-        <Slide data={SLIDES[0]} /> {/* Clone of first slide */}
+        <Slide data={SLIDES[0]} />
       </div>
 
       <CarouselButton
