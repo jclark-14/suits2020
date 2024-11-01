@@ -5,7 +5,7 @@ import Footer from '../components/layout/Footer';
 
 export const metadata = {
   title: 'Suits 20/20',
-  description: 'Built with Next.js',
+  description: `Built with Next.js to showcase the elegance of Suits 20/20's formal attire collection.`,
 };
 
 const poppins = Poppins({

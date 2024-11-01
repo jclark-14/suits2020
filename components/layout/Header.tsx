@@ -10,14 +10,14 @@ export default function Header() {
       {/* Background */}
       <div className="relative bg-cover bg-center h-32 md:h-36">
         <Image
-          src="/images/logo/suit-texture2.png"
+          src="/images/logo/pinstripe.png"
           alt="Suits 20/20 Background"
           fill
           className="object-cover"
           quality={100}
           priority={true}
         />
-        <div className="absolute inset-0 bg-black opacity-70"></div>
+        <div className="absolute inset-0 bg-neutral-950 opacity-70"></div>
         {/* Logo */}
         <div className="relative flex items-center space-x-8 md:space-x-12 justify-center h-full text-center text-white px-4">
           <SuitsLogo
