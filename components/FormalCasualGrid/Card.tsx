@@ -2,10 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { X } from 'lucide-react';
 
 interface CardProps {
   title: string;
-  subTitle?: string | undefined;
+  subTitle?: string;
   description: string;
   imageSrc: string;
   imageSrcMobile?: string;
@@ -26,42 +27,42 @@ export default function Card({
 }: CardProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [isPressed, setIsPressed] = useState(false);
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
 
   // Check if on mobile
   useEffect(() => {
     const checkIfMobile = () => {
-      setIsMobile(window.innerWidth < 768); // 768px is Tailwind's md breakpoint
+      setIsMobile(window.innerWidth < 768);
     };
 
-    // Check immediately and add listener
     checkIfMobile();
     window.addEventListener('resize', checkIfMobile);
 
-    // Cleanup the event listener
     return () => {
       window.removeEventListener('resize', checkIfMobile);
     };
   }, []);
 
-  // Handle card interaction based on device
-  const handleInteraction = () => {
+  const handleCardClick = () => {
     if (isMobile) {
-      setIsPressed(!isPressed);
+      setIsOverlayOpen(true);
     }
   };
 
-  const showOverlay = isMobile ? isPressed : isHovered;
-  // Determine which image to display
-  const cacheBust = isMobile ? 'mobile' : 'desktop';
+  const handleClose = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setIsOverlayOpen(false);
+  };
+
+  const showOverlay = isMobile ? isOverlayOpen : isHovered;
   const currentImageSrc = `${
     isMobile && imageSrcMobile ? imageSrcMobile : imageSrc
-  }?v=${cacheBust}`;
+  }?v=${isMobile ? 'mobile' : 'desktop'}`;
 
   return (
     <div
-      className={`relative w-full h-full overflow-hidden group rounded-md shadow-xl md:shadow-lg`}
-      onClick={handleInteraction}
+      className="relative w-full h-full overflow-hidden group rounded-md shadow-xl md:shadow-lg"
+      onClick={handleCardClick}
       onMouseEnter={() => !isMobile && setIsHovered(true)}
       onMouseLeave={() => !isMobile && setIsHovered(false)}
     >
@@ -134,7 +135,7 @@ export default function Card({
         </div>
       )}
 
-      {/* Blue Hover/Press Overlay - Applied to All Cards */}
+      {/* Blue Overlay - Applied to All Cards */}
       <div
         className={`absolute inset-0 h-full bg-blue-950 bg-opacity-80 text-white flex flex-col justify-center items-center text-center transform transition-all duration-300 ${
           showOverlay
@@ -142,15 +143,21 @@ export default function Card({
             : 'translate-y-full opacity-0'
         }`}
       >
-        <h3
-          className={`md:text-4xl px-2 font-semibold tracking-wider text-2xl mb-1`}
-        >
+        {isMobile && showOverlay && (
+          <button
+            onClick={handleClose}
+            className="close-button absolute top-2 right-2 p-2 text-white hover:text-gray-300 transition-colors"
+            aria-label="Close overlay"
+          >
+            <X size={26} />
+          </button>
+        )}
+        <h3 className="md:text-4xl px-2 font-semibold tracking-wider text-2xl mb-1">
           {subTitle ?? title}
         </h3>
         <div className="w-10/12 max-w-xl mx-auto px-2">
           <p
-            className={` md:text-xl font-light tracking-wide leading-relaxed text-center
-              ${isMobile ? 'text-lg' : 'text-xl'}`}
+            className="md:text-xl font-light tracking-wide leading-relaxed text-center text-lg"
             style={{ lineHeight: '1.2' }}
           >
             {description}
