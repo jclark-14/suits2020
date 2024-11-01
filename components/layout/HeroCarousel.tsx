@@ -25,7 +25,7 @@ const SLIDES: SlideData[] = [
     overlayOpacity: 0.5,
     title: 'CHEERS TO 30%',
     description: ['SAVINGS FOR YOUR WEDDING PARTY!'],
-    className: 'text-4xl sm:text-5xl md:text-5xl lg:text-8xl mb-0',
+    className: 'text-4xl sm:text-5xl md:text-5xl lg:text-8xl pt-10 mb-0',
     className2:
       'text-xl md:text-3xl lg:text-4xl font-normal tracking-wide mt-0 mb-3',
   },
@@ -52,7 +52,7 @@ const SLIDES: SlideData[] = [
     overlayOpacity: 0.5,
     title: 'FULL SERVICE STYLE',
     description: ['Expert Fashion Advice and Custom', 'Tailoring On-site.'],
-    className: 'text-4xl sm:text-5xl md:text-5xl lg:text-8xl',
+    className: 'text-4xl sm:text-5xl md:text-5xl lg:text-8xl pt-10 mb-0',
   },
 ];
 
@@ -191,7 +191,7 @@ function HeroCarousel() {
   }, [isTransitioning, handleTransitionEnd]);
 
   return (
-    <div className="relative h-[250px] sm:h-[350px] md:h-[415px] lg:h-[500px] w-full overflow-hidden">
+    <div className="relative h-[275px] sm:h-[350px] md:h-[415px] lg:h-[500px] w-full overflow-hidden">
       <div
         className={`flex h-full ${
           isTransitioning
