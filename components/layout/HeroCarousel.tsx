@@ -191,7 +191,7 @@ function HeroCarousel() {
   }, [isTransitioning, handleTransitionEnd]);
 
   return (
-    <div className="relative h-[275px] sm:h-[350px] md:h-[415px] lg:h-[500px] w-full overflow-hidden bg-black">
+    <div className="relative h-[275px] sm:h-[350px] md:h-[415px] lg:h-[500px] w-full overflow-hidden bg-gray-800">
       <div
         className={`flex h-full ${
           isTransitioning
