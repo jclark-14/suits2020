@@ -68,7 +68,7 @@ const CarouselButton = ({
     onClick={onClick}
     className={`absolute ${
       direction === 'left' ? 'left-2 sm:left-4' : 'right-2 sm:right-4'
-    } top-1/2 -translate-y-1/2 bg-black/20 md:bg-black/50 p-1 py-2 rounded-lg text-white hover:text-gray-200 hover:bg-black/65 transition-colors z-10`}
+    } top-1/2 -translate-y-1/2 bg-black/20 md:bg-black/50 p-1 py-2 rounded-lg text-white hover:text-gray-200 transition-colors z-10`}
     aria-label={`${direction === 'left' ? 'Previous' : 'Next'} slide`}
   >
     {direction === 'left' ? (
