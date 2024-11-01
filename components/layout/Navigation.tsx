@@ -2,15 +2,33 @@
 
 import Link from 'next/link';
 import { SocialLinks } from '../ui/SocialLinksHeader';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Handle body scroll lock when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const handleNavigation = () => {
+    setIsOpen(false);
+  };
+
   return (
-    <nav className="bg-white md:bg-black ">
+    <nav className="bg-white md:bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center md:justify-center h-10 font-sans">
           {/* Desktop Menu */}
@@ -44,7 +62,11 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center justify-between w-full mt-1">
             <SocialLinks />
-            <button onClick={toggleMenu} className="text-black p-2">
+            <button
+              onClick={toggleMenu}
+              className="text-black p-2 z-50 relative"
+              aria-label={isOpen ? 'Close menu' : 'Open menu'}
+            >
               <svg
                 className="w-8 h-6"
                 fill="none"
@@ -74,34 +96,38 @@ export default function Navigation() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu Overlay */}
         {isOpen && (
-          <>
-            <div className="border-t-2 border-gray-150 -mx-4 mt-1"></div>
-            <div className="md:hidden flex flex-col items-center mt-20 space-y-16 min-h-screen text-2xl bg-white">
-              <Link href="/services">
+          <div className="fixed inset-0 bg-white z-40 md:hidden">
+            <div className="w-full mt-1 px-4 py-[6px]">
+              <SocialLinks />
+            </div>
+            <div className="border-t-2 border-gray-200 w-full"></div>
+
+            <div className="flex flex-col items-center mt-20 space-y-16 text-2xl">
+              <Link href="/services" onClick={handleNavigation}>
                 <span className="block text-gray-900 font-medium">
                   SERVICES
                 </span>
               </Link>
               <div className="border-t-2 border-gray-200 w-3/4"></div>
-              <Link href="/location">
+              <Link href="/location" onClick={handleNavigation}>
                 <span className="block text-gray-900 font-medium">
                   LOCATION
                 </span>
               </Link>
               <div className="border-t-2 border-gray-200 w-3/4"></div>
-              <Link href="/brands">
+              <Link href="/brands" onClick={handleNavigation}>
                 <span className="block text-gray-900 font-medium">
                   DESIGNER BRANDS
                 </span>
               </Link>
               <div className="border-t-2 border-gray-200 w-3/4"></div>
-              <Link href="/contact">
+              <Link href="/contact" onClick={handleNavigation}>
                 <span className="block text-gray-900 font-medium">CONTACT</span>
               </Link>
             </div>
-          </>
+          </div>
         )}
       </div>
     </nav>
