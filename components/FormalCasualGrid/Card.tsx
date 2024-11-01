@@ -137,7 +137,7 @@ export default function Card({
 
       {/* Blue Overlay - Applied to All Cards */}
       <div
-        className={`absolute inset-0 h-full bg-blue-950 bg-opacity-80 text-white flex flex-col justify-center items-center text-center transform transition-all duration-300 ${
+        className={`absolute inset-0 h-full bg-slate-900 bg-opacity-80 text-white flex flex-col justify-center items-center text-center transform transition-all duration-300 ${
           showOverlay
             ? 'translate-y-0 opacity-100'
             : 'translate-y-full opacity-0'
