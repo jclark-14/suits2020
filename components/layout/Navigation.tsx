@@ -33,7 +33,7 @@ export default function Navigation() {
         <div className="flex items-center md:justify-center h-10 font-sans">
           {/* Desktop Menu */}
           <div className="hidden md:flex flex-shrink items-center">
-            <div className="hidden md:flex items-center text-lg md:mr-40 md:text-lg lg:text-lg space-x-4 md:space-x-6 lg:space-x-8 xl:space-x-10 flex-shrink">
+            <div className="hidden md:flex items-center text-lg md:pr-28 lg:pr-40 md:text-lg lg:text-lg space-x-4 md:space-x-6 lg:space-x-8 xl:space-x-10 flex-shrink">
               <Link href="/services">
                 <span className="text-white hover:text-gray-300 transition-colors">
                   SERVICES
