@@ -20,22 +20,11 @@ interface SlideData {
 const SLIDES: SlideData[] = [
   {
     id: 1,
-    image: '/images/carousel/suits-wedding.png',
-    alt: 'Wedding Party Savings',
-    overlayOpacity: 0.5,
-    title: 'CHEERS TO 30%',
-    description: ['SAVINGS FOR YOUR WEDDING PARTY!'],
-    className: 'text-4xl sm:text-5xl md:text-5xl lg:text-8xl pt-10 mb-0',
-    className2:
-      'text-xl md:text-3xl lg:text-4xl font-normal tracking-wide mt-0 mb-3',
-  },
-  {
-    id: 2,
     image: '/images/carousel/suit-rack6.png',
     alt: 'Fashion Outlet',
     overlayOpacity: 0.3,
     title: "CHICAGOLAND'S \nMEN'S & BOY'S",
-    title2: 'FASHION OUTLET.',
+    title2: 'FASHION WAREHOUSE.',
     description: [
       'Name Brand Suits, Tuxedos, Slacks, Sportcoats, Blazers',
       'Personal Service - Tailored to Fit On-site.',
@@ -46,13 +35,24 @@ const SLIDES: SlideData[] = [
       'hidden sm:block text-base sm:text-lg md:text-2xl lg:text-3xl font-normal tracking-wide mb-0 mt-0',
   },
   {
-    id: 3,
+    id: 2,
     image: '/images/carousel/suit-measuring.png',
     alt: 'Full service style',
     overlayOpacity: 0.5,
     title: 'FULL SERVICE STYLE',
     description: ['Expert Fashion Advice and Custom', 'Tailoring On-site.'],
     className: 'text-4xl sm:text-5xl md:text-5xl lg:text-8xl pt-10 mb-0',
+  },
+  {
+    id: 3,
+    image: '/images/carousel/suits-wedding.png',
+    alt: 'Wedding Party Savings',
+    overlayOpacity: 0.5,
+    title: 'CHEERS TO 30%',
+    description: ['SAVINGS FOR YOUR WEDDING PARTY!'],
+    className: 'text-4xl sm:text-5xl md:text-5xl lg:text-8xl pt-10 mb-0',
+    className2:
+      'text-xl md:text-3xl lg:text-4xl font-normal tracking-wide mt-0 mb-3',
   },
 ];
 
