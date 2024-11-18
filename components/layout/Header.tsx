@@ -2,6 +2,7 @@ import React from 'react';
 import Navigation from './Navigation';
 import Image from 'next/image';
 import SuitsLogo from '../ui/SuitsLogoHeader';
+import Link from 'next/link';
 
 export default function Header() {
   return (
@@ -19,7 +20,10 @@ export default function Header() {
         />
         <div className="absolute inset-0 bg-black opacity-65"></div>
         {/* Logo */}
-        <div className="relative flex items-center space-x-8 md:space-x-12 justify-center h-full text-center text-white px-4">
+        <Link
+          href="/"
+          className="relative flex items-center space-x-8 md:space-x-12 justify-center h-full text-center text-white px-4"
+        >
           <SuitsLogo
             className="w-[112px] h-[88px] md:w-[140px] md:h-[110px] relative top-1 sm:top-2"
             backgroundColor="white"
@@ -40,7 +44,7 @@ export default function Header() {
               </span>
             </span>
           </div>
-        </div>
+        </Link>
       </div>
     </div>
   );
