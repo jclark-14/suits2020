@@ -13,7 +13,7 @@ const LocationPage: React.FC = () => {
           }}
         >
           {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>{' '}
+          <div className="absolute inset-0 bg-black bg-opacity-45"></div>{' '}
           <div className="flex flex-col mb-20 space-y-2 sm:space-y-4 lg:m-0 max-w-sm md:max-w-2xl lg:max-w-5xl z-10">
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-semibold m-0">
               VISIT US TODAY
@@ -27,10 +27,11 @@ const LocationPage: React.FC = () => {
       </section>
 
       {/* Address and Contact Information */}
-      <section className="container mx-auto pt-8 pb-4 sm:py-10 md:pt-20 md:pb-10 lg:pt-24 lg:pb-14 px-4 sm:px-6 max-w-6xl">
-        <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-24 sm:max-w-fit">
-          <div className="flex flex-col items-start space-y-2">
-            <h2 className="text-xl sm:text-2xl font-bold text-black mb-4 mt-4 sm:mt-0 text-center md:text-left">
+      <section className="container mx-auto pt-8 pb-4 sm:py-10 md:pt-20 md:pb-10 lg:pt-20 lg:pb-10 px-8 sm:px-6 max-w-4xl">
+        <div className="flex flex-col sm:flex-row justify-between">
+          {/* Our Store Location */}
+          <div className="flex flex-col space-y-2 text-center sm:text-left">
+            <h2 className="text-xl sm:text-2xl font-bold text-black mb-0 sm:mb-4 mt-4 sm:mt-0">
               Our Store Location
             </h2>
             <p className="text-base sm:text-lg text-black">
@@ -56,8 +57,9 @@ const LocationPage: React.FC = () => {
               </a>
             </p>
           </div>
-          <div className="flex flex-col items-start space-y-2">
-            <h2 className="text-xl sm:text-2xl font-bold mb-4 text-black text-center md:text-left">
+          {/* Store Hours */}
+          <div className="flex flex-col space-y-2 mt-10 sm:mt-0 text-center sm:text-left">
+            <h2 className="text-xl sm:text-2xl font-bold mb-0 sm:mb-4 text-black">
               Store Hours
             </h2>
             <p className="text-base sm:text-lg text-black mb-0">
@@ -86,7 +88,7 @@ const LocationPage: React.FC = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="pt-4 pb-12 text-center">
+      <section className="pt-6 pb-12 text-center">
         <h2 className="text-2xl font-bold text-black mb-4">
           Ready to Visit Us?
         </h2>
@@ -96,7 +98,7 @@ const LocationPage: React.FC = () => {
           )}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 inline-block font-normal bg-white text-black border-2 border-footerBrown py-3 px-5 rounded-lg hover:bg-footerBrown hover:text-white transition-colors duration-200 shadow-lg"
+          className="mt-4 inline-block font-medium bg-white text-black border-2 shadow-md border-footerBrown py-3 px-5 rounded-lg hover:bg-footerBrown hover:text-white hover:scale-105 transition-all duration-200 hover:shadow-xl"
         >
           Get Directions
         </Link>
