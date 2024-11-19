@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <div>
+    <header>
       <Navigation />
       {/* Background */}
       <div className="relative bg-cover bg-center h-32 md:h-36">
@@ -23,14 +23,15 @@ export default function Header() {
         <Link
           href="/"
           className="relative flex items-center space-x-8 md:space-x-12 justify-center h-full text-center text-white px-4"
+          aria-label="Navigate to homepage"
         >
           <SuitsLogo
             className="w-[112px] h-[88px] md:w-[140px] md:h-[110px] relative top-1 sm:top-2"
             backgroundColor="white"
             strokeColor="white"
             textColor="black"
+            aria-label="Suits 20/20 logo"
           />
-
           <div className="relative border-[1.5px] border-white h-[77px] md:h-[97px] rounded-full bottom-[2px] sm:top-[1px]"></div>
           <div className="text-md md:text-2xl lg:text-[23px] font-medium text-left leading-5 sm:leading-5">
             MEN&apos;S & BOY&apos;S
@@ -46,6 +47,6 @@ export default function Header() {
           </div>
         </Link>
       </div>
-    </div>
+    </header>
   );
 }

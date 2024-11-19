@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { SocialLinks } from '../ui/SocialLinksHeader';
+import { SocialLinks } from '../ui/SocialLinks';
 import { useState, useEffect } from 'react';
 
 export default function Navigation() {
@@ -56,12 +56,12 @@ export default function Navigation() {
                 <span className="text-white hover:text-gray-300">CONTACT</span>
               </Link>
             </div>
-            <SocialLinks />
+            <SocialLinks color="white" />
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center justify-between w-full mt-1">
-            <SocialLinks />
+            <SocialLinks color="black" />
             <button
               onClick={toggleMenu}
               className="text-black p-2 z-50 relative"
@@ -100,7 +100,7 @@ export default function Navigation() {
         {isOpen && (
           <div className="fixed inset-0 bg-white z-40 md:hidden">
             <div className="w-full mt-1 px-4 py-[6px]">
-              <SocialLinks />
+              <SocialLinks color="black" />
             </div>
             <div className="border-t-2 border-gray-200 w-full"></div>
 

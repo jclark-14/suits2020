@@ -1,4 +1,4 @@
-import { SocialLinks } from '../ui/SocialLinksFooter';
+import { SocialLinks } from '../ui/SocialLinks';
 import SuitsLogo from '../ui/SuitsLogoHeader';
 
 export default function Footer() {
@@ -26,7 +26,7 @@ export default function Footer() {
 
         {/* Social Links */}
         <div className="mb-3 sm:mb-4 mx-auto">
-          <SocialLinks />
+          <SocialLinks color="white" />
         </div>
 
         {/* Copyright */}
