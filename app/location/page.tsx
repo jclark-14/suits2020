@@ -25,7 +25,7 @@ const LocationPage: React.FC = () => {
     telephone: '+1-847-676-2020',
     email: 'info@suits2020.com',
     url: 'https://suits2020.com/location',
-    image: '/images/location/chicago-skyline.jpg',
+    image: '/images/location/location-hero.jpg',
   };
 
   return (
@@ -51,8 +51,9 @@ const LocationPage: React.FC = () => {
         <Hero
           title="VISIT US TODAY"
           subtitle="Expert fashion advice and custom tailoring at our convenient location."
-          imagePath="/images/location/chicago-skyline.jpg"
+          imagePath="/images/location/location-hero.png"
           imageAlt="Chicago skyline backdrop"
+          overlayOpacity={30}
         />
 
         {/* Address and Contact Information */}
