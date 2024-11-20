@@ -93,11 +93,11 @@ const ServicesPage: React.FC = () => {
           <div className="text-center mb-16 max-w-3xl mx-auto">
             <h2
               id="services-heading"
-              className="text-3xl sm:text-4xl font-bold text-black mb-6"
+              className="text-4xl sm:text-5xl font-bold text-black mb-6"
             >
               On-Site Services
             </h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-xl sm:text-2xl text-gray-700 leading-relaxed">
               Experience the perfect blend of traditional craftsmanship and
               modern style with our expert tailoring and design services.
             </p>
@@ -124,11 +124,11 @@ const ServicesPage: React.FC = () => {
               <div className="space-y-4 px-6">
                 <h3
                   id="tailoring-heading"
-                  className="text-3xl font-bold text-black"
+                  className="text-4xl font-bold text-black"
                 >
                   In-Store Tailoring
                 </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-xl text-gray-700 leading-relaxed">
                   Get the perfect fit with our expert tailoring services. From
                   simple alterations to full suit customization, we ensure your
                   clothes fit perfectly.
@@ -175,11 +175,11 @@ const ServicesPage: React.FC = () => {
               <div className="space-y-4 px-6">
                 <h3
                   id="consultation-heading"
-                  className="text-3xl font-bold text-black"
+                  className="text-4xl font-bold text-black"
                 >
                   Design Consultation
                 </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-xl text-gray-700 leading-relaxed">
                   Work with our expert consultants to create a personalized
                   style that matches your taste and needs. We help with fabric
                   selection, design, and fit.
@@ -217,11 +217,11 @@ const ServicesPage: React.FC = () => {
             <div className="max-w-2xl mx-auto space-y-6">
               <h2
                 id="cta-heading"
-                className="text-2xl sm:text-3xl font-bold text-black"
+                className="text-3xl sm:text-4xl font-bold text-black"
               >
                 Interested In Our Services?
               </h2>
-              <p className="text-lg text-gray-700">
+              <p className="text-xl text-gray-700">
                 Schedule a consultation with our expert tailors and design
                 consultants today.
               </p>

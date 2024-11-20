@@ -62,17 +62,17 @@ const LocationPage: React.FC = () => {
         >
           <div className="flex flex-col sm:flex-row sm:justify-between">
             <div className="flex flex-col space-y-2 text-center sm:text-left">
-              <h2 className="text-xl sm:text-2xl font-bold text-black sm:mb-4 mt-4 sm:mt-0">
+              <h2 className="text-2xl sm:text-3xl font-bold text-black sm:mb-4 mt-4 sm:mt-0">
                 Our Store Location
               </h2>
               <address className="not-italic leading-none">
-                <p className="text-base sm:text-lg text-black leading-none">
+                <p className="text-lg sm:text-xl text-black leading-none">
                   7651 N Caldwell Ave
                 </p>
-                <p className="text-base sm:text-lg text-black leading-none">
+                <p className="text-lg sm:text-xl text-black leading-none">
                   Niles, IL 60714
                 </p>
-                <p className="text-base sm:text-lg text-black leading-none">
+                <p className="text-lg sm:text-xl text-black leading-none">
                   Phone:{' '}
                   <a
                     href="tel:+18476762020"
@@ -82,7 +82,7 @@ const LocationPage: React.FC = () => {
                     +1 (847) 676-2020
                   </a>
                 </p>
-                <p className="text-base sm:text-lg text-black">
+                <p className="text-lg sm:text-xl text-black">
                   Email:{' '}
                   <a
                     href="mailto:info@suits2020.com"
@@ -98,13 +98,13 @@ const LocationPage: React.FC = () => {
               className="flex flex-col space-y-2 mt-6 sm:mt-0 text-center sm:text-left"
               aria-label="Store hours"
             >
-              <h2 className="text-xl sm:text-2xl font-bold sm:mb-4 text-black">
+              <h2 className="text-2xl sm:text-3xl font-bold sm:mb-4 text-black">
                 Store Hours
               </h2>
-              <p className="text-base sm:text-lg text-black">
+              <p className="text-lg sm:text-xl text-black">
                 Monday - Friday: 11:00 AM - 7:00 PM
               </p>
-              <p className="text-base sm:text-lg text-black">
+              <p className="text-lg sm:text-xl text-black">
                 Saturday - Sunday: 10:00 AM - 5:00 PM
               </p>
             </div>
@@ -113,7 +113,7 @@ const LocationPage: React.FC = () => {
 
         {/* Map Section */}
         <section className="container mx-auto py-4 px-6 max-w-2xl md:max-w-3xl lg:max-w-5xl">
-          <h2 className="text-2xl font-bold text-black mb-6 text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-black mb-6 text-center">
             Our Location on the Map
           </h2>
           <div className="w-full h-96 sm:h-128">

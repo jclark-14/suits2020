@@ -10,15 +10,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Primary colors
         primary: {
           DEFAULT: 'white',
           light: '#3B5BA5',
           dark: 'black',
         },
-        // Secondary colors
         secondary: {
-          DEFAULT: '#8B7355', // Warm brown - good for accents
+          DEFAULT: '#8B7355', // Warm brown
           light: '#A68E6A',
           dark: '#6A563F',
         },
@@ -38,11 +36,10 @@ module.exports = {
         footerBrown: '#231f20',
       },
       fontFamily: {
-        // Classic, professional fonts
-        sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+        sans: ['"futura-pt"', 'Poppins', 'sans-serif'],
+        serif: ['Poppins', 'ui-sans-serif', 'system-ui'],
       },
       fontSize: {
-        // Custom size scale
         xs: ['0.75rem', { lineHeight: '1rem' }],
         sm: ['0.875rem', { lineHeight: '1.25rem' }],
         base: ['1rem', { lineHeight: '1.5rem' }],
@@ -69,17 +66,14 @@ module.exports = {
         black: 900,
       },
       spacing: {
-        // Custom spacing scale
         '128': '32rem',
         '144': '36rem',
       },
       borderRadius: {
-        // Custom border radius
         xl: '1rem',
         '2xl': '1.5rem',
       },
       boxShadow: {
-        // Custom shadows
         soft: '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
         card: '0 2px 4px rgba(0, 0, 0, 0.1)',
       },

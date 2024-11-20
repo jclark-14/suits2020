@@ -19,7 +19,7 @@ const Hero = ({
   imageAlt,
   overlayOpacity = 45,
   titleSize = 'text-4xl sm:text-5xl lg:text-7xl',
-  subtitleSize = 'text-base sm:text-xl md:text-2xl lg:text-4xl',
+  subtitleSize = 'text-2xl lg:text-4xl',
   height = 'medium',
   customHeight,
 }: HeroProps) => {
@@ -78,15 +78,15 @@ const Hero = ({
       ></div>
 
       {/* Content Container */}
-      <div className="relative h-full flex flex-col justify-end items-center text-center text-white z-10 px-4 md:px-6 lg:px-8 pb-10 sm:pb-20">
+      <div className="relative h-full flex flex-col justify-end items-center text-center text-white z-10 px-4 md:px-6 lg:px-8 pb-6 sm:pb-14 md:pb-20">
         <div className="max-w-6xl mx-auto">
           <h1
-            className={`${titleSize} font-semibold leading-[1.2] mb-4 sm:mb-6`}
+            className={`${titleSize} font-semibold leading-[1.2] mb-0 sm:mb-2 lg:mb-4`}
           >
             {title}
           </h1>
           <h3
-            className={`${subtitleSize} font-normal tracking-wide max-w-3xl mx-auto leading-relaxed`}
+            className={`${subtitleSize} font-normal tracking-wide max-w-4xl mx-auto leading-normal sm:leading-normal md:leading-normal lg:leading-normal`}
           >
             {subtitle}
           </h3>
