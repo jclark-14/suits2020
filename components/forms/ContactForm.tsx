@@ -9,7 +9,7 @@ const ContactForm: React.FC = () => {
       name: '',
       email: '',
       comment: '',
-      services: [],
+      services: [] as string[],
     },
     validationSchema: Yup.object({
       name: Yup.string().required('Name is required'),
