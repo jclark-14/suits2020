@@ -34,21 +34,27 @@ export default function Navigation() {
           {/* Desktop Menu */}
           <div className="hidden md:flex flex-shrink items-center">
             <div className="hidden md:flex items-center font-normal tracking-wide text-lg md:pr-28 lg:pr-40 md:text-lg lg:text-lg space-x-4 md:space-x-6 lg:space-x-8 xl:space-x-10 flex-shrink">
+              <Link href="/">
+                <span className="text-white hover:text-gray-300 transition-colors">
+                  HOME
+                </span>
+              </Link>
+              <div className="border-l border-[1.5px] border-white h-[19px]"></div>
               <Link href="/services">
                 <span className="text-white hover:text-gray-300 transition-colors">
                   SERVICES
                 </span>
               </Link>
               <div className="border-l border-[1.5px] border-white h-[19px]"></div>
-              <Link href="/location">
-                <span className="text-white hover:text-gray-300 transition-colors">
-                  LOCATION
-                </span>
-              </Link>
-              <div className="border-l border-[1.5px] border-white h-[19px]"></div>
               <Link href="/brands">
                 <span className="text-white hover:text-gray-300 whitespace-nowrap inline-block transition-colors">
                   DESIGNER BRANDS
+                </span>
+              </Link>
+              <div className="border-l border-[1.5px] border-white h-[19px]"></div>
+              <Link href="/location">
+                <span className="text-white hover:text-gray-300 transition-colors">
+                  LOCATION
                 </span>
               </Link>
               <div className="border-l border-[1.5px] border-white h-[19px]"></div>
@@ -105,21 +111,25 @@ export default function Navigation() {
             <div className="border-t-2 border-gray-200 w-full"></div>
 
             <div className="flex flex-col items-center mt-20 space-y-16 text-2xl">
+              <Link href="/" onClick={handleNavigation}>
+                <span className="block text-gray-900 font-medium">HOME</span>
+              </Link>
+              <div className="border-t-2 border-gray-200 w-3/4"></div>
               <Link href="/services" onClick={handleNavigation}>
                 <span className="block text-gray-900 font-medium">
                   SERVICES
                 </span>
               </Link>
               <div className="border-t-2 border-gray-200 w-3/4"></div>
-              <Link href="/location" onClick={handleNavigation}>
-                <span className="block text-gray-900 font-medium">
-                  LOCATION
-                </span>
-              </Link>
-              <div className="border-t-2 border-gray-200 w-3/4"></div>
               <Link href="/brands" onClick={handleNavigation}>
                 <span className="block text-gray-900 font-medium">
                   DESIGNER BRANDS
+                </span>
+              </Link>
+              <div className="border-t-2 border-gray-200 w-3/4"></div>
+              <Link href="/location" onClick={handleNavigation}>
+                <span className="block text-gray-900 font-medium">
+                  LOCATION
                 </span>
               </Link>
               <div className="border-t-2 border-gray-200 w-3/4"></div>
