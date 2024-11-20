@@ -66,12 +66,12 @@ const ContactForm: React.FC = () => {
       role="form"
       noValidate
     >
-      <div role="group" aria-labelledby="personal-info">
+      <div role="group" aria-labelledby="personal-info" className="space-y-4">
         <span id="personal-info" className="sr-only">
           Personal Information
         </span>
 
-        {/* Name field */}
+        {/* Name Field */}
         <div>
           <label
             htmlFor="name"
@@ -86,7 +86,7 @@ const ContactForm: React.FC = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.name}
-            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-footerBrown focus:border-footerBrown"
+            className="block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-footerBrown focus:border-footerBrown"
             aria-required="true"
             aria-invalid={formik.touched.name && !!formik.errors.name}
             aria-describedby={formik.errors.name ? 'name-error' : undefined}
@@ -98,7 +98,7 @@ const ContactForm: React.FC = () => {
           )}
         </div>
 
-        {/* Email field */}
+        {/* Email Field */}
         <div>
           <label
             htmlFor="email"
@@ -113,7 +113,7 @@ const ContactForm: React.FC = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.email}
-            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-footerBrown focus:border-footerBrown"
+            className="block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-footerBrown focus:border-footerBrown"
             aria-required="true"
             aria-invalid={formik.touched.email && !!formik.errors.email}
             aria-describedby={formik.errors.email ? 'email-error' : undefined}
