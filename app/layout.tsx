@@ -2,10 +2,12 @@ import './globals.css';
 import { Poppins } from 'next/font/google';
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
+import { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Suits 20/20',
   description: `Built with Next.js to showcase the elegance of Suits 20/20's formal attire collection.`,
+  metadataBase: new URL('https://suits2020.com'),
 };
 
 const poppins = Poppins({
