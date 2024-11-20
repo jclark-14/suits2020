@@ -1,7 +1,7 @@
 import React from 'react';
-import Link from 'next/link';
 import Head from 'next/head';
-import Image from 'next/image';
+import Hero from '@/components/layout/Hero';
+import Button from '@/components/ui/Button';
 
 const LocationPage: React.FC = () => {
   const schema = {
@@ -48,30 +48,12 @@ const LocationPage: React.FC = () => {
         />
       </Head>
       <div className="bg-white">
-        {/* Hero Section */}
-        <section className="relative h-[275px] sm:h-[350px] md:h-[400px] lg:h-[500px] w-full overflow-hidden bg-gray-800">
-          <div className="absolute inset-0 w-full h-full">
-            <Image
-              src="/images/location/chicago-skyline.jpg"
-              alt="Chicago skyline backdrop"
-              fill
-              priority
-              className="object-cover"
-              quality={90}
-            />
-          </div>
-          {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-45"></div>
-          <div className="relative h-full flex flex-col justify-center items-center text-center text-white z-10 px-4 pt-20 sm:pt-44">
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-semibold m-0">
-              VISIT US TODAY
-            </h1>
-            <h3 className="text-base sm:text-xl md:text-2xl lg:text-4xl font-normal tracking-wide m-0 mt-4">
-              Expert fashion advice and custom tailoring at our convenient
-              location.
-            </h3>
-          </div>
-        </section>
+        <Hero
+          title="VISIT US TODAY"
+          subtitle="Expert fashion advice and custom tailoring at our convenient location."
+          imagePath="/images/location/chicago-skyline.jpg"
+          imageAlt="Chicago skyline backdrop"
+        />
 
         {/* Address and Contact Information */}
         <section
@@ -147,23 +129,20 @@ const LocationPage: React.FC = () => {
 
         {/* Call to Action */}
         <section
-          className="pt-4 pb-10 sm:pt-10 sm:pb-16 text-center"
+          className="pt-4 pb-10 sm:pt-10 sm:pb-14 text-center"
           aria-label="Get directions"
         >
           <h2 className="text-2xl font-bold text-black mb-4">
             Ready to Visit Us?
           </h2>
-          <Link
+          <Button
             href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
               '7651 N Caldwell Ave, Niles, IL 60714'
             )}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-block font-medium bg-white text-black border-2 shadow-md border-footerBrown py-3 px-5 rounded-lg hover:bg-footerBrown hover:text-white hover:scale-105 transition-all duration-200 hover:shadow-xl"
-            aria-label="Get directions to our store"
-          >
-            Get Directions
-          </Link>
+            label="Get Directions"
+            ariaLabel="Get directions to our store"
+            isExternal
+          />
         </section>
       </div>
     </main>

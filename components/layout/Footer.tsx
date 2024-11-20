@@ -1,5 +1,5 @@
 import { SocialLinks } from '../ui/SocialLinks';
-import SuitsLogo from '../ui/SuitsLogoHeader';
+import SuitsLogo from '../ui/SuitsLogo';
 
 export default function Footer() {
   return (
@@ -11,7 +11,7 @@ export default function Footer() {
             className="w-[130px] h-[88px] md:w-[180px] md:h-[120px]"
             backgroundColor="white"
             strokeColor="white"
-            textColor="black"
+            textColor="footerBrown"
           />
         </div>
 

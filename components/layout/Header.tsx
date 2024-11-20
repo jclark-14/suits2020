@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from './Navigation';
 import Image from 'next/image';
-import SuitsLogo from '../ui/SuitsLogoHeader';
+import SuitsLogo from '../ui/SuitsLogo';
 import Link from 'next/link';
 
 export default function Header() {
@@ -20,20 +20,19 @@ export default function Header() {
         />
         <div className="absolute inset-0 bg-black opacity-65"></div>
         {/* Logo */}
-        <Link
-          href="/"
-          className="relative flex items-center space-x-8 md:space-x-12 justify-center h-full text-center text-white px-4"
-          aria-label="Navigate to homepage"
-        >
+        <div className="relative flex items-center space-x-8 md:space-x-12 justify-center h-full text-center text-white px-4">
           <SuitsLogo
             className="w-[112px] h-[88px] md:w-[140px] md:h-[110px] relative top-1 sm:top-2"
             backgroundColor="white"
             strokeColor="white"
-            textColor="black"
+            textColor="footerBrown"
             aria-label="Suits 20/20 logo"
           />
           <div className="relative border-[1.5px] border-white h-[77px] md:h-[97px] rounded-full bottom-[2px] sm:top-[1px]"></div>
-          <div className="text-md md:text-2xl lg:text-[23px] font-medium text-left leading-5 sm:leading-5">
+          <Link
+            href="/"
+            className="text-md md:text-2xl lg:text-[23px] font-medium text-left leading-5 sm:leading-5"
+          >
             MEN&apos;S & BOY&apos;S
             <br className="sm:hidden" /> FASHIONS{' '}
             <br className="hidden md:flex" />{' '}
@@ -44,8 +43,8 @@ export default function Header() {
                 VALUE
               </span>
             </span>
-          </div>
-        </Link>
+          </Link>
+        </div>
       </div>
     </header>
   );
