@@ -1,4 +1,5 @@
 import aspectRatio from '@tailwindcss/aspect-ratio';
+import forms from '@tailwindcss/forms';
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -79,5 +80,5 @@ module.exports = {
       },
     },
   },
-  plugins: [aspectRatio],
+  plugins: [aspectRatio, forms],
 };

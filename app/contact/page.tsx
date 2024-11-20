@@ -11,10 +11,11 @@ const ContactPage: React.FC = () => {
         imagePath="/images/contact/contact-hero.png"
         imageAlt="Contact Hero Image"
         height="large"
-        overlayOpacity={35}
+        className="object-top object-cover"
+        overlayOpacity={20}
       />
-      <section className="container mx-auto py-16 sm:pt-24 sm:pb-16 px-6 max-w-7xl">
-        <h2 className="text-center text-3xl sm:text-4xl font-bold text-black mb-12">
+      <section className="container bg-white mx-auto py-16 sm:pt-24 sm:pb-20 px-6 max-w-7xl">
+        <h2 className="text-center text-3xl sm:text-5xl font-bold text-black sm:mb-12">
           Get In Touch
         </h2>
         <ContactForm />

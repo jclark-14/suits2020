@@ -134,7 +134,7 @@ const ServicesPage: React.FC = () => {
                   clothes fit perfectly.
                 </p>
                 <ul
-                  className="text-gray-700 space-y-2 mt-4"
+                  className="text-gray-700 space-y-2 mt-4 text-lg"
                   aria-label="Tailoring service features"
                   role="list"
                 >
@@ -185,7 +185,7 @@ const ServicesPage: React.FC = () => {
                   selection, design, and fit.
                 </p>
                 <ul
-                  className="text-gray-700 space-y-2 mt-4"
+                  className="text-gray-700 space-y-2 mt-4 text-lg"
                   aria-label="Design consultation features"
                   role="list"
                 >

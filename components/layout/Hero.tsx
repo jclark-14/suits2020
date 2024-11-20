@@ -8,6 +8,7 @@ interface HeroProps {
   overlayOpacity?: number;
   titleSize?: string;
   subtitleSize?: string;
+  className?: string;
   height?: 'small' | 'medium' | 'large' | 'custom';
   customHeight?: string;
 }
@@ -18,6 +19,7 @@ const Hero = ({
   imagePath,
   imageAlt,
   overlayOpacity = 45,
+  className = 'object-cover',
   titleSize = 'text-4xl sm:text-5xl lg:text-7xl',
   subtitleSize = 'text-2xl lg:text-4xl',
   height = 'medium',
@@ -65,8 +67,8 @@ const Hero = ({
             fill
             priority
             sizes="100vw"
-            className="object-cover"
             quality={90}
+            className={className}
           />
         </picture>
       </div>
