@@ -16,7 +16,7 @@ export default function Footer() {
         </div>
 
         {/* Address */}
-        <address className="not-italic text-base leading-relaxed mb-8">
+        <address className="not-italic text-lg leading-relaxed mb-8">
           7651 N Caldwell Ave, <br />
           Niles, IL 60714 <br />
           <a href="tel:+18476762020" className="hover:underline">
@@ -30,7 +30,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="text-sm md:text-md">
+        <div className="text-base">
           © 2022 - Suits 2020. All rights reserved.
         </div>
       </div>

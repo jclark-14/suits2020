@@ -57,7 +57,7 @@ const LocationPage: React.FC = () => {
 
         {/* Address and Contact Information */}
         <section
-          className="container mx-auto py-8 sm:py-10 md:pt-20 md:pb-10 lg:pt-20 lg:pb-10 px-8 sm:px-6 max-w-4xl"
+          className="container mx-auto py-8 sm:py-10 md:pt-24 md:pb-14 px-8 sm:px-6 max-w-4xl"
           aria-label="Store contact information"
         >
           <div className="flex flex-col sm:flex-row sm:justify-between">
@@ -113,7 +113,7 @@ const LocationPage: React.FC = () => {
 
         {/* Map Section */}
         <section className="container mx-auto py-4 px-6 max-w-2xl md:max-w-3xl lg:max-w-5xl">
-          <h2 className="text-2xl sm:text-3xl font-bold text-black mb-6 text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-black mb-10 text-center">
             Our Location on the Map
           </h2>
           <div className="w-full h-96 sm:h-128">
@@ -129,10 +129,10 @@ const LocationPage: React.FC = () => {
 
         {/* Call to Action */}
         <section
-          className="pt-4 pb-10 sm:pt-10 sm:pb-14 text-center"
+          className="pt-4 pb-10 sm:pt-16 sm:pb-16 text-center"
           aria-label="Get directions"
         >
-          <h2 className="text-2xl font-bold text-black mb-4">
+          <h2 className="text-2xl font-bold text-black mb-8">
             Ready to Visit Us?
           </h2>
           <Button

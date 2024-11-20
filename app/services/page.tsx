@@ -85,12 +85,12 @@ const ServicesPage: React.FC = () => {
 
         {/* Services Section */}
         <section
-          className="container mx-auto py-16 sm:pt-24 sm:pb-16 px-6 max-w-7xl bg-white"
+          className="container mx-auto py-16 sm:pt-32 sm:pb-20 px-6 max-w-7xl bg-white"
           role="region"
           aria-labelledby="services-heading"
         >
           {/* Introduction Text */}
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-16 sm:mb-24 max-w-3xl mx-auto">
             <h2
               id="services-heading"
               className="text-4xl sm:text-5xl font-bold text-black mb-6"
@@ -110,7 +110,7 @@ const ServicesPage: React.FC = () => {
             aria-label="Our services"
           >
             {/* In-Store Tailoring Service */}
-            <div role="listitem" className="flex flex-col space-y-8">
+            <div role="listitem" className="flex flex-col space-y-10">
               <div className="relative aspect-[4/3] w-full">
                 <Image
                   src="/images/services/alterations.png"
@@ -161,7 +161,7 @@ const ServicesPage: React.FC = () => {
             </div>
 
             {/* Design Consultation Service */}
-            <div role="listitem" className="flex flex-col space-y-8">
+            <div role="listitem" className="flex flex-col space-y-10">
               <div className="relative aspect-[4/3] w-full">
                 <Image
                   src="/images/services/consultation.png"
@@ -213,15 +213,18 @@ const ServicesPage: React.FC = () => {
           </div>
 
           {/* Call to Action */}
-          <div className="mt-20 text-center" aria-labelledby="cta-heading">
-            <div className="max-w-2xl mx-auto space-y-6">
+          <div
+            className="mt-20 sm:mt-32 text-center"
+            aria-labelledby="cta-heading"
+          >
+            <div className="max-w-2xl mx-auto  sm:space-y-8">
               <h2
                 id="cta-heading"
-                className="text-3xl sm:text-4xl font-bold text-black"
+                className="text-3xl sm:text-4xl font-bold  text-black"
               >
                 Interested In Our Services?
               </h2>
-              <p className="text-xl text-gray-700">
+              <p className="text-xl mb-6 sm:mb-0 text-gray-700">
                 Schedule a consultation with our expert tailors and design
                 consultants today.
               </p>

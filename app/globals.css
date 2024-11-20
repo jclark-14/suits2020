@@ -6,6 +6,7 @@
 @layer base {
   body {
     @apply bg-neutral-50 text-neutral-800;
+    font-family: futura-pt, sans-serif;
   }
 
   h1 {
