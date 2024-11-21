@@ -75,7 +75,7 @@ const ContactForm: React.FC = () => {
         <div>
           <label
             htmlFor="name"
-            className="block text-base font-semibold text-gray-700"
+            className="block text-lg font-semibold text-gray-700"
           >
             Name <span className="text-red-500">*</span>
           </label>
@@ -102,7 +102,7 @@ const ContactForm: React.FC = () => {
         <div>
           <label
             htmlFor="email"
-            className="block text-base font-semibold text-gray-700"
+            className="block text-lg font-semibold text-gray-700"
           >
             Email <span className="text-red-500">*</span>
           </label>
@@ -130,7 +130,7 @@ const ContactForm: React.FC = () => {
       <div role="group" aria-labelledby="services-label">
         <span
           id="services-label"
-          className="block text-base font-semibold text-gray-700"
+          className="block text-lg font-semibold text-gray-700"
         >
           Services <span className="text-red-500">*</span>
         </span>
@@ -167,7 +167,7 @@ const ContactForm: React.FC = () => {
               />
               <label
                 htmlFor={service}
-                className="ml-2 text-sm sm:text-base font-medium text-gray-700"
+                className="ml-2 text-base sm:text-lg font-medium text-gray-700"
               >
                 {service}
               </label>
@@ -185,7 +185,7 @@ const ContactForm: React.FC = () => {
       <div>
         <label
           htmlFor="message"
-          className="block text-base font-semibold text-gray-700"
+          className="block text-lg font-semibold text-gray-700"
         >
           Message
         </label>
@@ -221,7 +221,7 @@ const ContactForm: React.FC = () => {
       </button>
       {submissionMessage && (
         <p
-          className="mt-4 text-center text-sm font-medium text-stone-800"
+          className="mt-4 text-center text-base font-medium text-stone-800"
           role="status"
         >
           {submissionMessage}

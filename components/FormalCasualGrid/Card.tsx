@@ -86,7 +86,7 @@ export default function Card({
       {/* Default Black Overlay at Bottom - Only for cards without hasOverlay */}
       {!hasOverlay && (
         <div
-          className={`absolute bottom-0 left-0 right-0 bg-stone-900 bg-opacity-80 text-white p-4 transform transition-all duration-300 ${
+          className={`absolute bottom-0 left-0 right-0 bg-footerBrown bg-opacity-85 text-white p-4 transform transition-all duration-300 ${
             showOverlay ? 'opacity-0' : 'opacity-100'
           }`}
         >
@@ -99,7 +99,7 @@ export default function Card({
       {/* Default Black Overlay at Bottom - all card for mobile */}
       {hasOverlay && (isMobile || isLargeMobile) && (
         <div
-          className={`absolute bottom-0 left-0 right-0 bg-stone-900 bg-opacity-80 text-white p-4 transform transition-all duration-300 ${
+          className={`absolute bottom-0 left-0 right-0 bg-footerBrown bg-opacity-85 text-white p-4 transform transition-all duration-300 ${
             showOverlay ? 'opacity-0' : 'opacity-100'
           }`}
         >
@@ -112,7 +112,7 @@ export default function Card({
       {/* Special Half-Width Overlay for Cards 3 and 6 */}
       {hasOverlay && !showOverlay && !isMobile && !isLargeMobile && (
         <div
-          className={`absolute inset-0 bg-stone-900 bg-opacity-85 flex w-[40%] transition-all duration-300 ease-in-out ${
+          className={`absolute inset-0 bg-footerBrown bg-opacity-90 flex w-[40%] transition-all duration-300 ease-in-out ${
             overlayPosition === 'right' ? 'right-0 ml-auto' : 'left-0'
           }`}
         >
