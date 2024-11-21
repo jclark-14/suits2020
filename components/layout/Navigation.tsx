@@ -66,7 +66,7 @@ export default function Navigation() {
           </div>
 
           {/* Mobile Menu Buttons */}
-          <div className="md:hidden flex items-center justify-between w-full fixed top-0 left-0 right-0 bg-white px-4 py-2 z-50 shadow-md">
+          <div className="md:hidden flex items-center justify-between w-full fixed top-0 left-0 right-0 bg-white px-4 py-1 z-50 shadow-md">
             <SocialLinks color="black" />
             <button
               onClick={toggleMenu}
@@ -105,11 +105,8 @@ export default function Navigation() {
         {/* Mobile Menu Overlay */}
         {isOpen && (
           <div className="fixed inset-0 bg-white z-40 md:hidden overflow-auto">
-            <div className="w-full px-4 py-[6px]">
-              <SocialLinks color="black" />
-            </div>
             <div className="border-t-2 border-gray-200 w-full"></div>
-            <div className="flex flex-col items-center mt-20 space-y-16 text-2xl">
+            <div className="flex flex-col items-center mt-24 mb-20 space-y-14 text-2xl">
               <Link href="/" onClick={handleNavigation}>
                 <span className="block text-gray-900 font-medium">HOME</span>
               </Link>
