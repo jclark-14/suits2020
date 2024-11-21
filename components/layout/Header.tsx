@@ -9,7 +9,7 @@ export default function Header() {
     <header>
       <Navigation />
       {/* Background */}
-      <div className="relative bg-cover bg-center h-32 md:h-36">
+      <div className="relative bg-cover bg-center h-32 md:h-40">
         <Image
           src="/images/logo/pinstripe.png"
           alt="Suits 20/20 Background"

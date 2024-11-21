@@ -28,7 +28,7 @@ const BrandsPage: React.FC = () => {
         overlayOpacity={25}
       />
       <main className="container mx-auto max-w-7xl bg-white">
-        <section className="py-20 px-6 sm:px-10 max-w-7xl">
+        <section className="pt-20 px-6 sm:px-10 max-w-7xl">
           <h2 className="text-center text-4xl sm:text-5xl font-bold text-black mb-16">
             Our Brands
           </h2>
@@ -36,13 +36,13 @@ const BrandsPage: React.FC = () => {
             {brands.map((brand, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-200 hover:scale-105"
+                className="flex items-center justify-center p-6 h-[215px] sm:h-[250px] bg-white border-[1px] border-footerBrown border-opacity-20 rounded-lg shadow-md hover:shadow-xl transition-all duration-200 hover:scale-105"
               >
                 <Image
                   src={brand.logo}
                   alt={`${brand.name} logo`}
                   width={200}
-                  height={100}
+                  height={250}
                   objectFit="contain"
                   className="hover:brightness-110"
                 />

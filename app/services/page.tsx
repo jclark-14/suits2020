@@ -85,7 +85,7 @@ const ServicesPage: React.FC = () => {
 
         {/* Services Section */}
         <section
-          className="container mx-auto py-16 sm:pt-32 px-6 max-w-7xl bg-white"
+          className="container mx-auto pt-16 sm:pt-32 px-6 max-w-7xl bg-white"
           role="region"
           aria-labelledby="services-heading"
         >

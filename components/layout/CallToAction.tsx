@@ -34,7 +34,10 @@ export default function CallToAction({
   };
 
   return (
-    <div className="pb-20 pt-16 text-center" aria-labelledby="cta-heading">
+    <div
+      className="pb-20 pt-16 px-2 text-center bg-white"
+      aria-labelledby="cta-heading"
+    >
       <div className="max-w-2xl mx-auto">
         <h2
           id="cta-heading"

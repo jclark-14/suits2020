@@ -42,7 +42,7 @@ const ContactPage = () => {
         overlayOpacity={20}
       />
       <section
-        className="container bg-white mx-auto py-16 sm:pt-24 sm:pb-20 px-6 max-w-7xl"
+        className="container bg-white mx-auto pt-16 pb-20 sm:pt-24 sm:pb-20 px-6 max-w-7xl"
         aria-labelledby="contact-heading"
       >
         <h2
