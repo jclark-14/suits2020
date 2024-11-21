@@ -86,7 +86,7 @@ const ContactForm: React.FC = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.name}
-            className="block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-footerBrown focus:border-footerBrown"
+            className="block w-full text-lg p-2 border border-gray-300 rounded-md shadow-sm focus:ring-footerBrown focus:border-footerBrown"
             aria-required="true"
             aria-invalid={formik.touched.name && !!formik.errors.name}
             aria-describedby={formik.errors.name ? 'name-error' : undefined}
@@ -113,7 +113,7 @@ const ContactForm: React.FC = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.email}
-            className="block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-footerBrown focus:border-footerBrown"
+            className="block w-full text-lg p-2 border border-gray-300 rounded-md shadow-sm focus:ring-footerBrown focus:border-footerBrown"
             aria-required="true"
             aria-invalid={formik.touched.email && !!formik.errors.email}
             aria-describedby={formik.errors.email ? 'email-error' : undefined}
@@ -151,7 +151,7 @@ const ContactForm: React.FC = () => {
                 value={service}
                 onChange={formik.handleChange}
                 checked={formik.values.services.includes(service)}
-                className="h-4 w-4 text-footerBrown border-gray-300 rounded focus:ring-footerBrown"
+                className="h-4 w-4 text-footerBrown border-gray-300 rounded focus:ring-footerBrown focus:ring-1"
                 aria-label={service}
                 onKeyDown={e => {
                   if (e.key === 'Enter') {
@@ -196,7 +196,7 @@ const ContactForm: React.FC = () => {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.message}
-          className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-footerBrown focus:border-footerBrown"
+          className="mt-1 block text-lg w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-footerBrown focus:border-footerBrown"
           aria-label="Message"
         />
       </div>
@@ -221,7 +221,7 @@ const ContactForm: React.FC = () => {
       </button>
       {submissionMessage && (
         <p
-          className="mt-4 text-center text-base font-medium text-stone-800"
+          className="mt-4 text-center text-lg font-medium text-stone-800"
           role="status"
         >
           {submissionMessage}
