@@ -11,7 +11,7 @@ const ServicesPage: React.FC = () => {
     '@type': 'LocalBusiness',
     name: 'Suits 20/20',
     description:
-      "Expert tailoring and design services for men's and boy's fashion in Niles, IL",
+      "Expert tailoring and fashion consulting services for men's and boy's fashion in Niles, IL",
     image: '/images/services/services-hero.png',
     url: 'https://www.suits2020.com',
     address: {
@@ -32,9 +32,9 @@ const ServicesPage: React.FC = () => {
       },
       {
         '@type': 'Offer',
-        name: 'Design Consultation',
+        name: 'Fashion Consultation',
         description:
-          'Personalized style guidance, premium fabric selection, and custom design options',
+          'Personalized style guidance and outfit suggestions to put together the perfect look',
       },
     ],
   };
@@ -43,23 +43,23 @@ const ServicesPage: React.FC = () => {
     <>
       <Head>
         <title>
-          Expert Tailoring & Design Services | Suits 20/20 | Niles, IL
+          Expert Tailoring & Fashion Services | Suits 20/20 | Niles, IL
         </title>
         <meta
           name="description"
-          content="Professional tailoring services and design consultations at Suits 20/20. Expert alterations, custom suits, and personalized style guidance in Niles, IL."
+          content="Professional tailoring services and fashion consultations at Suits 20/20. Expert alterations, fashion advice, and personalized style guidance in Niles, IL."
         />
         <meta
           name="keywords"
-          content="suit tailoring, custom suits, alterations, design consultation, men's fashion, Niles IL, Chicago suburbs"
+          content="suit tailoring, men's fashion consulting, alterations, fashion advice, Niles IL, Chicago suburbs"
         />
         <meta
           property="og:title"
-          content="Expert Tailoring & Design Services | Suits 20/20"
+          content="Expert Tailoring & Fashion Services | Suits 20/20"
         />
         <meta
           property="og:description"
-          content="Professional tailoring services and design consultations. Expert alterations, custom suits, and personalized style guidance."
+          content="Professional tailoring services and fashion consultations. Expert alterations and personalized style guidance."
         />
         <meta
           property="og:image"
@@ -75,7 +75,7 @@ const ServicesPage: React.FC = () => {
 
       <main id="main-content" role="main">
         <Hero
-          title="EXPERT TAILORING & DESIGN SERVICES"
+          title="EXPERT TAILORING & FASHION SERVICES"
           subtitle="Walk-in or schedule an appointment for our premium services."
           imagePath="/images/services/services-hero.png"
           imageAlt="Customer getting measured for a suit."
@@ -99,7 +99,8 @@ const ServicesPage: React.FC = () => {
             </h2>
             <p className="text-xl sm:text-2xl text-gray-700 leading-relaxed">
               Experience the perfect blend of traditional craftsmanship and
-              modern style with our expert tailoring and design services.
+              modern style with our expert tailoring and fashion consultation
+              services.
             </p>
           </div>
 
@@ -160,12 +161,12 @@ const ServicesPage: React.FC = () => {
               </div>
             </div>
 
-            {/* Design Consultation Service */}
+            {/* Fashion Consultation Service */}
             <div role="listitem" className="flex flex-col space-y-10">
               <div className="relative aspect-[4/3] w-full">
                 <Image
                   src="/images/services/consultation.png"
-                  alt="Style consultant discussing fabric options with a customer"
+                  alt="Style consultant helping a customer select outfits"
                   className="object-cover rounded-xl shadow-lg brightness-85"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -177,16 +178,17 @@ const ServicesPage: React.FC = () => {
                   id="consultation-heading"
                   className="text-4xl font-bold text-black"
                 >
-                  Design Consultation
+                  Fashion Consultation
                 </h3>
                 <p className="text-xl text-gray-700 leading-relaxed">
-                  Work with our expert consultants to create a personalized
-                  style that matches your taste and needs. We help with fabric
-                  selection, design, and fit.
+                  Our fashion consultants will help you put together the perfect
+                  look with off-the-rack suits and outfits that suit your style.
+                  We offer personalized style guidance to create a polished and
+                  modern look for every occasion.
                 </p>
                 <ul
                   className="text-gray-700 space-y-2 mt-4 text-lg"
-                  aria-label="Design consultation features"
+                  aria-label="Fashion consultation features"
                   role="list"
                 >
                   <li className="flex items-center" role="listitem">
@@ -199,13 +201,13 @@ const ServicesPage: React.FC = () => {
                     <span className="mr-2" aria-hidden="true">
                       •
                     </span>
-                    Premium fabric selection
+                    Outfit recommendations for every occasion
                   </li>
                   <li className="flex items-center" role="listitem">
                     <span className="mr-2" aria-hidden="true">
                       •
                     </span>
-                    Custom design options
+                    Perfect suits and complete looks
                   </li>
                 </ul>
               </div>
@@ -217,21 +219,21 @@ const ServicesPage: React.FC = () => {
             className="mt-20 sm:mt-32 text-center"
             aria-labelledby="cta-heading"
           >
-            <div className="max-w-2xl mx-auto  sm:space-y-8">
+            <div className="max-w-2xl mx-auto">
               <h2
                 id="cta-heading"
-                className="text-3xl sm:text-4xl font-bold  text-black"
+                className="text-3xl sm:text-4xl mb-6 font-bold text-black"
               >
                 Interested In Our Services?
               </h2>
-              <p className="text-xl mb-6 sm:mb-0 text-gray-700">
-                Schedule a consultation with our expert tailors and design
+              <p className="text-xl mb-6 sm:mb-10 text-gray-700">
+                Schedule a consultation with our expert tailors and fashion
                 consultants today.
               </p>
               <Button
                 href="/contact"
                 label="Schedule a Consultation"
-                ariaLabel="Schedule a consultation for tailoring or design services"
+                ariaLabel="Schedule a consultation for tailoring or fashion services"
                 size="large"
               />
             </div>
