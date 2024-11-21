@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Hero from '@/components/layout/Hero';
-import Button from '@/components/ui/Button';
 import Image from 'next/image';
+import CallToAction from '@/components/layout/CallToAction';
 
 const ServicesPage: React.FC = () => {
   // Schema markup for services
@@ -85,7 +85,7 @@ const ServicesPage: React.FC = () => {
 
         {/* Services Section */}
         <section
-          className="container mx-auto py-16 sm:pt-32 sm:pb-20 px-6 max-w-7xl bg-white"
+          className="container mx-auto py-16 sm:pt-32 px-6 max-w-7xl bg-white"
           role="region"
           aria-labelledby="services-heading"
         >
@@ -213,32 +213,15 @@ const ServicesPage: React.FC = () => {
               </div>
             </div>
           </div>
-
-          {/* Call to Action */}
-          <div
-            className="mt-20 sm:mt-32 text-center"
-            aria-labelledby="cta-heading"
-          >
-            <div className="max-w-2xl mx-auto">
-              <h2
-                id="cta-heading"
-                className="text-3xl sm:text-4xl mb-6 font-bold text-black"
-              >
-                Interested In Our Services?
-              </h2>
-              <p className="text-xl mb-6 sm:mb-10 text-gray-700">
-                Schedule a consultation with our expert tailors and fashion
-                consultants today.
-              </p>
-              <Button
-                href="/contact"
-                label="Schedule a Consultation"
-                ariaLabel="Schedule a consultation for tailoring or fashion services"
-                size="large"
-              />
-            </div>
-          </div>
         </section>
+        <CallToAction
+          title="Interested In Our Services?"
+          subtitle="Schedule a consultation with our expert tailors and fashion
+          consultants today."
+          href="/contact"
+          label="Schedule a Consultation"
+          ariaLabel="Schedule a consultation for tailoring or fashion services"
+        />
       </main>
     </>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Hero from '@/components/layout/Hero';
-import Button from '@/components/ui/Button';
+import CallToAction from '@/components/layout/CallToAction';
 
 const LocationPage: React.FC = () => {
   const schema = {
@@ -129,22 +129,16 @@ const LocationPage: React.FC = () => {
         </section>
 
         {/* Call to Action */}
-        <section
-          className="pt-4 pb-10 sm:pt-16 sm:pb-16 text-center"
-          aria-label="Get directions"
-        >
-          <h2 className="text-2xl font-bold text-black mb-8">
-            Ready to Visit Us?
-          </h2>
-          <Button
-            href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
-              '7651 N Caldwell Ave, Niles, IL 60714'
-            )}`}
-            label="Get Directions"
-            ariaLabel="Get directions to our store"
-            isExternal
-          />
-        </section>
+        <CallToAction
+          title="Ready to Visit Us?"
+          subtitle="Get directions to our store and explore our collection of designer brands."
+          href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
+            '7651 N Caldwell Ave, Niles, IL 60714'
+          )}`}
+          label="Get Directions"
+          ariaLabel="Get directions to our store"
+          isExternal={true}
+        />
       </div>
     </main>
   );
