@@ -39,7 +39,6 @@ const brandsSchema = {
   name: 'Designer Brands at Suits 20/20',
   description: "Premium men's fashion and designer brands",
   url: 'https://suits2020.com/brands',
-  image: 'https://suits2020.com/images/brands/hero-brands.png',
   mainEntity: {
     '@type': 'ItemList',
     itemListElement: brands.map((brand, index) => ({

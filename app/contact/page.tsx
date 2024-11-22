@@ -12,7 +12,6 @@ export const metadata: Metadata = {
     title: 'Contact Suits 2020 | Expert Tailoring & Formalwear',
     description:
       'Get in touch with Suits 2020 for premium tailoring, fashion consultation, and alterations. Located in Niles, IL.',
-    images: [{ url: '/images/contact/contact-hero.png' }],
   },
 };
 

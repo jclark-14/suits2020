@@ -12,7 +12,6 @@ export const metadata: Metadata = {
     title: "Visit Suits 20/20 | Men's & Boy's Fashion Store",
     description:
       "Find Suits 20/20 in Niles, IL for expert tailoring, men's suits, and boy's fashion. Open 7 days a week with convenient hours.",
-    images: [{ url: '/images/location/location-hero.jpg' }],
   },
 };
 

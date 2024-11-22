@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     title: 'Expert Tailoring & Fashion Services | Suits 20/20',
     description:
       'Professional tailoring services and fashion consultations. Expert alterations and personalized style guidance.',
-    images: [{ url: '/images/services/services-hero.png' }],
   },
 };
 
