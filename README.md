@@ -37,8 +37,8 @@ Suits 20/20 offers expert tailoring services, premium designer brands, and perso
 ### Prerequisites
 To work on this project, ensure the following tools are installed on your system:
 - Node.js v16+
-- PNPM
-- EmailJS account
+- PNPM: A faster, disk-efficient package manage
+- EmailJS Account: For configuring the contact form email integration
 
 ### Installation
 
