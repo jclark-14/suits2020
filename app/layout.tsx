@@ -77,11 +77,11 @@ export default function RootLayout({
         <link rel="canonical" href="https://suits2020.com" />
         <meta
           property="og:image"
-          content="https://suits2020.com/images/social-preview.png"
+          content="https://suits2020.com/images/home-hero.png"
         />
         <meta
           property="twitter:image"
-          content="https://suits2020.com/images/social-preview.png"
+          content="https://suits2020.com/images/home-hero.png"
         />
         <script
           type="application/ld+json"
