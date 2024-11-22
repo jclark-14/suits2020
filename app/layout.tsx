@@ -75,6 +75,14 @@ export default function RootLayout({
     <html lang="en" className={`${poppins.className}`}>
       <head>
         <link rel="canonical" href="https://suits2020.com" />
+        <meta
+          property="og:image"
+          content="https://suits2020.com/images/social-preview.png"
+        />
+        <meta
+          property="twitter:image"
+          content="https://suits2020.com/images/social-preview.png"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
