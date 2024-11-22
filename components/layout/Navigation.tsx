@@ -105,7 +105,7 @@ export default function Navigation() {
         {isOpen && (
           <div className="fixed inset-0 bg-white z-40 md:hidden overflow-auto">
             <div className="border-t-2 border-gray-200 w-full"></div>
-            <div className="flex flex-col items-center mt-24 mb-20 space-y-14 text-2xl">
+            <div className="flex flex-col items-center mt-24 mb-20 space-y-10 text-xl">
               <Link href="/" onClick={handleNavigation}>
                 <span className="block text-gray-900 font-medium">HOME</span>
               </Link>
