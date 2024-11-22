@@ -77,8 +77,9 @@ Open http://localhost:3000 to view the app in the browser.
 
 ![Landing Page Screenshot2](.github/screenshots/landingpage2.png)
 
-- # Landing Page Gif
-  ![Landing Page Gif](.github/gif.gif)
+### Landing Page Gif
+
+![Landing Page Gif](.github/gif.gif)
 
 ## Services Page
 
