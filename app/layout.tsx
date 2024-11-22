@@ -74,6 +74,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.className}`}>
       <head>
+        <link rel="canonical" href="https://suits2020.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
