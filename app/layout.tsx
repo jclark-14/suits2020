@@ -19,7 +19,6 @@ export const metadata: Metadata = {
   description: "Explore Suits 20/20's premium collection of formal attire.",
   keywords: 'formal wear, suits, tailoring, fashion consulting',
   openGraph: {
-    type: 'website',
     siteName: 'Suits 20/20',
     title: {
       template: '%s | Suits 20/20',
@@ -28,6 +27,8 @@ export const metadata: Metadata = {
     description:
       'Discover timeless formal wear for men and boys at Suits 20/20.',
     url: 'https://suits2020.com',
+    locale: 'en_US',
+    type: 'website',
     images: [
       {
         url: '/images/social-preview.jpg',
@@ -35,12 +36,6 @@ export const metadata: Metadata = {
         height: 630,
       },
     ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Suits 20/20 | Elegant Formal Wear',
-    description: 'Discover timeless formal wear for men and boys.',
-    images: ['/images/social-preview.jpg'],
   },
 };
 
