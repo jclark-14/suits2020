@@ -22,7 +22,7 @@ const SLIDES: SlideData[] = [
     id: 1,
     image: '/images/carousel/suit-rack6.png',
     alt: 'Fashion Outlet',
-    overlayOpacity: 0.3,
+    overlayOpacity: 0.2,
     title: "CHICAGOLAND'S \nMEN'S & BOY'S",
     title2: 'FASHION WAREHOUSE.',
     description: [
@@ -42,17 +42,20 @@ const SLIDES: SlideData[] = [
     title: 'FULL SERVICE STYLE',
     description: ['Expert Fashion Advice and Custom', 'Tailoring On-site.'],
     className: 'text-4xl sm:text-5xl md:text-5xl lg:text-8xl pt-10 mb-0',
+    className2:
+      'text-2xl md:text-3xl lg:text-4xl font-normal tracking-wide mt-0 mb-0',
   },
   {
     id: 3,
-    image: '/images/carousel/suits-wedding.png',
-    alt: 'Wedding Party Savings',
-    overlayOpacity: 0.5,
-    title: 'CHEERS TO 30%',
-    description: ['SAVINGS FOR YOUR WEDDING PARTY!'],
-    className: 'text-4xl sm:text-5xl md:text-5xl lg:text-8xl pt-10 mb-0',
+    image: '/images/carousel/black-friday-carousel.png',
+    alt: 'BLACK FRIDAY SALE',
+    overlayOpacity: 0.3,
+    title: 'BLACK FRIDAY SALE',
+    description: ['Exception Savings on Exceptional Suits!'],
+    className:
+      'text-4xl sm:text-5xl md:text-5xl lg:text-8xl pt-10 mb-0 mx-auto',
     className2:
-      'text-xl md:text-3xl lg:text-4xl font-normal tracking-wide mt-0 mb-3',
+      'text-2xl md:text-3xl lg:text-4xl font-normal tracking-wide mt-0 sm:mb-10 ',
   },
 ];
 
@@ -99,7 +102,7 @@ const Slide = ({ data }: { data: SlideData }) => (
         style={{ opacity: data.overlayOpacity }}
       />
       <div className="absolute inset-0 flex flex-col justify-center mt-10 sm:mt-0 sm:justify-end h-full">
-        <div className="relative flex flex-col items-center justify-end text-white px-4 text-center pb-4 md:pb-16">
+        <div className="relative flex flex-col items-center justify-end text-white px-4 text-center md:px-6 lg:px-8 sm:pb-20 md:pb-28">
           <div className="md:space-y-3 max-w-4xl">
             {data.title && (
               <>
@@ -191,7 +194,7 @@ function HeroCarousel() {
   }, [isTransitioning, handleTransitionEnd]);
 
   return (
-    <div className="relative h-[350px] sm:h-[450px] md:h-[550px] lg:h-[650px] 2xl:h-[700px] w-full overflow-hidden bg-gray-400">
+    <div className="relative h-[350px] sm:h-[450px] md:h-[550px] lg:h-[650px] 2xl:h-[700px] w-full overflow-hidden bg-gray-200">
       <div
         className={`flex h-full ${
           isTransitioning

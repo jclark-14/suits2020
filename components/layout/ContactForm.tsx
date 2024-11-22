@@ -151,7 +151,7 @@ const ContactForm: React.FC = () => {
                 value={service}
                 onChange={formik.handleChange}
                 checked={formik.values.services.includes(service)}
-                className="h-4 w-4 text-footerBrown border-gray-300 rounded focus:ring-footerBrown focus:ring-1"
+                className="h-4 w-4 text-footerBrown border-gray-300 rounded focus:ring-footerBrown focus:ring-opacity-30 focus:ring-2"
                 aria-label={service}
                 onKeyDown={e => {
                   if (e.key === 'Enter') {

@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header>
+    <header role="banner">
       <Navigation />
       {/* Background */}
       <div className="relative bg-cover bg-center h-32 md:h-40">
@@ -18,7 +18,7 @@ export default function Header() {
           quality={100}
           priority={true}
         />
-        <div className="absolute inset-0 bg-black opacity-65"></div>
+        <div className="absolute inset-0 bg-black opacity-75"></div>
         {/* Logo */}
         <div className="relative flex items-center space-x-8 md:space-x-12 justify-center h-full text-center text-white px-4 pb-1 pt-4 sm:pt-0">
           <SuitsLogo

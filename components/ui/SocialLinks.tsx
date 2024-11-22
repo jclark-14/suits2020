@@ -10,7 +10,7 @@ export function SocialLinks({ color }: SocialLinksProps) {
       <Link
         href="https://www.instagram.com/suits2020chicago/"
         target="_blank"
-        rel="noopener noreferrer" // Corrected from 'grey' to 'gray'
+        rel="noopener noreferrer"
         style={{ color }}
         aria-label="Visit our Instagram page"
         title="Follow Suits 20/20 on Instagram"

@@ -3,7 +3,10 @@ import SuitsLogo from '../ui/SuitsLogo';
 
 export default function Footer() {
   return (
-    <footer className="bg-footerBrown text-white pt-10 pb-6 md:py-10">
+    <footer
+      role="contentinfo"
+      className="bg-footerBrown text-white pt-10 pb-6 md:py-10"
+    >
       <div className="max-w-6xl mx-auto px-6 text-center flex flex-col justify-center items-center">
         {/* Logo */}
         <div className="mb-2">
@@ -31,7 +34,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="text-base">
-          © 2022 - Suits 2020. All rights reserved.
+          © 2022 - Suits 20/20. All rights reserved.
         </div>
       </div>
     </footer>

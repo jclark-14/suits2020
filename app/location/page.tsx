@@ -1,52 +1,60 @@
-import React from 'react';
-import Head from 'next/head';
+import { Metadata } from 'next';
 import Hero from '@/components/layout/Hero';
 import CallToAction from '@/components/layout/CallToAction';
 
-const LocationPage: React.FC = () => {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'Suits 20/20',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '7651 N Caldwell Ave',
-      addressLocality: 'Niles',
-      addressRegion: 'IL',
-      postalCode: '60714',
-      addressCountry: 'US',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: '42.015925',
-      longitude: '-87.812256',
-    },
-    openingHours: ['Mo-Fr 11:00-19:00', 'Sa-Su 10:00-17:00'],
-    telephone: '+1-847-676-2020',
-    email: 'info@suits2020.com',
-    url: 'https://suits2020.com/location',
-    image: '/images/location/location-hero.jpg',
-  };
+export const metadata: Metadata = {
+  title: "Visit Suits 20/20 | Men's & Boy's Fashion Store in Niles, IL",
+  description:
+    "Visit Suits 20/20, your go-to fashion store in Niles, IL. Offering men's suits, custom tailoring, and designer fashion with convenient store hours.",
+  keywords:
+    "men's fashion store, Niles IL suits, custom tailoring, Suits 20/20, designer fashion, store hours, Chicago suburbs fashion",
+  openGraph: {
+    title: "Visit Suits 20/20 | Men's & Boy's Fashion Store",
+    description:
+      "Find Suits 20/20 in Niles, IL for expert tailoring, men's suits, and boy's fashion. Open 7 days a week with convenient hours.",
+    images: [{ url: '/images/location/location-hero.jpg' }],
+  },
+};
 
+const locationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Suits 20/20 - Niles Location',
+  description: "Men's fashion and tailoring services in Niles, IL",
+  image: 'https://suits2020.com/images/location/location-hero.jpg',
+  '@id': 'https://suits2020.com/location',
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: '42.015925',
+    longitude: '-87.812256',
+  },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '11:00',
+      closes: '19:00',
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Saturday', 'Sunday'],
+      opens: '10:00',
+      closes: '17:00',
+    },
+  ],
+  email: 'info@suits2020.com',
+  hasMap: 'https://goo.gl/maps/YOUR_GOOGLE_MAPS_URL',
+};
+
+export default function LocationPage() {
   return (
-    <main>
-      <Head>
-        <title>
-          Visit Suits 20/20 in Niles, IL | Men&apos;s & Boy&apos;s Fashion Store
-        </title>
-        <meta
-          name="description"
-          content="Visit Suits 20/20, conveniently located in Niles, IL, serving the greater Chicago area for all your custom tailoring and fashion needs. Open 7 days a week."
-        />
-        <meta
-          name="keywords"
-          content="suits store Niles, men's fashion Illinois, custom tailoring Chicago suburbs, Suits 20/20 location"
-        />
-        <script
-          type="application/ld-json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
-      </Head>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(locationSchema),
+        }}
+      />
       <div className="bg-white">
         <Hero
           title="VISIT US TODAY"
@@ -59,26 +67,25 @@ const LocationPage: React.FC = () => {
         {/* Address and Contact Information */}
         <section
           className="container mx-auto py-8 sm:py-10 md:pt-24 md:pb-14 px-8 sm:px-6 max-w-4xl"
-          aria-label="Store contact information"
+          aria-label="Store contact and operating information"
         >
           <div className="flex flex-col sm:flex-row sm:justify-between">
+            {/* Store Address */}
             <div className="flex flex-col space-y-2 text-center sm:text-left">
               <h2 className="text-2xl sm:text-3xl font-bold text-black sm:mb-4 mt-4 sm:mt-0">
                 Our Store Location
               </h2>
               <address className="not-italic leading-none">
-                <p className="text-lg sm:text-xl text-black leading-none">
+                <p className="text-lg sm:text-xl text-black">
                   7651 N Caldwell Ave
                 </p>
-                <p className="text-lg sm:text-xl text-black leading-none">
-                  Niles, IL 60714
-                </p>
-                <p className="text-lg sm:text-xl text-black leading-none">
+                <p className="text-lg sm:text-xl text-black">Niles, IL 60714</p>
+                <p className="text-lg sm:text-xl text-black">
                   Phone:{' '}
                   <a
                     href="tel:+18476762020"
-                    className="text-black hover:text-gray-600 transition-colors duration-200 leading-none"
-                    aria-label="Call our store"
+                    className="text-black hover:text-gray-600 transition-colors duration-200"
+                    aria-label="Call Suits 20/20 at +1-847-676-2020"
                   >
                     +1 (847) 676-2020
                   </a>
@@ -88,13 +95,15 @@ const LocationPage: React.FC = () => {
                   <a
                     href="mailto:info@suits2020.com"
                     className="text-black hover:text-gray-600 transition-colors duration-200"
-                    aria-label="Email our store"
+                    aria-label="Email Suits 20/20 at info@suits2020.com"
                   >
                     info@suits2020.com
                   </a>
                 </p>
               </address>
             </div>
+
+            {/* Store Hours */}
             <div
               className="flex flex-col space-y-2 mt-6 sm:mt-0 text-center sm:text-left"
               aria-label="Store hours"
@@ -136,12 +145,10 @@ const LocationPage: React.FC = () => {
             '7651 N Caldwell Ave, Niles, IL 60714'
           )}`}
           label="Get Directions"
-          ariaLabel="Get directions to our store"
+          ariaLabel="Get directions to Suits 20/20 via Google Maps"
           isExternal={true}
         />
       </div>
-    </main>
+    </>
   );
-};
-
-export default LocationPage;
+}

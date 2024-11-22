@@ -25,7 +25,6 @@ const Hero = ({
   height = 'medium',
   customHeight,
 }: HeroProps) => {
-  // Define height classes based on common use cases
   const heightClasses = {
     small: 'h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] 2xl:h-[400px]',
     medium: 'h-[275px] sm:h-[350px] md:h-[400px] lg:h-[500px] 2xl:h-[600px]',
@@ -88,7 +87,7 @@ const Hero = ({
             {title}
           </h1>
           <h3
-            className={`${subtitleSize} font-normal tracking-wide max-w-4xl mx-auto leading-normal sm:leading-normal md:leading-normal lg:leading-normal`}
+            className={`${subtitleSize} font-normal tracking-wide max-w-4xl mx-auto leading-snug sm:leading-normal md:leading-normal lg:leading-normal`}
           >
             {subtitle}
           </h3>

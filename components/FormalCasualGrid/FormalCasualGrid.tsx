@@ -75,8 +75,8 @@ export default function FormalCasualGrid() {
   ];
 
   return (
-    <section className="max-w-6xl mx-auto px-4 pt-4 pb-10 sm:pb-10 sm:pt-6 bg-white">
-      <div className="text-center mb-6 sm:mb-12">
+    <section className="max-w-6xl mx-auto px-4 pt-14 pb-10 sm:pt-24 bg-white">
+      <div className="text-center pb-6 sm:pb-16">
         <h2 className="text-4xl sm:text-6xl font-bold text-primary-dark my-3 sm:my-7 sm:tracking-wide">
           FROM FORMAL
           <br className="md:hidden" /> TO CASUAL
@@ -86,7 +86,7 @@ export default function FormalCasualGrid() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
         {categories.map(category => (
           <div
             key={category.id}

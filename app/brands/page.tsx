@@ -1,71 +1,64 @@
-import React from 'react';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import CallToAction from '@/components/layout/CallToAction';
 import Hero from '@/components/layout/Hero';
-import Head from 'next/head';
 
-const BrandsPage: React.FC = () => {
-  const brands = [
-    { name: 'Hugo Boss', logo: '/images/brands/boss-hugo-boss.svg' },
-    { name: 'Johnston & Murphy', logo: '/images/brands/johnston-murphy.svg' },
-    { name: 'Calvin Klein', logo: '/images/brands/calvin-klein-logo.svg' },
-    { name: 'Cole Haan', logo: '/images/brands/cole-haan.svg' },
-    { name: 'Ted Baker', logo: '/images/brands/ted-baker.svg' },
-    { name: 'Michael Kors', logo: '/images/brands/michael-kors.svg' },
-    {
-      name: 'Hart Schaffner Marx',
-      logo: '/images/brands/hart-schaffner-marx.svg',
-    },
-    { name: 'Stacy Adams', logo: '/images/brands/stacy-adams-logo-vector.svg' },
-  ];
+const brands = [
+  { name: 'Hugo Boss', logo: '/images/brands/boss-hugo-boss.svg' },
+  { name: 'Johnston & Murphy', logo: '/images/brands/johnston-murphy.svg' },
+  { name: 'Calvin Klein', logo: '/images/brands/calvin-klein-logo.svg' },
+  { name: 'Cole Haan', logo: '/images/brands/cole-haan.svg' },
+  { name: 'Ted Baker', logo: '/images/brands/ted-baker.svg' },
+  { name: 'Michael Kors', logo: '/images/brands/michael-kors.svg' },
+  {
+    name: 'Hart Schaffner Marx',
+    logo: '/images/brands/hart-schaffner-marx.svg',
+  },
+  { name: 'Stacy Adams', logo: '/images/brands/stacy-adams-logo-vector.svg' },
+];
 
+export const metadata: Metadata = {
+  title: "Top Designer Brands | Men's Fashion & Style",
+  description:
+    "Discover the finest designer brands at Suits 20/20. From Hugo Boss to Michael Kors, explore premium men's fashion and accessories for every occasion.",
+  keywords:
+    "designer brands, men's fashion, Hugo Boss, Calvin Klein, Cole Haan, Ted Baker, Michael Kors, premium suits, Suits 20/20",
+  openGraph: {
+    title: "Top Designer Brands | Men's Fashion & Style",
+    description:
+      'Explore a wide range of premium designer brands like Hugo Boss and Calvin Klein at Suits 20/20. Perfect suits for any occasion.',
+    images: [{ url: '/images/brands/hero-brands.png' }],
+  },
+};
+
+const brandsSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Designer Brands at Suits 20/20',
+  description: "Premium men's fashion and designer brands",
+  url: 'https://suits2020.com/brands',
+  image: 'https://suits2020.com/images/brands/hero-brands.png',
+  mainEntity: {
+    '@type': 'ItemList',
+    itemListElement: brands.map((brand, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'Brand',
+        name: brand.name,
+        logo: `https://suits2020.com${brand.logo}`,
+      },
+    })),
+  },
+};
+
+export default function BrandsPage() {
   return (
     <>
-      {/* SEO Meta Tags */}
-      <Head>
-        <title>Designer Brands | Men's Fashion | Suits 20/20</title>
-        <meta
-          name="description"
-          content="Discover top designer brands in men's fashion at Suits 20/20. From Hugo Boss to Michael Kors, explore premium styles and find the perfect look for any occasion."
-        />
-        <meta
-          name="keywords"
-          content="men's fashion, designer brands, Hugo Boss, Calvin Klein, Cole Haan, Ted Baker, Michael Kors, Suits 20/20"
-        />
-        <meta property="og:title" content="Designer Brands | Men's Fashion" />
-        <meta
-          property="og:description"
-          content="Explore a wide range of designer brands in men's fashion. Find everything from formal to casual styles at Suits 20/20."
-        />
-        <meta property="og:image" content="/images/brands/hero-brands.png" />
-        <meta property="og:url" content="https://suits2020.com/brands" />
-        <meta property="og:type" content="website" />
-        <link
-          rel="canonical"
-          href="https://www.suits2020.com/designer-brands"
-        />
-      </Head>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'ClothingStore',
-            name: 'Suits 20/20',
-            description: "Premium men's fashion and designer brands",
-            brand: brands.map(brand => ({
-              '@type': 'Brand',
-              name: brand.name,
-            })),
-            address: {
-              '@type': 'PostalAddress',
-              streetAddress: '7651 N Caldwell Ave',
-              addressLocality: 'Niles',
-              addressRegion: 'IL',
-              postalCode: '60714',
-              addressCountry: 'US',
-            },
-          }),
+          __html: JSON.stringify(brandsSchema),
         }}
       />
 
@@ -75,60 +68,56 @@ const BrandsPage: React.FC = () => {
         subtitle="Discover the finest brands in men's fashion, all in one place."
         imagePath="/images/brands/hero-brands.png"
         imageAlt="Luxury men's fashion display showcasing designer suits and accessories"
-        height="medium"
-        overlayOpacity={25}
+        height="large"
+        overlayOpacity={40}
       />
 
-      {/* Main Content */}
-      <main className="container mx-auto max-w-7xl bg-white">
-        {/* Brands Section */}
-        <section
-          className="pt-20 px-6 sm:px-10 max-w-7xl"
-          role="region"
-          aria-labelledby="brands-heading"
+      {/* Brands Section */}
+      <section
+        className=" pt-20 px-6 sm:px-10 max-w-7xl mx-auto"
+        role="region"
+        aria-labelledby="brands-heading"
+      >
+        <h1
+          id="brands-heading"
+          className="text-center text-4xl sm:text-5xl font-bold text-black mb-16"
         >
-          <h1
-            id="brands-heading"
-            className="text-center text-4xl sm:text-5xl font-bold text-black mb-16"
-          >
-            Our Designer Brands
-          </h1>
-          <div
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12"
-            role="list"
-            aria-label="List of designer brands available at Suits 20/20"
-          >
-            {brands.map((brand, index) => (
-              <div
-                key={index}
-                role="listitem"
-                className="flex items-center justify-center p-6 h-[215px] sm:h-[250px] bg-white border-[1px] border-footerBrown border-opacity-20 rounded-lg shadow-md hover:shadow-xl transition-all duration-200 hover:scale-105"
-                aria-label={`Brand logo of ${brand.name}`}
-              >
-                <Image
-                  src={brand.logo}
-                  alt={`${brand.name} brand logo`}
-                  width={200}
-                  height={250}
-                  objectFit="contain"
-                  className="hover:brightness-110"
-                />
-              </div>
-            ))}
-          </div>
-        </section>
+          Our Designer Brands
+        </h1>
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12"
+          role="list"
+          aria-label="List of designer brands available at Suits 20/20"
+        >
+          {brands.map((brand, index) => (
+            <div
+              key={index}
+              role="listitem"
+              className="flex items-center justify-center p-6 h-[215px] sm:h-[250px] bg-white border-[1px] border-footerBrown border-opacity-20 rounded-lg shadow-md hover:shadow-xl transition-all duration-200 hover:scale-105"
+              aria-label={`Brand logo of ${brand.name}, available at Suits 20/20`}
+            >
+              <Image
+                src={brand.logo}
+                alt={`Logo of ${brand.name}, a premium designer brand in men's fashion`}
+                width={200}
+                height={250}
+                objectFit="contain"
+                className="hover:brightness-110"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
 
-        {/* Call to Action Section */}
-        <CallToAction
-          title="Discover Your Favorite Designer Brands"
-          subtitle="Explore our collection of top designer brands in men's fashion. Find the perfect style that suits your personality. Visit us today."
-          href="/location"
-          label="Visit Our Store"
-          ariaLabel="Visit our store to explore designer brands and collections"
-        />
-      </main>
+      {/* Call to Action Section */}
+      <CallToAction
+        title="Discover Top Designer Brands"
+        subtitle="From Hugo Boss to Michael Kors, find the perfect style in our premium designer collections. Visit Suits 20/20 today and experience the elegance of timeless fashion."
+        href="/location"
+        label="Visit Our Store"
+        ariaLabel="Visit Suits 20/20's location to explore top designer brands"
+      />
     </>
   );
-};
-
-export default BrandsPage;
+}
