@@ -6,16 +6,36 @@ import emailjs from '@emailjs/browser';
 
 emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!);
 
+const formatPhoneNumber = (value: string) => {
+  // Remove all non-digit characters
+  const digits = value.replace(/\D/g, '');
+
+  // Format the phone number based on the number of digits
+  if (digits.length > 6) {
+    return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(
+      6,
+      10
+    )}`;
+  } else if (digits.length > 3) {
+    return `(${digits.slice(0, 3)}) ${digits.slice(3)}`;
+  } else if (digits.length > 0) {
+    return `(${digits}`;
+  }
+  return '';
+};
+
 const ContactForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [submissionMessage, setSubmissionMessage] = React.useState<
     string | null
   >(null);
+  const [previousPhone, setPreviousPhone] = React.useState('');
 
   const formik = useFormik({
     initialValues: {
       name: '',
       email: '',
+      phone: '',
       message: '',
       services: [] as string[],
       favoriteColor: '', // Honeypot field
@@ -25,6 +45,12 @@ const ContactForm: React.FC = () => {
       email: Yup.string()
         .email('Invalid email address')
         .required('Email is required'),
+      phone: Yup.string()
+        .matches(
+          /^\(\d{3}\) \d{3}-\d{4}$/,
+          'Phone number must be in format (XXX) XXX-XXXX'
+        )
+        .required('Phone number is required'),
       services: Yup.array().min(1, 'Select at least one service'),
     }),
     onSubmit: async (values, { resetForm }) => {
@@ -43,6 +69,7 @@ const ContactForm: React.FC = () => {
           {
             name: values.name,
             email: values.email,
+            phone: values.phone,
             message: values.message,
             services: values.services.join(', '),
           }
@@ -57,6 +84,13 @@ const ContactForm: React.FC = () => {
       }
     },
   });
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const input = e.target.value;
+    const formattedPhone = formatPhoneNumber(input);
+
+    formik.setFieldValue('phone', formattedPhone);
+  };
 
   return (
     <form
@@ -121,6 +155,34 @@ const ContactForm: React.FC = () => {
           {formik.touched.email && formik.errors.email && (
             <div id="email-error" className="text-red-500 text-sm" role="alert">
               {formik.errors.email}
+            </div>
+          )}
+        </div>
+
+        {/* Phone Field */}
+        <div>
+          <label
+            htmlFor="phone"
+            className="block text-lg font-semibold text-gray-700"
+          >
+            Phone <span className="text-red-500">*</span>
+          </label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            onChange={handlePhoneChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.phone}
+            placeholder="(123) 456-7890"
+            className="block w-full text-lg p-2 border border-gray-300 rounded-md shadow-sm focus:ring-footerBrown focus:border-footerBrown placeholder-gray-500 placeholder-opacity-75"
+            aria-required="true"
+            aria-invalid={formik.touched.phone && !!formik.errors.phone}
+            aria-describedby={formik.errors.phone ? 'phone-error' : undefined}
+          />
+          {formik.touched.phone && formik.errors.phone && (
+            <div id="phone-error" className="text-red-500 text-sm" role="alert">
+              {formik.errors.phone}
             </div>
           )}
         </div>
