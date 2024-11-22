@@ -35,7 +35,9 @@ Suits 20/20 offers expert tailoring services, premium designer brands, and perso
 ## Getting Started
 
 ### Prerequisites
+
 To work on this project, ensure the following tools are installed on your system:
+
 - Node.js v16+
 - PNPM: A faster, disk-efficient package manage
 - EmailJS Account: For configuring the contact form email integration
@@ -59,10 +61,12 @@ NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
 # Start development server
 pnpm dev
 ```
+
 This will install all required dependencies, including next, formik, yup, and emailjs.
 Open http://localhost:3000 to view the app in the browser.
 
 ## Deployment
+
 -The site is deployed on Vercel. To deploy updates, push changes to the main branch, and Vercel will automatically redeploy.
 
 ### Screenshots
@@ -73,29 +77,24 @@ Open http://localhost:3000 to view the app in the browser.
 
 ![Landing Page Screenshot2](.github/screenshots/landingpage2.png)
 
-
-- **Gif**
+- # Landing Page Gif
   ![Landing Page Gif](.github/gif.gif)
 
 ## Services Page
 
 ![Services Screenshot1](.github/screenshots/services.png)
 
-
 ## Designer Brands Page
 
 ![Brands Screenshot1](.github/screenshots/brands.png)
-
 
 ## Location Page
 
 ![Location Screenshot1](.github/screenshots/location.png)
 
-
 ## Contact Page
 
 ![Contact Screenshot1](.github/screenshots/contact.png)
-
 
 Thank you for visiting Suits 20/20! If you have any questions or suggestions, please feel free to reach out.
 
