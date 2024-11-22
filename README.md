@@ -56,3 +56,22 @@ NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
 
 # Start development server
 pnpm dev
+```
+
+Future Enhancements
+Customer Portal: Add a feature for users to log in and manage their appointments.
+Online Appointment Booking: Allow users to schedule tailoring or design consultations online.
+E-Commerce: Extend the site to include online shopping for designer products.
+
+Screenshots
+Home Page
+
+Services Page
+
+Designer Brands Page
+
+Location Page
+
+Contact Page
+
+Thank you for visiting Suits 20/20! If you have any questions or suggestions, please feel free to reach out.
