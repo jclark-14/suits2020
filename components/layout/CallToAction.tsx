@@ -35,7 +35,7 @@ export default function CallToAction({
 
   return (
     <div
-      className="py-24 px-2 text-center bg-white relative bottom-1"
+      className="py-24 px-2 text-center bg-white h-full -mt-1"
       aria-labelledby="cta-heading"
     >
       <div className="max-w-2xl mx-auto">
