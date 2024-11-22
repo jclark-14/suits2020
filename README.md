@@ -44,7 +44,7 @@ Suits 20/20 offers expert tailoring services, premium designer brands, and perso
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/suits2020.git
+git clone https://github.com/jclark-14/suits2020.git
 
 # Install dependencies
 cd suits2020
