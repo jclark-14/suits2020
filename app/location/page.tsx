@@ -62,6 +62,7 @@ export default function LocationPage() {
           imagePath="/images/location/location-hero.png"
           imageAlt="Chicago skyline backdrop"
           overlayOpacity={30}
+          height="large"
         />
 
         {/* Address and Contact Information */}
