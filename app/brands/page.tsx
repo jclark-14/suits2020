@@ -69,7 +69,7 @@ export default function BrandsPage() {
         imagePath="/images/brands/hero-brands.png"
         imageAlt="Luxury men's fashion display showcasing designer suits and accessories"
         height="large"
-        overlayOpacity={40}
+        overlayOpacity={30}
       />
 
       {/* Brands Section */}
