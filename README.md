@@ -51,7 +51,7 @@ cd suits2020
 pnpm install
 
 # Configure environment variables
-# Create .env.local with:
+# Create .env with:
 NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
 NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
 NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
@@ -59,11 +59,11 @@ NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
 # Start development server
 pnpm dev
 ```
+This will install all required dependencies, including next, formik, yup, and emailjs.
+Open http://localhost:3000 to view the app in the browser.
 
-Future Enhancements
-Customer Portal: Add a feature for users to log in and manage their appointments.
-Online Appointment Booking: Allow users to schedule tailoring or design consultations online.
-E-Commerce: Extend the site to include online shopping for designer products.
+## Deployment
+-The site is deployed on Vercel. To deploy updates, push changes to the main branch, and Vercel will automatically redeploy.
 
 ### Screenshots
 
@@ -73,7 +73,6 @@ E-Commerce: Extend the site to include online shopping for designer products.
 
 ![Landing Page Screenshot2](.github/screenshots/landingpage2.png)
 
-![Landing Page Screenshot3](.github/screenshots/landingpage3.png)
 
 - **Gif**
   ![Landing Page Gif](.github/gif.gif)
@@ -82,25 +81,21 @@ E-Commerce: Extend the site to include online shopping for designer products.
 
 ![Services Screenshot1](.github/screenshots/services.png)
 
-![Services Screenshot2](.github/screenshots/services.png)
 
 ## Designer Brands Page
 
 ![Brands Screenshot1](.github/screenshots/brands.png)
 
-![Brands Screenshot2](.github/screenshots/brands2.png)
 
 ## Location Page
 
 ![Location Screenshot1](.github/screenshots/location.png)
 
-![Location Screenshot2](.github/screenshots/location2.png)
 
 ## Contact Page
 
 ![Contact Screenshot1](.github/screenshots/contact.png)
 
-![Contact Screenshot2](.github/screenshots/contact2.png)
 
 Thank you for visiting Suits 20/20! If you have any questions or suggestions, please feel free to reach out.
 
