@@ -79,10 +79,6 @@ export default function RootLayout({
           property="og:image"
           content="https://suits2020.com/home/home-hero.png"
         />
-        <meta
-          property="twitter:image"
-          content="https://suits2020.com/home/home-hero.png"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
