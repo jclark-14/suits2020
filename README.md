@@ -35,11 +35,13 @@ Suits 20/20 offers expert tailoring services, premium designer brands, and perso
 ## Setup
 
 ### Prerequisites
+
 - Node.js v16+
 - PNPM
 - EmailJS account
 
 ### Installation
+
 ```bash
 # Clone repository
 git clone https://github.com/yourusername/suits2020.git
@@ -65,13 +67,31 @@ E-Commerce: Extend the site to include online shopping for designer products.
 
 Screenshots
 Home Page
+![Landing Page Screenshot1](.github/screenshots/landingpage.png)
+![Landing Page Screenshot2](.github/screenshots/landingpage2.png)
+![Landing Page Screenshot3](.github/screenshots/landingpage3.png)
+![Landing Page Gif](.github/gif.gif)
 
 Services Page
+![Services Screenshot1](.github/screenshots/services.png)
+![Services Screenshot2](.github/screenshots/services.png)
 
 Designer Brands Page
+![Brands Screenshot1](.github/screenshots/brands.png)
+![Brands Screenshot2](.github/screenshots/brands2.png)
 
 Location Page
+![Location Screenshot1](.github/screenshots/location.png)
+![Location Screenshot2](.github/screenshots/location2.png)
 
 Contact Page
+![Contact Screenshot1](.github/screenshots/contact.png)
+![Contact Screenshot2](.github/screenshots/contact2.png)
 
 Thank you for visiting Suits 20/20! If you have any questions or suggestions, please feel free to reach out.
+
+## Links
+
+- [Visit Suits 20/20 Live](https://suits2020.com)
+- [TailwindCSS Documentation](https://tailwindcss.com)
+- [EmailJS Integration Guide](https://www.emailjs.com/docs/)
