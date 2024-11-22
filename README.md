@@ -8,21 +8,21 @@ Suits 20/20 offers expert tailoring services, premium designer brands, and perso
 
 ## Features
 
-- Designer brand showcase (Hugo Boss, Michael Kors, Ted Baker, etc.)
-- Expert tailoring and alteration services
-- Store location with interactive map
-- Contact form with EmailJS integration
-- Responsive, mobile-first design
-- SEO and accessibility optimized
+- Designer Brands Showcase: Highlighting premium brands like Hugo Boss, Michael Kors, Ted Baker, and more.
+- Expert Tailoring Services: Comprehensive tailoring and alteration options.
+- Store Location: Includes an interactive map for easy navigation.
+- Contact Form: Integrated with EmailJS for message submission.
+- Responsive Design: Mobile-first, ensuring great UX across all devices.
+- SEO & Accessibility Optimized: Includes Schema.org markup and ARIA-compliant features.
 
 ## Technologies
 
 - **Framework:** Next.js 15
 - **Styling:** TailwindCSS
-- **Forms:** Formik + Yup
-- **Email:** EmailJS
-- **Images:** MidJourney AI, Next/Image
-- **SEO:** Schema.org, OpenGraph
+- **Forms:** Formik + Yup for validation
+- **Email Integration:** EmailJS
+- **Images:** MidJourney AI-generated images and Next/Image optimization
+- **SEO:** Schema.org, OpenGraph, and meta tags for enhanced search visibility
 
 ## Pages
 
