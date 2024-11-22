@@ -115,7 +115,7 @@ export default function BrandsPage() {
       {/* Call to Action Section */}
       <CallToAction
         title="Discover Top Designer Brands"
-        subtitle="From Hugo Boss to Michael Kors, find the perfect style in our premium designer collections. Visit Suits 20/20 today and experience the elegance of timeless fashion."
+        subtitle="From Hugo Boss to Michael Kors, find the perfect style in our premium designer collections."
         href="/location"
         label="Visit Our Store"
         ariaLabel="Visit Suits 20/20's location to explore top designer brands"
