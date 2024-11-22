@@ -81,9 +81,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="flex flex-col min-h-screen">
+      <body className="flex flex-col min-h-screen bg-black lg:bg-white">
         <Header />
-        <main role="main" className="flex-grow bg-black lg:bg-white">
+        <main role="main" className="flex-grow ">
           {children}
         </main>
         <Footer />
