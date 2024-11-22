@@ -7,6 +7,7 @@ const brands = [
   { name: 'Hugo Boss', logo: '/images/brands/boss-hugo-boss.svg' },
   { name: 'Johnston & Murphy', logo: '/images/brands/johnston-murphy.svg' },
   { name: 'Calvin Klein', logo: '/images/brands/calvin-klein-logo.svg' },
+  { name: 'Tommy Hilfiger', logo: '/images/brands/tommy-hilfiger-1.svg' },
   { name: 'Cole Haan', logo: '/images/brands/cole-haan.svg' },
   { name: 'Ted Baker', logo: '/images/brands/ted-baker.svg' },
   { name: 'Michael Kors', logo: '/images/brands/michael-kors.svg' },
@@ -14,6 +15,7 @@ const brands = [
     name: 'Hart Schaffner Marx',
     logo: '/images/brands/hart-schaffner-marx.svg',
   },
+  { name: 'Cigar Couture', logo: '/images/brands/cigar.png' },
   { name: 'Stacy Adams', logo: '/images/brands/stacy-adams-logo-vector.svg' },
 ];
 

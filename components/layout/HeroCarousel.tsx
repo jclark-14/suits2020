@@ -51,7 +51,7 @@ const SLIDES: SlideData[] = [
     alt: 'BLACK FRIDAY SALE',
     overlayOpacity: 0.3,
     title: 'BLACK FRIDAY SALE',
-    description: ['Exceptional Savings on Exceptional Suits!'],
+    description: ['Exceptional Savings on Exceptional Apparel!'],
     className:
       'text-4xl sm:text-5xl md:text-5xl lg:text-8xl pt-10 mb-0 mx-auto',
     className2:
