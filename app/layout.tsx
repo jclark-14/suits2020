@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/social-preview.jpg',
+        url: '/images/home/home-hero.png',
         width: 1200,
         height: 630,
       },
@@ -44,7 +44,7 @@ const baseSchema = {
   '@type': 'ClothingStore',
   name: 'Suits 20/20',
   url: 'https://suits2020.com',
-  logo: 'https://suits2020.com/images/logo.png',
+  logo: 'https://suits2020.com/home/home-hero.png',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '7651 N Caldwell Ave',
