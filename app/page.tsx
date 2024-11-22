@@ -67,7 +67,7 @@ export default function HomePage() {
 
       <CallToAction
         title="Come Visit Us in Person"
-        subtitle="Experience our personalized service and browse our wide selection of men's and boy's fashion. Our expert consultants are ready to help you find the perfect look."
+        subtitle="Experience our personalized service and browse our wide selection of men's and boy's fashion."
         href="/location"
         label="Find Our Location"
         ariaLabel="Find our store location and visit us for personalized service"

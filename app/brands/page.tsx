@@ -74,7 +74,7 @@ export default function BrandsPage() {
 
       {/* Brands Section */}
       <section
-        className=" pt-20 px-6 sm:px-10 max-w-7xl mx-auto"
+        className=" pt-20 px-6 sm:px-10 max-w-7xl mx-auto bg-white"
         role="region"
         aria-labelledby="brands-heading"
       >
