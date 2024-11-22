@@ -26,16 +26,16 @@ Suits 20/20 offers expert tailoring services, premium designer brands, and perso
 
 ## Pages
 
-- **Home:** Service overview and style offerings
+- **Landing Page:** Service overview and style offerings
 - **Services:** Tailoring and design services
 - **Brands:** Premium designer brand showcase
 - **Location:** Store details and interactive map
 - **Contact:** ARIA-compliant form with live validation
 
-## Setup
+## Getting Started
 
 ### Prerequisites
-
+To work on this project, ensure the following tools are installed on your system:
 - Node.js v16+
 - PNPM
 - EmailJS account
