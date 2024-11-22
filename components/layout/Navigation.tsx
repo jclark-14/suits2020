@@ -11,12 +11,21 @@ export default function Navigation() {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      document.body.style.height = '100vh';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
+      document.body.style.height = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
     }
 
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
+      document.body.style.height = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
     };
   }, [isOpen]);
 
@@ -105,7 +114,7 @@ export default function Navigation() {
         {isOpen && (
           <div className="fixed inset-0 bg-white z-40 md:hidden overflow-auto">
             <div className="border-t-2 border-gray-200 w-full"></div>
-            <div className="flex flex-col items-center mt-24 mb-20 space-y-10 text-xl">
+            <div className="flex flex-col items-center mt-24 mb-20 space-y-12 text-2xl">
               <Link href="/" onClick={handleNavigation}>
                 <span className="block text-gray-900 font-medium">HOME</span>
               </Link>
