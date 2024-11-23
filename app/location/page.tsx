@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'Visit Suits 20/20 in Niles, IL. Expert tailoring and fashion consultation services available at our convenient location.',
   openGraph: {
     ...defaultMetadata.openGraph,
-    title: 'Visit Our Store | Suits 20/20',
+    title: 'Visit Our Store',
     description:
       'Visit Suits 20/20 in Niles, IL. Expert tailoring and fashion consultation services at our convenient location.',
     url: '/location',

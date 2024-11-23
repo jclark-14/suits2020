@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'Experience expert tailoring and fashion consultation services at Suits 20/20. Schedule your consultation today for premium service.',
   openGraph: {
     ...defaultMetadata.openGraph,
-    title: 'Expert Tailoring & Fashion Services | Suits 20/20',
+    title: 'Expert Tailoring & Fashion Services',
     description:
       'Explore premium tailoring and fashion consultation services at Suits 20/20, crafted for style and comfort.',
     url: '/services',

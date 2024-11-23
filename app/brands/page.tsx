@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'Discover premium designer brands including Hugo Boss, Calvin Klein, Tommy Hilfiger, and more at Suits 20/20. Shop our curated collection of luxury menswear.',
   openGraph: {
     ...defaultMetadata.openGraph,
-    title: 'Designer Brands Collection | Suits 20/20',
+    title: 'Designer Brands Collection',
     description:
       'Explore our collection of premium designer brands including Hugo Boss, Calvin Klein, Tommy Hilfiger, and more.',
     url: '/brands',

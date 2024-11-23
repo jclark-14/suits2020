@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "Contact Suits 20/20 for expert tailoring services, fashion consultation, or general inquiries. We're here to help you look your best.",
   openGraph: {
     ...defaultMetadata.openGraph,
-    title: 'Contact Us | Suits 20/20',
+    title: 'Contact Us',
     description:
       'Reach out to Suits 20/20 for tailoring services, fashion consultation, and style guidance. Get in touch with our expert team today.',
     url: '/contact',
