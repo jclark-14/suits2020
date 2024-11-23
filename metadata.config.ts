@@ -18,7 +18,7 @@ export const defaultMetadata = {
     type: 'website',
     images: [
       {
-        url: '/home/Suits2020-logo.jpg',
+        url: '/home/suits-logo-social-preview.png',
         width: 1200,
         height: 630,
         alt: 'Suits 20/20 - Elegant Formal Wear',
