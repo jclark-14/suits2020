@@ -2,40 +2,27 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Hero from '@/components/layout/Hero';
 import CallToAction from '@/components/layout/CallToAction';
+import { defaultMetadata, globalSchema } from '@/metadata.config';
 
+// Page-Specific Metadata
 export const metadata: Metadata = {
-  title: 'Expert Tailoring & Fashion Services | Niles, IL',
+  ...defaultMetadata,
+  title: {
+    default: 'Expert Tailoring & Fashion Services | Suits 20/20',
+    template: '%s | Suits 20/20',
+  },
+  alternates: {
+    canonical: '/services',
+  },
   description:
-    'Professional tailoring services and fashion consultations at Suits 20/20. Expert alterations, fashion advice, and personalized style guidance in Niles, IL.',
-  keywords:
-    "suit tailoring, men's fashion consulting, alterations, fashion advice, Niles IL, Chicago suburbs",
+    'Experience expert tailoring and fashion consultation services at Suits 20/20. Schedule your consultation today for premium service.',
   openGraph: {
+    ...defaultMetadata.openGraph,
     title: 'Expert Tailoring & Fashion Services | Suits 20/20',
     description:
-      'Professional tailoring services and fashion consultations. Expert alterations and personalized style guidance.',
+      'Explore premium tailoring and fashion consultation services at Suits 20/20, crafted for style and comfort.',
+    url: '/services',
   },
-};
-
-const servicesSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ClothingStore',
-  name: 'Suits 20/20 Tailoring Services',
-  description:
-    "Expert tailoring and fashion consulting services for men's and boy's fashion in Niles, IL",
-  image: '/images/services/services-hero.png',
-  url: 'https://suits2020.com/services',
-  offers: [
-    {
-      '@type': 'Offer',
-      name: 'In-Store Tailoring',
-      description: 'Professional tailoring and alterations.',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Fashion Consultation',
-      description: 'Personalized style guidance for any occasion.',
-    },
-  ],
 };
 
 export default function ServicesPage() {
@@ -44,10 +31,10 @@ export default function ServicesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(servicesSchema),
+          __html: JSON.stringify(globalSchema),
         }}
       />
-
+      {/* Hero Section */}
       <Hero
         title="EXPERT TAILORING & FASHION SERVICES"
         subtitle="Walk-in or schedule an appointment for our premium services."
@@ -136,7 +123,7 @@ export default function ServicesPage() {
 
           {/* Fashion Consultation Service */}
           <div role="listitem" className="flex flex-col space-y-10">
-            <div className="relative aspect-[4/3] w-full ">
+            <div className="relative aspect-[4/3] w-full">
               <Image
                 src="/images/services/consultation.png"
                 alt="Style consultant helping a customer select outfits"
@@ -188,6 +175,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Call to Action Section */}
       <CallToAction
         title="Interested In Our Services?"
         subtitle="Schedule a consultation with our expert tailors and fashion

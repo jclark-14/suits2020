@@ -2,54 +2,59 @@ import { Metadata } from 'next';
 import FormalCasualGrid from '../components/FormalCasualGrid/FormalCasualGrid';
 import HeroCarousel from '@/components/layout/HeroCarousel';
 import CallToAction from '@/components/layout/CallToAction';
+import { defaultMetadata, globalSchema } from '@/metadata.config';
 
+// Page-Specific Metadata
 export const metadata: Metadata = {
-  title: 'Suits 20/20 | Elegant Formal & Casual Wear for Men & Boys',
+  ...defaultMetadata,
+  title: defaultMetadata.title.default,
+  alternates: {
+    canonical: '/',
+  },
   description:
-    "Discover Suits 20/20's wide range of formal and casual wear. Personalized service and expert consultants to help you find the perfect look for any occasion.",
-  keywords:
-    "formal wear, casual wear, men's fashion, boys' fashion, suits, personalized fashion consulting, Niles IL",
+    "Chicago's premier destination for men's and boy's formal wear. Expert tailoring, designer brands, and personalized fashion consultation at Suits 20/20.",
   openGraph: {
-    title: 'Suits 20/20 | Elegant Formal & Casual Wear',
+    ...defaultMetadata.openGraph,
+    title: defaultMetadata.title.default,
     description:
-      'Explore premium formal and casual wear for men and boys at Suits 20/20. Visit us for personalized service and expert fashion advice.',
-    images: [{ url: '/images/home/home-hero.jpg' }],
+      "Chicago's leading men's and boy's formal wear store. Discover designer brands, expert tailoring, and personalized fashion consultation at Suits 20/20.",
+    url: '/',
   },
 };
 
+// Home Page Schema
 const homeSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Suits 20/20 - Premium Formal and Casual Wear',
-  description: 'Premium formal and casual wear for men and boys',
-  url: 'https://suits2020.com',
-  image: 'https://suits2020.com/images/home/home-hero.jpg',
-  mainEntity: {
-    '@type': 'ClothingStore',
-    name: 'Suits 20/20',
-    description: 'Premium formal and casual wear for men and boys',
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: "Men's and Boy's Fashion Collection",
-      itemListElement: [
+  name: "Suits 20/20 - Premier Men's Formal Wear Store",
+  description:
+    "Chicago's premier destination for men's and boy's formal wear, offering expert tailoring and designer brands.",
+  url: '/',
+  mainContentOfPage: {
+    '@type': 'WebPageElement',
+    offers: {
+      '@type': 'AggregateOffer',
+      itemOffered: [
         {
-          '@type': 'OfferCatalog',
-          name: 'Formal Wear',
-          description: 'Premium suits and formal attire for all occasions',
+          '@type': 'Service',
+          name: 'Expert Tailoring Services',
         },
         {
-          '@type': 'OfferCatalog',
-          name: 'Casual Wear',
-          description: 'Stylish casual clothing and accessories',
+          '@type': 'Service',
+          name: 'Fashion Consultation',
         },
         {
-          '@type': 'OfferCatalog',
-          name: "Boy's Collection",
-          description: "Premium boys' formal and casual wear",
+          '@type': 'Thing',
+          name: 'Designer Brand Collection',
+        },
+        {
+          '@type': 'Service',
+          name: 'Formal Wear Fitting',
         },
       ],
     },
   },
+  specialty: "Men's and Boy's Formal Wear",
 };
 
 export default function HomePage() {
@@ -58,10 +63,9 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(homeSchema),
+          __html: JSON.stringify([globalSchema, homeSchema]),
         }}
       />
-
       <HeroCarousel />
       <FormalCasualGrid />
 

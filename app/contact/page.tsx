@@ -1,40 +1,43 @@
 import { Metadata } from 'next';
 import Hero from '@/components/layout/Hero';
 import ContactForm from '@/components/layout/ContactForm';
+import { defaultMetadata, globalSchema } from '@/metadata.config';
 
+// Page-Specific Metadata
 export const metadata: Metadata = {
-  title: 'Contact Suits 2020 | Expert Tailoring & Formalwear',
+  ...defaultMetadata,
+  title: {
+    default: 'Contact Us | Suits 20/20',
+    template: '%s | Suits 20/20',
+  },
+  alternates: {
+    canonical: '/contact',
+  },
   description:
-    'Reach out to Suits 2020 for expert tailoring services, alterations, fashion consultations, and premium formalwear. Located in Niles, IL, serving the greater Chicago area.',
-  keywords:
-    'tailoring, alterations, fashion consultation, formalwear, contact Suits 2020, Niles IL, Chicago tailoring services',
+    "Contact Suits 20/20 for expert tailoring services, fashion consultation, or general inquiries. We're here to help you look your best.",
   openGraph: {
-    title: 'Contact Suits 2020 | Expert Tailoring & Formalwear',
+    ...defaultMetadata.openGraph,
+    title: 'Contact Us | Suits 20/20',
     description:
-      'Get in touch with Suits 2020 for premium tailoring, fashion consultation, and alterations. Located in Niles, IL.',
+      'Reach out to Suits 20/20 for tailoring services, fashion consultation, and style guidance. Get in touch with our expert team today.',
+    url: '/contact',
   },
 };
 
+// Page-Specific Schema
 const contactSchema = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
-  name: 'Contact Suits 2020',
-  description: 'Contact page for Suits 2020 tailoring and formalwear services',
-  url: 'https://suits2020.com/contact',
+  name: 'Contact Suits 20/20',
+  description: 'Contact page for Suits 20/20 tailoring and fashion services',
+  url: '/contact',
   mainEntity: {
-    '@type': 'WebForm',
-    name: 'Contact Form',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: 'https://suits2020.com/contact',
-      inLanguage: 'en-US',
-      actionPlatform: [
-        'http://schema.org/DesktopWebPlatform',
-        'http://schema.org/MobileWebPlatform',
-      ],
-    },
-    description:
-      'Contact form for inquiries about tailoring services, alterations, and fashion consultations',
+    '@type': 'ContactPoint',
+    telephone: '+1-847-676-2020',
+    email: 'info@suits2020.com',
+    contactType: 'customer service',
+    availableLanguage: 'English',
+    areaServed: 'US',
   },
 };
 
@@ -44,9 +47,10 @@ export default function ContactPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(contactSchema),
+          __html: JSON.stringify([globalSchema, contactSchema]),
         }}
       />
+
       <div>
         <h1 className="sr-only">Contact Suits 2020</h1>
         <Hero

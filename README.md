@@ -21,7 +21,7 @@ Suits 20/20 offers expert tailoring services, premium designer brands, and perso
 - **Styling:** TailwindCSS
 - **Forms:** Formik + Yup for validation
 - **Email Integration:** EmailJS
-- **Images:** MidJourney AI-generated images and Next/Image optimization
+- **Images:** Next/Image optimization
 - **SEO:** Schema.org, OpenGraph, and meta tags for enhanced search visibility
 
 ## Pages

@@ -1,48 +1,42 @@
 import { Metadata } from 'next';
 import Hero from '@/components/layout/Hero';
 import CallToAction from '@/components/layout/CallToAction';
+import { defaultMetadata, globalSchema } from '@/metadata.config';
 
+// Page-Specific Metadata
 export const metadata: Metadata = {
-  title: "Visit Suits 20/20 | Men's & Boy's Fashion Store in Niles, IL",
+  ...defaultMetadata,
+  title: {
+    default: 'Visit Our Store | Suits 20/20',
+    template: '%s | Suits 20/20',
+  },
+  alternates: {
+    canonical: '/location',
+  },
   description:
-    "Visit Suits 20/20, your go-to fashion store in Niles, IL. Offering men's suits, custom tailoring, and designer fashion with convenient store hours.",
-  keywords:
-    "men's fashion store, Niles IL suits, custom tailoring, Suits 20/20, designer fashion, store hours, Chicago suburbs fashion",
+    'Visit Suits 20/20 in Niles, IL. Expert tailoring and fashion consultation services available at our convenient location.',
   openGraph: {
-    title: "Visit Suits 20/20 | Men's & Boy's Fashion Store",
+    ...defaultMetadata.openGraph,
+    title: 'Visit Our Store | Suits 20/20',
     description:
-      "Find Suits 20/20 in Niles, IL for expert tailoring, men's suits, and boy's fashion. Open 7 days a week with convenient hours.",
+      'Visit Suits 20/20 in Niles, IL. Expert tailoring and fashion consultation services at our convenient location.',
+    url: '/location',
   },
 };
 
+// Page-Specific Schema
 const locationSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'Suits 20/20 - Niles Location',
-  description: "Men's fashion and tailoring services in Niles, IL",
-  image: 'https://suits2020.com/images/location/location-hero.jpg',
-  '@id': 'https://suits2020.com/location',
+  name: 'Suits 20/20',
+  image: '/home/suits-logo-social-preview.png',
+  '@id': '/location',
+  url: '/',
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: '42.015925',
-    longitude: '-87.812256',
+    latitude: 42.015925,
+    longitude: -87.812256,
   },
-  openingHoursSpecification: [
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '11:00',
-      closes: '19:00',
-    },
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Saturday', 'Sunday'],
-      opens: '10:00',
-      closes: '17:00',
-    },
-  ],
-  email: 'info@suits2020.com',
-  hasMap: 'https://goo.gl/maps/YOUR_GOOGLE_MAPS_URL',
 };
 
 export default function LocationPage() {
@@ -51,7 +45,7 @@ export default function LocationPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(locationSchema),
+          __html: JSON.stringify([globalSchema, locationSchema]),
         }}
       />
       <div className="bg-white">

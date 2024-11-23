@@ -2,6 +2,28 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import CallToAction from '@/components/layout/CallToAction';
 import Hero from '@/components/layout/Hero';
+import { defaultMetadata, globalSchema } from '@/metadata.config';
+
+// Page-Specific Metadata
+export const metadata: Metadata = {
+  ...defaultMetadata,
+  title: {
+    default: 'Designer Brands Collection | Suits 20/20',
+    template: '%s | Suits 20/20',
+  },
+  alternates: {
+    canonical: '/brands',
+  },
+  description:
+    'Discover premium designer brands including Hugo Boss, Calvin Klein, Tommy Hilfiger, and more at Suits 20/20. Shop our curated collection of luxury menswear.',
+  openGraph: {
+    ...defaultMetadata.openGraph,
+    title: 'Designer Brands Collection | Suits 20/20',
+    description:
+      'Explore our collection of premium designer brands including Hugo Boss, Calvin Klein, Tommy Hilfiger, and more.',
+    url: '/brands',
+  },
+};
 
 const brands = [
   { name: 'Hugo Boss', logo: '/images/brands/boss-hugo-boss.svg' },
@@ -19,37 +41,28 @@ const brands = [
   { name: 'Stacy Adams', logo: '/images/brands/stacy-adams-logo-vector.svg' },
 ];
 
-export const metadata: Metadata = {
-  title: "Top Designer Brands | Men's Fashion & Style",
-  description:
-    "Discover the finest designer brands at Suits 20/20. From Hugo Boss to Michael Kors, explore premium men's fashion and accessories for every occasion.",
-  keywords:
-    "designer brands, men's fashion, Hugo Boss, Calvin Klein, Cole Haan, Ted Baker, Michael Kors, premium suits, Suits 20/20",
-  openGraph: {
-    title: "Top Designer Brands | Men's Fashion & Style",
-    description:
-      'Explore a wide range of premium designer brands like Hugo Boss and Calvin Klein at Suits 20/20. Perfect suits for any occasion.',
-    images: [{ url: '/images/brands/hero-brands.png' }],
-  },
-};
-
+// Page-Specific Schema
 const brandsSchema = {
   '@context': 'https://schema.org',
-  '@type': 'CollectionPage',
-  name: 'Designer Brands at Suits 20/20',
-  description: "Premium men's fashion and designer brands",
-  url: 'https://suits2020.com/brands',
-  mainEntity: {
-    '@type': 'ItemList',
-    itemListElement: brands.map((brand, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      item: {
-        '@type': 'Brand',
-        name: brand.name,
-        logo: `https://suits2020.com${brand.logo}`,
-      },
-    })),
+  '@type': 'Store',
+  name: 'Suits 20/20 Designer Brands Collection',
+  '@id': '/brands',
+  url: '/brands',
+  description: 'Premium designer menswear brands available at Suits 20/20',
+  brand: brands.map(brand => ({
+    '@type': 'Brand',
+    name: brand.name,
+    logo: brand.logo,
+  })),
+  offers: {
+    '@type': 'AggregateOffer',
+    offerCount: brands.length,
+    availability: 'https://schema.org/InStock',
+  },
+  department: {
+    '@type': 'Department',
+    name: "Men's Designer Fashion",
+    description: 'Premium menswear from top designer brands',
   },
 };
 
@@ -59,7 +72,7 @@ export default function BrandsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(brandsSchema),
+          __html: JSON.stringify([globalSchema, brandsSchema]),
         }}
       />
 
