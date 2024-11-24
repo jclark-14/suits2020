@@ -53,16 +53,9 @@ const servicesSchema = {
     },
     {
       '@type': 'OpeningHoursSpecification',
-      dayOfWeek: 'Saturday',
-      opens: '10:00',
+      dayOfWeek: ['Saturday', 'Sunday'],
+      opens: '11:00',
       closes: '17:00',
-    },
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: 'Sunday',
-      opens: '00:00',
-      closes: '00:00',
-      description: 'Closed',
     },
   ],
   makesOffer: [
