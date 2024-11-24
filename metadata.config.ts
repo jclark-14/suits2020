@@ -33,6 +33,15 @@ export const globalSchema = {
   name: 'Suits 20/20',
   url: 'https://suits2020.com',
   logo: 'https://suits2020.com/home/suits-logo-social-preview.png',
+  image: [
+    {
+      '@type': 'ImageObject',
+      url: 'https://suits2020.com/home/home-hero.png',
+      width: 1200,
+      height: 630,
+      alternateName: 'Suits 20/20 - Elegant Formal Wear',
+    },
+  ],
   address: {
     '@type': 'PostalAddress',
     streetAddress: '7651 N Caldwell Ave',
