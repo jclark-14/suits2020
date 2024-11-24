@@ -24,11 +24,11 @@ export const metadata: Metadata = {
   },
 };
 
-// Page-Specific Schema
 const contactSchema = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
   name: 'Contact Suits 20/20',
+  image: 'https://suits2020.com/home/suits-logo-social-preview.png',
   description: 'Contact page for Suits 20/20 tailoring and fashion services',
   url: 'https://suits2020.com/contact',
   address: {
@@ -39,13 +39,23 @@ const contactSchema = {
     postalCode: '60714',
     addressCountry: 'US',
   },
-  mainEntity: {
+  contactPoint: {
     '@type': 'ContactPoint',
+    name: 'Customer Service',
     telephone: '+1-847-676-2020',
     email: 'info@suits2020.com',
     contactType: 'customer service',
-    availableLanguage: 'English',
+    availableLanguage: ['English'],
     areaServed: 'US',
+  },
+  potentialAction: {
+    '@type': 'CommunicateAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://suits2020.com/contact',
+      name: 'Submit a Contact Form',
+    },
+    actionPlatform: ['http://schema.org/WebApplication'],
   },
 };
 
@@ -55,12 +65,13 @@ export default function ContactPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([contactSchema]),
+          __html: JSON.stringify(contactSchema),
         }}
       />
 
       <div>
-        <h1 className="sr-only">Contact Suits 2020</h1>
+        <h1 className="sr-only">Contact Suits 20/20</h1>
+        {/* Hero Section */}
         <Hero
           title="Contact Us"
           subtitle="We'd love to hear from you! Reach out with any questions or inquiries."
@@ -70,6 +81,8 @@ export default function ContactPage() {
           className="object-top object-cover"
           overlayOpacity={20}
         />
+
+        {/* Contact Section */}
         <section
           className="container bg-white mx-auto pt-16 pb-20 sm:pt-24 sm:pb-20 px-6 max-w-7xl"
           aria-labelledby="contact-heading"

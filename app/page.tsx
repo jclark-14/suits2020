@@ -27,6 +27,7 @@ const homeSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   name: "Suits 20/20 - Premier Men's Formal Wear Store",
+  image: 'https://suits2020.com/home/suits-logo-social-preview.png',
   url: 'https://suits2020.com',
   description:
     "Chicago's premier destination for men's and boy's formal wear, offering expert tailoring, designer brands, and personalized fashion consultation.",
