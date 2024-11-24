@@ -49,6 +49,14 @@ const brandsSchema = {
   '@id': '/brands',
   url: '/brands',
   description: 'Premium designer menswear brands available at Suits 20/20',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '7651 N Caldwell Ave',
+    addressLocality: 'Niles',
+    addressRegion: 'IL',
+    postalCode: '60714',
+    addressCountry: 'US',
+  },
   brand: brands.map(brand => ({
     '@type': 'Brand',
     name: brand.name,

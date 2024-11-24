@@ -31,6 +31,14 @@ const contactSchema = {
   name: 'Contact Suits 20/20',
   description: 'Contact page for Suits 20/20 tailoring and fashion services',
   url: '/contact',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '7651 N Caldwell Ave',
+    addressLocality: 'Niles',
+    addressRegion: 'IL',
+    postalCode: '60714',
+    addressCountry: 'US',
+  },
   mainEntity: {
     '@type': 'ContactPoint',
     telephone: '+1-847-676-2020',
