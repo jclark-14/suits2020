@@ -55,7 +55,7 @@ const contactSchema = {
       urlTemplate: 'https://suits2020.com/contact',
       name: 'Submit a Contact Form',
     },
-    actionPlatform: ['http://schema.org/WebApplication'],
+    actionPlatform: 'http://schema.org/WebApplication',
   },
 };
 
