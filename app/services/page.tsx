@@ -33,6 +33,14 @@ const servicesSchema = {
   name: 'Suits 20/20 Tailoring & Fashion Services',
   description:
     'Expert tailoring and fashion consultation services at Suits 20/20',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '7651 N Caldwell Ave',
+    addressLocality: 'Niles',
+    addressRegion: 'IL',
+    postalCode: '60714',
+    addressCountry: 'US',
+  },
   offers: [
     {
       '@type': 'Service',
