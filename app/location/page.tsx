@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: '%s | Suits 20/20',
   },
   alternates: {
-    canonical: '/location',
+    canonical: 'https://suits2020.com/location',
   },
   description:
     'Visit Suits 20/20 in Niles, IL. Expert tailoring and fashion consultation services available at our convenient location.',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: 'Visit Our Store',
     description:
       'Visit Suits 20/20 in Niles, IL. Expert tailoring and fashion consultation services at our convenient location.',
-    url: '/location',
+    url: 'https://suits2020.com/location',
   },
 };
 
@@ -29,9 +29,9 @@ const locationSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Suits 20/20',
-  image: '/home/suits-logo-social-preview.png',
-  '@id': '/location',
-  url: '/',
+  image: 'https://suits2020.com/home/suits-logo-social-preview.png',
+  '@id': 'https://suits2020.com/location',
+  url: 'https://suits2020.com/location',
   geo: {
     '@type': 'GeoCoordinates',
     latitude: 42.015925,
