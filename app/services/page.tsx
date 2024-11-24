@@ -32,7 +32,7 @@ const servicesSchema = {
   url: 'https://suits2020.com/services',
   name: 'Suits 20/20',
   description:
-    'Expert tailoring and fashion consultation services at Suits 20/20',
+    'Expert tailoring and fashion consultation services, providing premium suit alterations and personal style guidance.',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '7651 N Caldwell Ave',
@@ -45,6 +45,8 @@ const servicesSchema = {
     },
   },
   telephone: '+1-847-676-2020',
+  priceRange: '$$$',
+  openingHours: ['Mo-Fr 09:00-19:00', 'Sa 10:00-17:00', 'Su Closed'],
   makesOffer: [
     {
       '@type': 'Offer',
@@ -85,6 +87,11 @@ const servicesSchema = {
       name: 'Tailoring or Fashion Consultation Appointment',
     },
   },
+  sameAs: [
+    'https://www.facebook.com/suits2020',
+    'https://www.instagram.com/suits2020',
+    'https://www.tiktok.com/@suits2020chicago?lang=en',
+  ],
 };
 
 export default function ServicesPage() {
