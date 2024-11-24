@@ -24,7 +24,6 @@ export const metadata: Metadata = {
   },
 };
 
-// Refactored Schema
 const locationSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',

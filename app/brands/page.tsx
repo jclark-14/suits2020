@@ -41,14 +41,14 @@ const brands = [
   { name: 'Stacy Adams', logo: '/images/brands/stacy-adams-logo-vector.svg' },
 ];
 
-// Page-Specific Schema
 const brandsSchema = {
   '@context': 'https://schema.org',
   '@type': 'Store',
   name: 'Suits 20/20 Designer Brands Collection',
+  image: 'https://suits2020.com/home/suits-logo-social-preview.png',
   '@id': 'https://suits2020.com/brands',
   url: 'https://suits2020.com/brands',
-  description: 'Premium designer menswear brands available at Suits 20/20',
+  description: 'Premium designer menswear brands available at Suits 20/20.',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '7651 N Caldwell Ave',
@@ -57,20 +57,25 @@ const brandsSchema = {
     postalCode: '60714',
     addressCountry: 'US',
   },
-  brand: brands.map(brand => ({
-    '@type': 'Brand',
-    name: brand.name,
-    logo: brand.logo,
-  })),
-  offers: {
-    '@type': 'AggregateOffer',
-    offerCount: brands.length,
-    availability: 'https://schema.org/InStock',
-  },
+  telephone: '+1-847-676-2020',
+  priceRange: '$$$',
   department: {
     '@type': 'Department',
     name: "Men's Designer Fashion",
     description: 'Premium menswear from top designer brands',
+  },
+  brand: brands.map(brand => ({
+    '@type': 'Brand',
+    name: brand.name,
+    logo: `https://suits2020.com${brand.logo}`,
+  })),
+  potentialAction: {
+    '@type': 'ViewAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://suits2020.com/brands',
+      name: 'Explore Our Designer Brands',
+    },
   },
 };
 
@@ -80,7 +85,7 @@ export default function BrandsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([brandsSchema]),
+          __html: JSON.stringify(brandsSchema),
         }}
       />
 
@@ -96,7 +101,7 @@ export default function BrandsPage() {
 
       {/* Brands Section */}
       <section
-        className=" pt-20 px-6 pb-2 sm:px-10 max-w-7xl mx-auto bg-white"
+        className="pt-20 px-6 pb-2 sm:px-10 max-w-7xl mx-auto bg-white"
         role="region"
         aria-labelledby="brands-heading"
       >
