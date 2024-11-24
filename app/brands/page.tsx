@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: '%s | Suits 20/20',
   },
   alternates: {
-    canonical: '/brands',
+    canonical: 'https://suits2020.com/brands',
   },
   description:
     'Discover premium designer brands including Hugo Boss, Calvin Klein, Tommy Hilfiger, and more at Suits 20/20. Shop our curated collection of luxury menswear.',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: 'Designer Brands Collection',
     description:
       'Explore our collection of premium designer brands including Hugo Boss, Calvin Klein, Tommy Hilfiger, and more.',
-    url: '/brands',
+    url: 'https://suits2020.com/brands',
   },
 };
 
@@ -46,8 +46,8 @@ const brandsSchema = {
   '@context': 'https://schema.org',
   '@type': 'Store',
   name: 'Suits 20/20 Designer Brands Collection',
-  '@id': '/brands',
-  url: '/brands',
+  '@id': 'https://suits2020.com/brands',
+  url: 'https://suits2020.com/brands',
   description: 'Premium designer menswear brands available at Suits 20/20',
   address: {
     '@type': 'PostalAddress',

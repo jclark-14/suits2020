@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: '%s | Suits 20/20',
   },
   alternates: {
-    canonical: '/contact',
+    canonical: 'https://suits2020.com/contact',
   },
   description:
     "Contact Suits 20/20 for expert tailoring services, fashion consultation, or general inquiries. We're here to help you look your best.",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: 'Contact Us',
     description:
       'Reach out to Suits 20/20 for tailoring services, fashion consultation, and style guidance. Get in touch with our expert team today.',
-    url: '/contact',
+    url: 'https://suits2020.com/contact',
   },
 };
 
@@ -30,7 +30,7 @@ const contactSchema = {
   '@type': 'ContactPage',
   name: 'Contact Suits 20/20',
   description: 'Contact page for Suits 20/20 tailoring and fashion services',
-  url: '/contact',
+  url: 'https://suits2020.com/contact',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '7651 N Caldwell Ave',

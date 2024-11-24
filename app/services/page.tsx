@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: '%s | Suits 20/20',
   },
   alternates: {
-    canonical: '/services',
+    canonical: 'https://suits2020.com/services',
   },
   description:
     'Experience expert tailoring and fashion consultation services at Suits 20/20. Schedule your consultation today for premium service.',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: 'Expert Tailoring & Fashion Services',
     description:
       'Explore premium tailoring and fashion consultation services at Suits 20/20, crafted for style and comfort.',
-    url: '/services',
+    url: 'https://suits2020.com/services',
   },
 };
 
