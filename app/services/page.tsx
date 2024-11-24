@@ -27,58 +27,63 @@ export const metadata: Metadata = {
 
 const servicesSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Service',
+  '@type': ['LocalBusiness', 'ClothingStore'],
   '@id': 'https://suits2020.com/services',
   url: 'https://suits2020.com/services',
-  name: 'Tailoring & Fashion Services at Suits 20/20',
+  name: 'Suits 20/20',
   description:
     'Expert tailoring and fashion consultation services at Suits 20/20',
-  provider: {
-    '@type': ['LocalBusiness', 'ClothingStore'],
-    name: 'Suits 20/20',
-    '@id': 'https://suits2020.com',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '7651 N Caldwell Ave',
-      addressLocality: 'Niles',
-      addressRegion: 'IL',
-      postalCode: '60714',
-      addressCountry: 'US',
-    },
-    telephone: '+1-847-676-2020',
-  },
-  areaServed: {
-    '@type': 'City',
-    name: 'Niles',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '7651 N Caldwell Ave',
+    addressLocality: 'Niles',
     addressRegion: 'IL',
+    postalCode: '60714',
+    addressCountry: {
+      '@type': 'Country',
+      name: 'US',
+    },
   },
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Available Services',
-    itemListElement: [
-      {
+  telephone: '+1-847-676-2020',
+  makesOffer: [
+    {
+      '@type': 'Offer',
+      itemOffered: {
         '@type': 'Service',
         name: 'In-Store Tailoring',
         description:
           'Professional suit alterations and custom tailoring services',
-        serviceOutput: [
-          'Professional measurements and fitting',
-          'Custom suit alterations',
-          'Quick turnaround times',
-        ],
+        provider: {
+          '@type': 'LocalBusiness',
+          name: 'Suits 20/20',
+        },
       },
-      {
+    },
+    {
+      '@type': 'Offer',
+      itemOffered: {
         '@type': 'Service',
         name: 'Fashion Consultation',
         description:
           'Personal style guidance and outfit recommendations for every occasion',
-        serviceOutput: [
-          'Personalized style guidance',
-          'Outfit recommendations for every occasion',
-          'Perfect suits and complete looks',
-        ],
+        provider: {
+          '@type': 'LocalBusiness',
+          name: 'Suits 20/20',
+        },
       },
-    ],
+    },
+  ],
+  potentialAction: {
+    '@type': 'ReserveAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://suits2020.com/contact',
+      name: 'Schedule a Consultation',
+    },
+    result: {
+      '@type': 'Reservation',
+      name: 'Tailoring or Fashion Consultation Appointment',
+    },
   },
 };
 
