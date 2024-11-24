@@ -27,19 +27,11 @@ export const metadata: Metadata = {
 // Page-Specific Schema
 const locationSchema = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
+  '@type': 'ClothingStore',
   name: 'Suits 20/20',
   image: 'https://suits2020.com/home/suits-logo-social-preview.png',
   '@id': 'https://suits2020.com/location',
   url: 'https://suits2020.com/location',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '7651 N Caldwell Ave',
-    addressLocality: 'Niles',
-    addressRegion: 'IL',
-    postalCode: '60714',
-    addressCountry: 'US',
-  },
   geo: {
     '@type': 'GeoCoordinates',
     latitude: 42.015925,
