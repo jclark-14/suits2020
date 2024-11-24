@@ -3,7 +3,7 @@ import { Poppins } from 'next/font/google';
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
 import { Metadata } from 'next';
-import { defaultMetadata, globalSchema } from '@/metadata.config';
+import { defaultMetadata } from '@/metadata.config';
 
 const poppins = Poppins({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -21,12 +21,6 @@ export default function RootLayout({
     <html lang="en" className={`${poppins.className}`}>
       <head>
         <link rel="canonical" href={metadata.metadataBase?.toString()} />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(globalSchema),
-          }}
-        />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body className="flex flex-col min-h-screen bg-black lg:bg-white">
