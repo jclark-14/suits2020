@@ -29,7 +29,7 @@ export const defaultMetadata = {
 
 export const globalSchema = {
   '@context': 'https://schema.org',
-  '@type': 'ClothingStore',
+  '@type': ['LocalBusiness', 'ClothingStore'],
   name: 'Suits 20/20',
   url: 'https://suits2020.com',
   logo: 'https://suits2020.com/home/suits-logo-social-preview.png',
