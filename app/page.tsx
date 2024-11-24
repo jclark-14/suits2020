@@ -63,7 +63,7 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([homeSchema]),
+          __html: JSON.stringify(homeSchema),
         }}
       />
       <HeroCarousel />
