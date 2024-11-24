@@ -27,58 +27,43 @@ export const metadata: Metadata = {
 
 const servicesSchema = {
   '@context': 'https://schema.org',
-  '@type': 'ClothingStore',
+  '@type': 'Service',
   '@id': 'https://suits2020.com/services',
   url: 'https://suits2020.com/services',
-  name: 'Suits 20/20 Tailoring & Fashion Services',
-  description:
-    'Expert tailoring and fashion consultation services at Suits 20/20',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '7651 N Caldwell Ave',
-    addressLocality: 'Niles',
-    addressRegion: 'IL',
-    postalCode: '60714',
-    addressCountry: 'US',
+  name: 'Tailoring & Fashion Services',
+  provider: {
+    '@type': 'ClothingStore',
+    name: 'Suits 20/20',
+    '@id': 'https://suits2020.com',
   },
-  offers: [
-    {
-      '@type': 'Service',
-      name: 'In-Store Tailoring',
-      description:
-        'Professional suit alterations and custom tailoring services',
-      provider: {
-        '@type': 'ClothingStore',
-        name: 'Suits 20/20',
+  serviceType: ['Tailoring', 'Fashion Consulting'],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Available Services',
+    itemListElement: [
+      {
+        '@type': 'Service',
+        name: 'In-Store Tailoring',
+        description:
+          'Professional suit alterations and custom tailoring services',
+        serviceOutput: [
+          'Professional measurements and fitting',
+          'Custom suit alterations',
+          'Quick turnaround times',
+        ],
       },
-      serviceType: 'Tailoring',
-      serviceOutput: [
-        'Professional measurements and fitting',
-        'Custom suit alterations',
-        'Quick turnaround times',
-      ],
-    },
-    {
-      '@type': 'Service',
-      name: 'Fashion Consultation',
-      description:
-        'Personal style guidance and outfit recommendations for every occasion',
-      provider: {
-        '@type': 'ClothingStore',
-        name: 'Suits 20/20',
+      {
+        '@type': 'Service',
+        name: 'Fashion Consultation',
+        description:
+          'Personal style guidance and outfit recommendations for every occasion',
+        serviceOutput: [
+          'Personalized style guidance',
+          'Outfit recommendations for every occasion',
+          'Perfect suits and complete looks',
+        ],
       },
-      serviceType: 'Fashion Consulting',
-      serviceOutput: [
-        'Personalized style guidance',
-        'Outfit recommendations for every occasion',
-        'Perfect suits and complete looks',
-      ],
-    },
-  ],
-  areaServed: {
-    '@type': 'City',
-    name: 'Niles',
-    addressRegion: 'IL',
+    ],
   },
 };
 
@@ -88,7 +73,7 @@ export default function ServicesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([servicesSchema]),
+          __html: JSON.stringify([globalSchema, servicesSchema]),
         }}
       />
       {/* Hero Section */}
