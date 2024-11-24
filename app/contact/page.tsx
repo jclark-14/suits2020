@@ -55,7 +55,7 @@ export default function ContactPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([globalSchema, contactSchema]),
+          __html: JSON.stringify([contactSchema]),
         }}
       />
 

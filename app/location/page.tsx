@@ -53,7 +53,7 @@ export default function LocationPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([globalSchema, locationSchema]),
+          __html: JSON.stringify([locationSchema]),
         }}
       />
       <div className="bg-white">

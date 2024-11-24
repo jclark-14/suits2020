@@ -80,7 +80,7 @@ export default function BrandsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([globalSchema, brandsSchema]),
+          __html: JSON.stringify([brandsSchema]),
         }}
       />
 

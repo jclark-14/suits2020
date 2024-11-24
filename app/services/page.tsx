@@ -88,7 +88,7 @@ export default function ServicesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([globalSchema, servicesSchema]),
+          __html: JSON.stringify([servicesSchema]),
         }}
       />
       {/* Hero Section */}
