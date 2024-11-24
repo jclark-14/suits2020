@@ -27,7 +27,8 @@ export const metadata: Metadata = {
 
 const servicesSchema = {
   '@context': 'https://schema.org',
-  '@type': ['LocalBusiness', 'ClothingStore'],
+  '@type': 'LocalBusiness',
+  additionalType: 'ClothingStore',
   '@id': 'https://suits2020.com/services',
   url: 'https://suits2020.com/services',
   name: 'Suits 20/20',
@@ -39,14 +40,31 @@ const servicesSchema = {
     addressLocality: 'Niles',
     addressRegion: 'IL',
     postalCode: '60714',
-    addressCountry: {
-      '@type': 'Country',
-      name: 'US',
-    },
+    addressCountry: 'US',
   },
   telephone: '+1-847-676-2020',
   priceRange: '$$$',
-  openingHours: ['Mo-Fr 09:00-19:00', 'Sa 10:00-17:00', 'Su Closed'],
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '19:00',
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: 'Saturday',
+      opens: '10:00',
+      closes: '17:00',
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: 'Sunday',
+      opens: '00:00',
+      closes: '00:00',
+      description: 'Closed',
+    },
+  ],
   makesOffer: [
     {
       '@type': 'Offer',
@@ -55,10 +73,6 @@ const servicesSchema = {
         name: 'In-Store Tailoring',
         description:
           'Professional suit alterations and custom tailoring services',
-        provider: {
-          '@type': 'LocalBusiness',
-          name: 'Suits 20/20',
-        },
       },
     },
     {
@@ -68,10 +82,6 @@ const servicesSchema = {
         name: 'Fashion Consultation',
         description:
           'Personal style guidance and outfit recommendations for every occasion',
-        provider: {
-          '@type': 'LocalBusiness',
-          name: 'Suits 20/20',
-        },
       },
     },
   ],
