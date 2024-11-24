@@ -24,14 +24,17 @@ export const metadata: Metadata = {
   },
 };
 
-// Page-Specific Schema
+// Refactored Schema
 const locationSchema = {
   '@context': 'https://schema.org',
-  '@type': 'ClothingStore',
+  '@type': 'LocalBusiness',
   name: 'Suits 20/20',
+  additionalType: 'ClothingStore',
   image: 'https://suits2020.com/home/suits-logo-social-preview.png',
   '@id': 'https://suits2020.com/location',
   url: 'https://suits2020.com/location',
+  description:
+    'Visit Suits 20/20 in Niles, IL. Expert tailoring and fashion consultation services available at our convenient location.',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '7651 N Caldwell Ave',
@@ -45,6 +48,39 @@ const locationSchema = {
     latitude: 42.015925,
     longitude: -87.812256,
   },
+  telephone: '+1-847-676-2020',
+  priceRange: '$$$',
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '11:00',
+      closes: '19:00',
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Saturday', 'Sunday'],
+      opens: '10:00',
+      closes: '17:00',
+    },
+  ],
+  potentialAction: {
+    '@type': 'ReserveAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://suits2020.com/contact',
+      name: 'Schedule a Consultation',
+    },
+    result: {
+      '@type': 'Reservation',
+      name: 'Tailoring or Fashion Consultation Appointment',
+    },
+  },
+  sameAs: [
+    'https://www.facebook.com/suits2020',
+    'https://www.instagram.com/suits2020',
+    'https://www.tiktok.com/@suits2020chicago?lang=en',
+  ],
 };
 
 export default function LocationPage() {
@@ -53,7 +89,7 @@ export default function LocationPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([locationSchema]),
+          __html: JSON.stringify(locationSchema),
         }}
       />
       <div className="bg-white">

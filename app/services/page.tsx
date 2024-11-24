@@ -29,6 +29,7 @@ const servicesSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   additionalType: 'ClothingStore',
+  image: 'https://suits2020.com/home/suits-logo-social-preview.png',
   '@id': 'https://suits2020.com/services',
   url: 'https://suits2020.com/services',
   name: 'Suits 20/20',
