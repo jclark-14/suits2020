@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import FormalCasualGrid from '../components/FormalCasualGrid/FormalCasualGrid';
 import HeroCarousel from '@/components/layout/HeroCarousel';
 import CallToAction from '@/components/layout/CallToAction';
-import { defaultMetadata, globalSchema } from '@/metadata.config';
+import { defaultMetadata } from '@/metadata.config';
 
 // Page-Specific Metadata
 export const metadata: Metadata = {

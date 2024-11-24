@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import CallToAction from '@/components/layout/CallToAction';
 import Hero from '@/components/layout/Hero';
-import { defaultMetadata, globalSchema } from '@/metadata.config';
+import { defaultMetadata } from '@/metadata.config';
 
 // Page-Specific Metadata
 export const metadata: Metadata = {
