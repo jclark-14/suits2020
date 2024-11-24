@@ -27,21 +27,31 @@ export const metadata: Metadata = {
 
 const servicesSchema = {
   '@context': 'https://schema.org',
-  '@type': ['LocalBusiness', 'ClothingStore'],
+  '@type': 'Service',
   '@id': 'https://suits2020.com/services',
   url: 'https://suits2020.com/services',
-  name: 'Suits 20/20',
+  name: 'Tailoring & Fashion Services at Suits 20/20',
   description:
     'Expert tailoring and fashion consultation services at Suits 20/20',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '7651 N Caldwell Ave',
-    addressLocality: 'Niles',
-    addressRegion: 'IL',
-    postalCode: '60714',
-    addressCountry: 'US',
+  provider: {
+    '@type': ['LocalBusiness', 'ClothingStore'],
+    name: 'Suits 20/20',
+    '@id': 'https://suits2020.com',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '7651 N Caldwell Ave',
+      addressLocality: 'Niles',
+      addressRegion: 'IL',
+      postalCode: '60714',
+      addressCountry: 'US',
+    },
+    telephone: '+1-847-676-2020',
   },
-  telephone: '+1-847-676-2020',
+  areaServed: {
+    '@type': 'City',
+    name: 'Niles',
+    addressRegion: 'IL',
+  },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Available Services',
@@ -51,11 +61,6 @@ const servicesSchema = {
         name: 'In-Store Tailoring',
         description:
           'Professional suit alterations and custom tailoring services',
-        provider: {
-          '@type': ['LocalBusiness', 'ClothingStore'],
-          name: 'Suits 20/20',
-          '@id': 'https://suits2020.com',
-        },
         serviceOutput: [
           'Professional measurements and fitting',
           'Custom suit alterations',
@@ -67,11 +72,6 @@ const servicesSchema = {
         name: 'Fashion Consultation',
         description:
           'Personal style guidance and outfit recommendations for every occasion',
-        provider: {
-          '@type': ['LocalBusiness', 'ClothingStore'],
-          name: 'Suits 20/20',
-          '@id': 'https://suits2020.com',
-        },
         serviceOutput: [
           'Personalized style guidance',
           'Outfit recommendations for every occasion',
