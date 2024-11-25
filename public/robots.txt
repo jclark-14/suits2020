@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://suits2020.com
+
+# Sitemaps
+Sitemap: https://suits2020.com/sitemap.xml
