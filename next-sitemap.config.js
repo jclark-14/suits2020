@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://suits2020.com',
+  siteUrl: 'https://www.suits2020.com',
   generateRobotsTxt: true,
   exclude: ['/not-found', '/icon.ico'],
   robotsTxtOptions: {
