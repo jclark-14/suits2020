@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: '%s | Suits 20/20',
   },
   alternates: {
-    canonical: 'https://suits2020.com/services',
+    canonical: 'https://www.suits2020.com/services',
   },
   description:
     'Experience expert tailoring and fashion consultation services at Suits 20/20. Schedule your consultation today for premium service.',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: 'Expert Tailoring & Fashion Services',
     description:
       'Explore premium tailoring and fashion consultation services at Suits 20/20, crafted for style and comfort.',
-    url: 'https://suits2020.com/services',
+    url: 'https://www.suits2020.com/services',
   },
 };
 
@@ -29,9 +29,9 @@ const servicesSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   additionalType: 'ClothingStore',
-  image: 'https://suits2020.com/home/suits-logo-social-preview.png',
-  '@id': 'https://suits2020.com/services',
-  url: 'https://suits2020.com/services',
+  image: 'https://www.suits2020.com/home/suits-logo-social-preview.png',
+  '@id': 'https://www.suits2020.com/services',
+  url: 'https://www.suits2020.com/services',
   name: 'Suits 20/20',
   description:
     'Expert tailoring and fashion consultation services, providing premium suit alterations and personal style guidance.',
@@ -83,7 +83,7 @@ const servicesSchema = {
     '@type': 'ReserveAction',
     target: {
       '@type': 'EntryPoint',
-      urlTemplate: 'https://suits2020.com/contact',
+      urlTemplate: 'https://www.suits2020.com/contact',
       name: 'Schedule a Consultation',
     },
     result: {

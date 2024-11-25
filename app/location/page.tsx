@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: '%s | Suits 20/20',
   },
   alternates: {
-    canonical: 'https://suits2020.com/location',
+    canonical: 'https://www.suits2020.com/location',
   },
   description:
     'Visit Suits 20/20 in Niles, IL. Expert tailoring and fashion consultation services available at our convenient location.',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: 'Visit Our Store',
     description:
       'Visit Suits 20/20 in Niles, IL. Expert tailoring and fashion consultation services at our convenient location.',
-    url: 'https://suits2020.com/location',
+    url: 'https://www.suits2020.com/location',
   },
 };
 
@@ -29,9 +29,9 @@ const locationSchema = {
   '@type': 'LocalBusiness',
   name: 'Suits 20/20',
   additionalType: 'ClothingStore',
-  image: 'https://suits2020.com/home/suits-logo-social-preview.png',
-  '@id': 'https://suits2020.com/location',
-  url: 'https://suits2020.com/location',
+  image: 'https://www.suits2020.com/home/suits-logo-social-preview.png',
+  '@id': 'https://www.suits2020.com/location',
+  url: 'https://www.suits2020.com/location',
   description:
     'Visit Suits 20/20 in Niles, IL. Expert tailoring and fashion consultation services available at our convenient location.',
   address: {
@@ -67,7 +67,7 @@ const locationSchema = {
     '@type': 'ReserveAction',
     target: {
       '@type': 'EntryPoint',
-      urlTemplate: 'https://suits2020.com/contact',
+      urlTemplate: 'https://www.suits2020.com/contact',
       name: 'Schedule a Consultation',
     },
     result: {

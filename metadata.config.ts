@@ -1,5 +1,5 @@
 export const defaultMetadata = {
-  metadataBase: new URL('https://suits2020.com'),
+  metadataBase: new URL('https://www.suits2020.com'),
   title: {
     template: '%s | Suits 20/20',
     default: 'Suits 20/20 | Elegant Formal Wear',

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: '%s | Suits 20/20',
   },
   alternates: {
-    canonical: 'https://suits2020.com/brands',
+    canonical: 'https://www.suits2020.com/brands',
   },
   description:
     'Discover premium designer brands including Hugo Boss, Calvin Klein, Tommy Hilfiger, and more at Suits 20/20. Shop our curated collection of luxury menswear.',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: 'Designer Brands Collection',
     description:
       'Explore our collection of premium designer brands including Hugo Boss, Calvin Klein, Tommy Hilfiger, and more.',
-    url: 'https://suits2020.com/brands',
+    url: 'https://www.suits2020.com/brands',
   },
 };
 
@@ -45,9 +45,9 @@ const brandsSchema = {
   '@context': 'https://schema.org',
   '@type': 'Store',
   name: 'Suits 20/20 Designer Brands Collection',
-  image: 'https://suits2020.com/home/suits-logo-social-preview.png',
-  '@id': 'https://suits2020.com/brands',
-  url: 'https://suits2020.com/brands',
+  image: 'https://www.suits2020.com/home/suits-logo-social-preview.png',
+  '@id': 'https://www.suits2020.com/brands',
+  url: 'https://www.suits2020.com/brands',
   description: 'Premium designer menswear brands available at Suits 20/20.',
   address: {
     '@type': 'PostalAddress',
@@ -67,13 +67,13 @@ const brandsSchema = {
   brand: brands.map(brand => ({
     '@type': 'Brand',
     name: brand.name,
-    logo: `https://suits2020.com${brand.logo}`,
+    logo: `https://www.suits2020.com${brand.logo}`,
   })),
   potentialAction: {
     '@type': 'ViewAction',
     target: {
       '@type': 'EntryPoint',
-      urlTemplate: 'https://suits2020.com/brands',
+      urlTemplate: 'https://www.suits2020.com/brands',
       name: 'Explore Our Designer Brands',
     },
   },

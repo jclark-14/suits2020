@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   ...defaultMetadata,
   title: defaultMetadata.title.default,
   alternates: {
-    canonical: 'https://suits2020.com',
+    canonical: 'https://www.suits2020.com',
   },
   description:
     "Chicago's premier destination for men's and boy's formal wear. Expert tailoring, designer brands, and personalized fashion consultation at Suits 20/20.",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: defaultMetadata.title.default,
     description:
       "Chicago's leading men's and boy's formal wear store. Discover designer brands, expert tailoring, and personalized fashion consultation at Suits 20/20.",
-    url: 'https://suits2020.com',
+    url: 'https://www.suits2020.com',
   },
 };
 
@@ -27,8 +27,8 @@ const homeSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   name: "Suits 20/20 - Premier Men's Formal Wear Store",
-  image: 'https://suits2020.com/home/suits-logo-social-preview.png',
-  url: 'https://suits2020.com',
+  image: 'https://www.suits2020.com/home/suits-logo-social-preview.png',
+  url: 'https://www.suits2020.com',
   description:
     "Chicago's premier destination for men's and boy's formal wear, offering expert tailoring, designer brands, and personalized fashion consultation.",
   breadcrumb: {
@@ -38,41 +38,41 @@ const homeSchema = {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://suits2020.com',
+        item: 'https://www.suits2020.com',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Services',
-        item: 'https://suits2020.com/services',
+        item: 'https://www.suits2020.com/services',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: 'Brands',
-        item: 'https://suits2020.com/brands',
+        item: 'https://www.suits2020.com/brands',
       },
       {
         '@type': 'ListItem',
         position: 4,
         name: 'Location',
-        item: 'https://suits2020.com/location',
+        item: 'https://www.suits2020.com/location',
       },
       {
         '@type': 'ListItem',
         position: 5,
         name: 'Contact',
-        item: 'https://suits2020.com/contact',
+        item: 'https://www.suits2020.com/contact',
       },
     ],
   },
   publisher: {
     '@type': 'Organization',
     name: 'Suits 20/20',
-    url: 'https://suits2020.com',
+    url: 'https://www.suits2020.com',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://suits2020.com/home/suits-logo-social-preview.png',
+      url: 'https://www.suits2020.com/home/suits-logo-social-preview.png',
       width: 600,
       height: 60,
     },
@@ -85,7 +85,7 @@ const homeSchema = {
   mainEntity: {
     '@type': 'LocalBusiness',
     name: 'Suits 20/20',
-    url: 'https://suits2020.com',
+    url: 'https://www.suits2020.com',
     description:
       'Expert tailoring, designer brands, and personalized fashion consultation for men and boys.',
     address: {
