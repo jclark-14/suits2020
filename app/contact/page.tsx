@@ -34,6 +34,7 @@ const contactSchema = {
   mainEntity: {
     '@type': 'LocalBusiness',
     name: 'Suits 20/20',
+    telephone: '+1-847-676-2020',
     address: {
       '@type': 'PostalAddress',
       streetAddress: '7651 N Caldwell Ave',
