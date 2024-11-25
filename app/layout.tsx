@@ -21,13 +21,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.className}`}>
       <head>
+        <GoogleAnalytics />
         <link rel="canonical" href={metadata.metadataBase?.toString()} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <GoogleAnalytics />
       <body className="flex flex-col min-h-screen bg-black lg:bg-white">
         <Header />
-        <main role="main" className="flex-grow ">
+        <main role="main" className="flex-grow">
           {children}
         </main>
         <Footer />

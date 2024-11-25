@@ -6,18 +6,20 @@ export default function GoogleAnalytics() {
   return (
     <>
       <Script
-        strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=G-9RKB9096ED`}
+        strategy="beforeInteractive"
       />
       <Script
-        id="google-analytics"
-        strategy="afterInteractive"
+        id="ga-script"
+        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
+            function gtag(){window.dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-9RKB9096ED');
+            gtag('config', 'G-9RKB9096ED', {
+              page_path: window.location.pathname,
+            });
           `,
         }}
       />
