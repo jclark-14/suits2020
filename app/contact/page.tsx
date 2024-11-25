@@ -26,27 +26,31 @@ export const metadata: Metadata = {
 
 const contactSchema = {
   '@context': 'https://schema.org',
-  '@type': 'ContactPage',
+  '@type': 'WebPage',
   name: 'Contact Suits 20/20',
   image: 'https://www.suits2020.com/home/suits-logo-social-preview.png',
   description: 'Contact page for Suits 20/20 tailoring and fashion services',
   url: 'https://www.suits2020.com/contact',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '7651 N Caldwell Ave',
-    addressLocality: 'Niles',
-    addressRegion: 'IL',
-    postalCode: '60714',
-    addressCountry: 'US',
-  },
-  contactPoint: {
-    '@type': 'ContactPoint',
-    name: 'Customer Service',
-    telephone: '+1-847-676-2020',
-    email: 'info@suits2020.com',
-    contactType: 'customer service',
-    availableLanguage: ['English'],
-    areaServed: 'US',
+  mainEntity: {
+    '@type': 'LocalBusiness',
+    name: 'Suits 20/20',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '7651 N Caldwell Ave',
+      addressLocality: 'Niles',
+      addressRegion: 'IL',
+      postalCode: '60714',
+      addressCountry: 'US',
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      name: 'Customer Service',
+      telephone: '+1-847-676-2020',
+      email: 'info@suits2020.com',
+      contactType: 'customer service',
+      availableLanguage: ['English'],
+      areaServed: 'US',
+    },
   },
   potentialAction: {
     '@type': 'CommunicateAction',
@@ -55,7 +59,6 @@ const contactSchema = {
       urlTemplate: 'https://www.suits2020.com/contact',
       name: 'Submit a Contact Form',
     },
-    actionPlatform: 'http://schema.org/WebApplication',
   },
 };
 
