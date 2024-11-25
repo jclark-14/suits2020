@@ -1,4 +1,3 @@
-// components/GoogleAnalytics.tsx
 'use client';
 
 import Script from 'next/script';
@@ -8,7 +7,7 @@ export default function GoogleAnalytics() {
     <>
       <Script
         strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=G-9RKB9096ED`}
       />
       <Script
         id="google-analytics"
