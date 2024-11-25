@@ -29,6 +29,7 @@ const contactSchema = {
   '@type': 'WebPage',
   name: 'Contact Suits 20/20',
   image: 'https://www.suits2020.com/home/suits-logo-social-preview.png',
+  '@id': 'https://www.suits2020.com/contact',
   description: 'Contact page for Suits 20/20 tailoring and fashion services',
   url: 'https://www.suits2020.com/contact',
   mainEntity: {
