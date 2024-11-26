@@ -120,7 +120,7 @@ export default function BrandsPage() {
             <div
               key={index}
               role="listitem"
-              className="flex items-center justify-center p-6 h-[215px] sm:h-[250px] bg-white border-[1px] border-footerBrown border-opacity-20 rounded-lg shadow-md hover:shadow-xl transition-all duration-200 hover:scale-105"
+              className="flex items-center justify-center p-6 h-[215px] sm:h-[250px] bg-white border-[1px] border-footerBrown border-opacity-20 rounded-lg shadow-md hover:shadow-xl transition-all duration-200 sm:hover:scale-105"
               aria-label={`Brand logo of ${brand.name}, available at Suits 20/20`}
             >
               <Image
