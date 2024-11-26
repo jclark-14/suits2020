@@ -48,7 +48,7 @@ const locationSchema = {
     longitude: -87.812256,
   },
   telephone: '+1-847-676-2020',
-  priceRange: '$$$',
+  priceRange: '$',
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',

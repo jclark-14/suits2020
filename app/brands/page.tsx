@@ -58,7 +58,7 @@ const brandsSchema = {
     addressCountry: 'US',
   },
   telephone: '+1-847-676-2020',
-  priceRange: '$$$',
+  priceRange: '$',
   department: {
     '@type': 'Department',
     name: "Men's Designer Fashion",

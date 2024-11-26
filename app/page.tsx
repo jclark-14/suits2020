@@ -98,7 +98,7 @@ const homeSchema = {
       addressCountry: 'US',
     },
     telephone: '+1-847-676-2020',
-    priceRange: '$$$',
+    priceRange: '$',
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
