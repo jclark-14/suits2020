@@ -75,7 +75,7 @@ export default function ContactPage() {
       />
 
       <div>
-        <h1 className="sr-only">Contact Suits 20/20</h1>
+        <h2 className="sr-only">Contact Suits 20/20</h2>
         {/* Hero Section */}
         <Hero
           title="Contact Us"

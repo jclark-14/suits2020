@@ -105,12 +105,12 @@ export default function BrandsPage() {
         role="region"
         aria-labelledby="brands-heading"
       >
-        <h1
+        <h2
           id="brands-heading"
           className="text-center text-4xl sm:text-5xl font-bold text-black mb-16"
         >
           Our Designer Brands
-        </h1>
+        </h2>
         <div
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12"
           role="list"

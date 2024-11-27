@@ -108,9 +108,9 @@ const Slide = ({ data }: { data: SlideData }) => (
               <>
                 <h1 className={data.className}>{data.title}</h1>
                 {data.title2 && (
-                  <h1 className="text-4xl sm:text-8xl font-semibold">
+                  <h2 className="text-4xl sm:text-8xl font-semibold">
                     {data.title2}
-                  </h1>
+                  </h2>
                 )}
               </>
             )}
