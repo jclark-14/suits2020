@@ -9,8 +9,7 @@ interface HeroProps {
   titleSize?: string;
   subtitleSize?: string;
   className?: string;
-  height?: 'small' | 'medium' | 'large' | 'custom';
-  customHeight?: string;
+  height?: 'small' | 'medium' | 'large';
 }
 
 const Hero = ({
@@ -22,54 +21,33 @@ const Hero = ({
   className = 'object-cover',
   titleSize = 'text-4xl sm:text-5xl lg:text-7xl',
   subtitleSize = 'text-2xl lg:text-4xl',
-  height = 'medium',
-  customHeight,
+  height = 'large',
 }: HeroProps) => {
   const heightClasses = {
     small: 'h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] 2xl:h-[400px]',
     medium: 'h-[275px] sm:h-[350px] md:h-[400px] lg:h-[500px] 2xl:h-[600px]',
     large: 'h-[350px] sm:h-[450px] md:h-[550px] lg:h-[650px] 2xl:h-[700px]',
-    custom: customHeight,
   };
 
   return (
     <section
       className={`relative w-full overflow-hidden bg-stone-900 ${heightClasses[height]}`}
-      style={height === 'custom' ? { height: customHeight } : undefined}
     >
       {/* Image Container */}
       <div className="absolute inset-0">
-        <picture>
-          {/* Mobile devices */}
-          <source
-            media="(max-width: 640px)"
-            srcSet={`${imagePath}?width=640&quality=80`}
-          />
-          {/* Tablets */}
-          <source
-            media="(max-width: 1024px)"
-            srcSet={`${imagePath}?width=1024&quality=85`}
-          />
-          {/* Desktops */}
-          <source
-            media="(max-width: 1536px)"
-            srcSet={`${imagePath}?width=1536&quality=90`}
-          />
-          {/* Large screens */}
-          <source
-            media="(min-width: 1537px)"
-            srcSet={`${imagePath}?width=1920&quality=90`}
-          />
-          <Image
-            src={imagePath}
-            alt={imageAlt}
-            fill
-            priority
-            sizes="100vw"
-            quality={75}
-            className={className}
-          />
-        </picture>
+        <Image
+          src={imagePath}
+          alt={imageAlt}
+          fill
+          priority
+          sizes="100vw"
+          style={{
+            objectPosition: 'center',
+            objectFit: 'cover',
+          }}
+          quality={75}
+          className={className}
+        />
       </div>
 
       {/* Dark Overlay */}
