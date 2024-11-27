@@ -20,7 +20,7 @@ interface SlideData {
 const SLIDES: SlideData[] = [
   {
     id: 1,
-    image: '/images/carousel/suit-rack6.png',
+    image: '/images/carousel/suit-rack6.webp',
     alt: 'Fashion Outlet',
     overlayOpacity: 0.2,
     title: "CHICAGOLAND'S \nMEN'S & BOY'S",
@@ -36,7 +36,7 @@ const SLIDES: SlideData[] = [
   },
   {
     id: 2,
-    image: '/images/carousel/suit-measuring.png',
+    image: '/images/carousel/suit-measuring.webp',
     alt: 'Full service style',
     overlayOpacity: 0.5,
     title: 'FULL SERVICE STYLE',
@@ -47,7 +47,7 @@ const SLIDES: SlideData[] = [
   },
   {
     id: 3,
-    image: '/images/carousel/black-friday-carousel.png',
+    image: '/images/carousel/black-friday-carousel.webp',
     alt: 'BLACK FRIDAY SALE',
     overlayOpacity: 0.3,
     title: 'BLACK FRIDAY SALE',
@@ -96,6 +96,7 @@ const Slide = ({ data }: { data: SlideData }) => (
           objectPosition: 'center',
           objectFit: 'cover',
         }}
+        quality={75}
       />
       <div
         className="absolute inset-0 bg-black"

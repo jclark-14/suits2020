@@ -93,7 +93,7 @@ export default function BrandsPage() {
       <Hero
         title="DESIGNER BRANDS"
         subtitle="Discover the finest brands in men's fashion, all in one place."
-        imagePath="/images/brands/hero-brands.png"
+        imagePath="/images/brands/hero-brands.webp"
         imageAlt="Luxury men's fashion display showcasing designer suits and accessories"
         height="large"
         overlayOpacity={30}
@@ -130,6 +130,7 @@ export default function BrandsPage() {
                 height={250}
                 objectFit="contain"
                 className="hover:brightness-110"
+                quality={75}
                 loading="lazy"
               />
             </div>

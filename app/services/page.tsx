@@ -147,12 +147,13 @@ export default function ServicesPage() {
           <div role="listitem" className="flex flex-col space-y-10">
             <div className="relative aspect-[4/3] w-full">
               <Image
-                src="/images/services/alterations.png"
+                src="/images/services/alterations.webp"
                 alt="Tailor working on suit alterations"
                 className="object-cover rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 sm:hover:scale-105"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 loading="lazy"
+                quality={75}
               />
             </div>
             <div className="space-y-4 px-6">
@@ -198,12 +199,13 @@ export default function ServicesPage() {
           <div role="listitem" className="flex flex-col space-y-10">
             <div className="relative aspect-[4/3] w-full">
               <Image
-                src="/images/services/consultation.png"
+                src="/images/services/consultation.webp"
                 alt="Style consultant helping a customer select outfits"
                 className="object-cover rounded-xl shadow-lg brightness-85 hover:shadow-xl transition-all duration-200 hover:scale-105"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 loading="lazy"
+                quality={75}
               />
             </div>
             <div className="space-y-4 px-6">

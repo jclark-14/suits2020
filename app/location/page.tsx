@@ -95,7 +95,7 @@ export default function LocationPage() {
         <Hero
           title="VISIT US TODAY"
           subtitle="Expert fashion advice and custom tailoring at our convenient location."
-          imagePath="/images/location/location-hero.png"
+          imagePath="/images/location/location-hero.webp"
           imageAlt="Chicago skyline backdrop"
           overlayOpacity={30}
           height="large"

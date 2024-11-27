@@ -80,7 +80,7 @@ export default function ContactPage() {
         <Hero
           title="Contact Us"
           subtitle="We'd love to hear from you! Reach out with any questions or inquiries."
-          imagePath="/images/contact/contact-hero.png"
+          imagePath="/images/contact/contact-hero.webp"
           imageAlt="Suits 2020 Tailoring Shop Interior"
           height="large"
           className="object-top object-cover"

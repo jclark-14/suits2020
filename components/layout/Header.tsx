@@ -11,7 +11,7 @@ export default function Header() {
       {/* Background */}
       <div className="relative bg-cover bg-center h-32 md:h-40">
         <Image
-          src="/images/logo/pinstripe.png"
+          src="/images/logo/pinstripe.webp"
           alt="Suits 20/20 Background"
           fill
           className="object-cover"

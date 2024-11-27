@@ -21,7 +21,7 @@ export default function FormalCasualGrid() {
       title: 'DRESS & CASUAL SHOES',
       description:
         "When sneakers don't cut it, stop in to see our full selection of shoes to top off your personal style.",
-      image: '/images/grid/formal-shoes.png',
+      image: '/images/grid/formal-shoes.webp',
       span: 'third',
     },
     {
@@ -29,8 +29,8 @@ export default function FormalCasualGrid() {
       title: 'DESIGNER ACCESSORIES',
       description:
         'Suits 20/20 offers a giant selection of Neck Ties, Belts, Socks, Cuff Links, Handkerchiefs, Hats and more. New merchandise is coming in all the time, so stop in at Suits 20/20 to see the latest trends and styles.',
-      image: '/images/grid/accessories.png',
-      imageSrcMobile: '/images/grid/accessories-mobile.png',
+      image: '/images/grid/accessories.webp',
+      imageSrcMobile: '/images/grid/accessories-mobile.webp',
       span: 'twoThirds',
     },
     {
@@ -38,8 +38,8 @@ export default function FormalCasualGrid() {
       title: 'CASUAL LOOKS',
       subTitle: 'CASUAL LOOKS',
       description: `From laid-back weekends to effortless everyday outfits, our collection of casual wear ensures you stay comfortable without compromising on style. Whether you're stepping out or staying in, these pieces are designed to fit every moment seamlessly.`,
-      image: '/images/grid/casual-wear.png',
-      imageSrcMobile: '/images/grid/casual-wear-mobile.png',
+      image: '/images/grid/casual-wear.webp',
+      imageSrcMobile: '/images/grid/casual-wear-mobile.webp',
       span: 'twoThirds',
       hasOverlay: true,
       overlayText: "THE\nLOOKS\nYOU'RE\nLOOKING\nFOR",
@@ -50,14 +50,14 @@ export default function FormalCasualGrid() {
       title: "MEN'S OUTERWEAR",
       description:
         'Stay ahead of the season with our selection of coats, jackets, and blazers designed to keep you looking sharp and comfortable.',
-      image: '/images/grid/outerwear.png',
+      image: '/images/grid/outerwear.webp',
       span: 'third',
     },
     {
       id: 5,
       title: "BOY'S SUITS",
       description: `Perfect for weddings and formal events, our finely tailored suits bring charm and confidence to your little one’s wardrobe, ensuring he looks his best.`,
-      image: '/images/grid/boys-suits.png',
+      image: '/images/grid/boys-suits.webp',
       span: 'third',
     },
     {
@@ -65,8 +65,8 @@ export default function FormalCasualGrid() {
       title: 'KEEPING CURRENT & LOOKING COOL',
       subTitle: 'BUSINESS CASUAL',
       description: `Strike the perfect balance between professional and relaxed with our business casual collection. Ideal for the modern workspace or a polished weekend look, these versatile outfits keep you sharp, stylish, and ready for anything.`,
-      image: '/images/grid/business-casual-1-2.png',
-      imageSrcMobile: '/images/grid/business-casual-mobile.png',
+      image: '/images/grid/business-casual-1-2.webp',
+      imageSrcMobile: '/images/grid/business-casual-mobile.webp',
       span: 'twoThirds',
       hasOverlay: true,
       overlayText: 'THE\nNEW\nBUSINESS\nCASUAL',
