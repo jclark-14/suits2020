@@ -149,7 +149,7 @@ export default function ServicesPage() {
               <Image
                 src="/images/services/alterations.webp"
                 alt="Tailor working on suit alterations"
-                className="object-cover rounded-xl shadow-lg sm:hover:shadow-xl transition-all duration-200 smm:hover:scale-105"
+                className="object-cover rounded-xl shadow-lg sm:hover:shadow-xl transition-all duration-200 sm:hover:scale-105"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 loading="lazy"
