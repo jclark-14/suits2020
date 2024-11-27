@@ -29,7 +29,6 @@ const ContactForm: React.FC = () => {
   const [submissionMessage, setSubmissionMessage] = React.useState<
     string | null
   >(null);
-  const [previousPhone, setPreviousPhone] = React.useState('');
 
   const formik = useFormik({
     initialValues: {
