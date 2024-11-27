@@ -21,7 +21,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.className}`}>
       <head>
-        <link rel="canonical" href={metadata.metadataBase?.toString()} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body className="flex flex-col min-h-screen bg-black lg:bg-white">
