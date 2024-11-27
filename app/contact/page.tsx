@@ -7,7 +7,7 @@ import { defaultMetadata } from '@/metadata.config';
 export const metadata: Metadata = {
   ...defaultMetadata,
   title: {
-    default: 'Contact Us | Suits 20/20',
+    default: 'Contact Us',
     template: '%s | Suits 20/20',
   },
   alternates: {

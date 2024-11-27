@@ -8,7 +8,7 @@ import { defaultMetadata } from '@/metadata.config';
 export const metadata: Metadata = {
   ...defaultMetadata,
   title: {
-    default: 'Designer Brands Collection | Suits 20/20',
+    default: 'Designer Brands Collection',
     template: '%s | Suits 20/20',
   },
   alternates: {
