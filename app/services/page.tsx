@@ -111,7 +111,7 @@ export default function ServicesPage() {
       <Hero
         title="EXPERT TAILORING & FASHION SERVICES"
         subtitle="Walk-in or schedule an appointment for our premium services."
-        imagePath="/images/services/services-hero.png"
+        imagePath="/images/services/services-hero.webp"
         imageAlt="Customer getting measured for a suit."
         height="large"
         overlayOpacity={35}
@@ -149,7 +149,7 @@ export default function ServicesPage() {
               <Image
                 src="/images/services/alterations.webp"
                 alt="Tailor working on suit alterations"
-                className="object-cover rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 sm:hover:scale-105"
+                className="object-cover rounded-xl shadow-lg sm:hover:shadow-xl transition-all duration-200 smm:hover:scale-105"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 loading="lazy"
@@ -201,7 +201,7 @@ export default function ServicesPage() {
               <Image
                 src="/images/services/consultation.webp"
                 alt="Style consultant helping a customer select outfits"
-                className="object-cover rounded-xl shadow-lg brightness-85 hover:shadow-xl transition-all duration-200 hover:scale-105"
+                className="object-cover rounded-xl shadow-lg brightness-85 sm:hover:shadow-xl transition-all duration-200 sm:hover:scale-105"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 loading="lazy"

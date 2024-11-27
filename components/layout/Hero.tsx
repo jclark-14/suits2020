@@ -34,7 +34,7 @@ const Hero = ({
 
   return (
     <section
-      className={`relative w-full overflow-hidden ${heightClasses[height]}`}
+      className={`relative w-full overflow-hidden bg-stone-900 ${heightClasses[height]}`}
       style={height === 'custom' ? { height: customHeight } : undefined}
     >
       {/* Image Container */}
