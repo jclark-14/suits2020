@@ -77,10 +77,10 @@ export default function FormalCasualGrid() {
   return (
     <section className="max-w-6xl mx-auto px-4 pt-14 pb-10 sm:pt-24 bg-white">
       <div className="text-center pb-6 sm:pb-16">
-        <h2 className="text-4xl sm:text-6xl font-bold text-primary-dark my-3 sm:my-7 sm:tracking-wide">
+        <h1 className="text-4xl sm:text-6xl font-bold text-primary-dark my-3 sm:my-7 sm:tracking-wide">
           FROM FORMAL
           <br className="md:hidden" /> TO CASUAL
-        </h2>
+        </h1>
         <p className="text-2xl md:text-3xl font-normal text-primary-dark sm:tracking-wider">
           EVERYTHING IN MEN&apos;S & BOY&apos;S FASHION IN ONE PLACE.
         </p>

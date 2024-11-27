@@ -107,7 +107,7 @@ const Slide = ({ data }: { data: SlideData }) => (
           <div className="md:space-y-3 max-w-4xl">
             {data.title && (
               <>
-                <h1 className={data.className}>{data.title}</h1>
+                <h2 className={data.className}>{data.title}</h2>
                 {data.title2 && (
                   <h2 className="text-4xl sm:text-8xl font-semibold">
                     {data.title2}
