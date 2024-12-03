@@ -45,18 +45,18 @@ const SLIDES: SlideData[] = [
     className2:
       'text-2xl md:text-3xl lg:text-4xl font-normal tracking-wide mt-0 mb-0',
   },
-  {
-    id: 3,
-    image: '/images/carousel/black-friday-carousel.webp',
-    alt: 'BLACK FRIDAY SALE',
-    overlayOpacity: 0.3,
-    title: 'BLACK FRIDAY SALE',
-    description: ['Exceptional Savings on Exceptional Apparel!'],
-    className:
-      'text-4xl sm:text-5xl md:text-5xl lg:text-8xl pt-10 mb-0 mx-auto',
-    className2:
-      'text-2xl md:text-3xl lg:text-4xl font-normal tracking-wide mt-0 sm:mb-10 ',
-  },
+  // {
+  //   id: 3,
+  //   image: '/images/carousel/black-friday-carousel.webp',
+  //   alt: 'BLACK FRIDAY SALE',
+  //   overlayOpacity: 0.3,
+  //   title: 'BLACK FRIDAY SALE',
+  //   description: ['Exceptional Savings on Exceptional Apparel!'],
+  //   className:
+  //     'text-4xl sm:text-5xl md:text-5xl lg:text-8xl pt-10 mb-0 mx-auto',
+  //   className2:
+  //     'text-2xl md:text-3xl lg:text-4xl font-normal tracking-wide mt-0 sm:mb-10 ',
+  // },
 ];
 
 // Carousel Navigation Button Component
