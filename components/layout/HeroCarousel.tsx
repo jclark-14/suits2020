@@ -26,7 +26,7 @@ const SLIDES: SlideData[] = [
     title: "CHICAGOLAND'S \nMEN'S & BOY'S",
     title2: 'FASHION WAREHOUSE.',
     description: [
-      'Name Brand Suits, Tuxedos, Slacks, Sportcoats, Blazers',
+      'Name Brand Suits, Tuxedos, Slacks, Sport Coats, Blazers',
       'Personal Service - Tailored to Fit On-site.',
     ],
     className:
@@ -44,6 +44,18 @@ const SLIDES: SlideData[] = [
     className: 'text-4xl sm:text-5xl md:text-5xl lg:text-8xl pt-10 mb-0',
     className2:
       'text-2xl md:text-3xl lg:text-4xl font-normal tracking-wide mt-0 mb-0',
+  },
+  {
+    id: 3,
+    image: '/images/carousel/holiday.webp',
+    alt: 'Holiday Donations',
+    overlayOpacity: 0.3,
+    title: 'DONATE A GENTLY USED SUIT, SPORT COAT OR SHOES',
+    title2: 'AND SAVE 20% OFF THE SAME ITEM.',
+    className:
+      'text-2xl lg:text-5xl sm:font-light tracking-wide m-0 tracking-wider whitespace-pre-line sm:whitespace-normal',
+    className2:
+      'hidden sm:block text-base sm:text-lg md:text-2xl lg:text-3xl font-normal tracking-wide mb-0 mt-0',
   },
   // {
   //   id: 3,
