@@ -20,7 +20,7 @@ interface SlideData {
 const SLIDES: SlideData[] = [
   {
     id: 1,
-    image: '/images/carousel/holiday-sale2.webp',
+    image: '/images/carousel/holiday-sale3.jpg',
     alt: 'Fashion Outlet',
     overlayOpacity: 0,
   },
