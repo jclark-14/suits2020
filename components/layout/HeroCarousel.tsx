@@ -20,6 +20,12 @@ interface SlideData {
 const SLIDES: SlideData[] = [
   {
     id: 1,
+    image: '/images/carousel/holiday-sale2.webp',
+    alt: 'Fashion Outlet',
+    overlayOpacity: 0,
+  },
+  {
+    id: 2,
     image: '/images/carousel/suit-rack6.webp',
     alt: 'Fashion Outlet',
     overlayOpacity: 0.2,
@@ -35,8 +41,8 @@ const SLIDES: SlideData[] = [
       'hidden sm:block text-base sm:text-lg md:text-2xl lg:text-3xl font-normal tracking-wide mb-0 mt-0',
   },
   {
-    id: 2,
-    image: '/images/carousel/suit-measuring.webp',
+    id: 3,
+    image: '/images/carousel/suit-measuring3.webp',
     alt: 'Full service style',
     overlayOpacity: 0.5,
     title: 'FULL SERVICE STYLE',
@@ -45,18 +51,18 @@ const SLIDES: SlideData[] = [
     className2:
       'text-2xl md:text-3xl lg:text-4xl font-normal tracking-wide mt-0 mb-0',
   },
-  {
-    id: 3,
-    image: '/images/carousel/holiday.webp',
-    alt: 'Holiday Donations',
-    overlayOpacity: 0.3,
-    title: 'DONATE A GENTLY USED SUIT, SPORT COAT OR SHOES',
-    title2: 'AND SAVE 20% OFF THE SAME ITEM.',
-    className:
-      'text-2xl lg:text-5xl sm:font-light tracking-wide m-0 tracking-wider whitespace-pre-line sm:whitespace-normal',
-    className2:
-      'hidden sm:block text-base sm:text-lg md:text-2xl lg:text-3xl font-normal tracking-wide mb-0 mt-0',
-  },
+  // {
+  //   id: 3,
+  //   image: '/images/carousel/holiday.webp',
+  //   alt: 'Holiday Donations',
+  //   overlayOpacity: 0.3,
+  //   title: 'DONATE A GENTLY USED SUIT, SPORT COAT OR SHOES',
+  //   title2: 'AND SAVE 20% OFF THE SAME ITEM.',
+  //   className:
+  //     'text-2xl lg:text-5xl sm:font-light tracking-wide m-0 tracking-wider whitespace-pre-line sm:whitespace-normal',
+  //   className2:
+  //     'hidden sm:block text-base sm:text-lg md:text-2xl lg:text-3xl font-normal tracking-wide mb-0 mt-0',
+  // },
   // {
   //   id: 3,
   //   image: '/images/carousel/black-friday-carousel.webp',
@@ -177,7 +183,7 @@ function HeroCarousel() {
     intervalRef.current = setInterval(() => {
       setIsTransitioning(true);
       setCurrentSlide(prev => prev + 1);
-    }, 6000);
+    }, 12000);
   }, []);
 
   const handleNavigation = useCallback(
@@ -207,7 +213,7 @@ function HeroCarousel() {
   }, [isTransitioning, handleTransitionEnd]);
 
   return (
-    <div className="relative h-[350px] sm:h-[450px] md:h-[550px] lg:h-[650px] 2xl:h-[700px] w-full overflow-hidden bg-gray-200">
+    <div className="relative h-[350px] sm:h-[450px] md:h-[550px] lg:h-[650px] 2xl:h-[850px] w-full overflow-hidden bg-gray-200">
       <div
         className={`flex h-full ${
           isTransitioning
