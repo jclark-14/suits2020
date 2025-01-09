@@ -20,12 +20,6 @@ interface SlideData {
 const SLIDES: SlideData[] = [
   {
     id: 1,
-    image: '/images/carousel/holiday-sale3.jpg',
-    alt: 'Fashion Outlet',
-    overlayOpacity: 0,
-  },
-  {
-    id: 2,
     image: '/images/carousel/suit-rack6.webp',
     alt: 'Fashion Outlet',
     overlayOpacity: 0.2,
@@ -41,7 +35,7 @@ const SLIDES: SlideData[] = [
       'hidden sm:block text-base sm:text-lg md:text-2xl lg:text-3xl font-normal tracking-wide mb-0 mt-0',
   },
   {
-    id: 3,
+    id: 2,
     image: '/images/carousel/suit-measuring3.webp',
     alt: 'Full service style',
     overlayOpacity: 0.5,
